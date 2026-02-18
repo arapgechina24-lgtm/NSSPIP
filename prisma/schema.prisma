@@ -15,6 +15,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  encryptedDetails String? @db.Text // Encrypted PII (Phone, Home Address, etc.)
   role          UserRole  @default(OFFICER)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -76,8 +77,12 @@ model Incident {
   status      IncidentStatus @default(OPEN)
   priority    Priority       @default(MEDIUM)
   location    String?
+  // Geospatial Data: Stored as floats for Prisma compatibility, indexed in DB for PostGIS
   latitude    Float?
   longitude   Float?
+  
+  // Zero PII: All sensitive details must be encrypted before storage
+  encryptedDetails String? @db.Text // JSON string of encrypted fields
   reportedBy  String
   reporter    User           @relation(fields: [reportedBy], references: [id])
   createdAt   DateTime       @default(now())
