@@ -11,29 +11,23 @@ const AIAssistantPanel: React.FC = () => {
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
 
-    // Simulated AI response generation script
-    const generateResponse = (prompt: string) => {
+    // Live AI inference via Serverless Python API
+    const generateResponse = async (prompt: string) => {
         setIsTyping(true);
         let fullResponse = '';
 
-        // Simple mock logic based on keywords
-        if (prompt.toLowerCase().includes('strategy')) {
-            fullResponse = `GENERATING RESPONSE STRATEGY...
-      
-ANALYSIS: DETECTED COORDINATED ATTACK VECTOR.
-LEGAL FRAMEWORK: KENYA DATA PROTECTION ACT 2019, SECTION 34.
-
-RECOMMENDED ACTIONS:
-1. IMMEDIATE ISOLATION of affected subnet (192.168.10.x).
-2. DEPLOY COUNTERMEASURE: IPTables Rule Set #4492.
-3. NOTIFY: National Computer and Cybercrimes Coordination Committee (NC4).
-
-AWAITING AUTHORIZATION TO EXECUTE.`;
-        } else {
-            fullResponse = `PROCESSING INQUIRY...
-      
-Confirming intelligence feed integrity. MITRE ATT&CK Pattern matched: T1562.001 (Impair Defenses).
-Suggestion: Review system logs for "Sudo" elevation attempts within the last 15 minutes.`;
+        try {
+            const res = await fetch(`/api/ai/analyze/sentiment?text=${encodeURIComponent(prompt)}`, {
+                method: 'POST'
+            });
+            if (res.ok) {
+                const data = await res.json();
+                fullResponse = `[NSSPIP LIVE NLP ENGINE]\n\nVOLATILITY SCORE: ${data.sentiment} (Score: ${data.score})\nCONTEXT: "${data.text_preview}..."\n\nAI RECOMMENDATION: ${data.sentiment === 'NEGATIVE' ? 'ELEVATED THREAT DETECTED. ADVISE DEPLOYMENT OF COUNTERMEASURES.' : 'MAINTAIN OBSERVATION. NO IMMEDIATE THREAT IDENTIFIED.'}`;
+            } else {
+                fullResponse = "ERROR: UNABLE TO CONTACT SERVERLESS AI ENGINE.";
+            }
+        } catch (e) {
+            fullResponse = "CRITICAL FAILURE: AI ENDPOINT UNREACHABLE.";
         }
 
         // Typing effect simulation
@@ -42,17 +36,6 @@ Suggestion: Review system logs for "Sudo" elevation attempts within the last 15 
             if (currentText.length < fullResponse.length) {
                 currentText += fullResponse[currentText.length];
                 setMessages(prev => {
-                    const newMessages = [...prev];
-                    if (newMessages[newMessages.length - 1].role === 'ai' && newMessages.length > messages.length + 1) { // logic check
-                        newMessages[newMessages.length - 1].content = currentText;
-                        return newMessages;
-                    }
-                    // This part is a bit tricky with React state in interval, simplifying for simulation
-                    return prev;
-                });
-
-                // Simpler approach for the typing effect: just update the last message
-                setMessages(prev => {
                     const lastMsg = prev[prev.length - 1];
                     if (lastMsg.role === 'ai') {
                         return [...prev.slice(0, -1), { role: 'ai', content: currentText }];
@@ -60,12 +43,11 @@ Suggestion: Review system logs for "Sudo" elevation attempts within the last 15 
                         return [...prev, { role: 'ai', content: currentText }];
                     }
                 });
-
             } else {
                 clearInterval(interval);
                 setIsTyping(false);
             }
-        }, 30);
+        }, 15);
     };
 
     const handleSubmit = (e: React.FormEvent) => {
