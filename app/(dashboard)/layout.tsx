@@ -1,11 +1,18 @@
+import { AuthProvider } from "@/contexts/nctirs/AuthContext"
+import { SessionProvider } from "next-auth/react"
+
 export default function DashboardLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <div className="flex h-screen w-full bg-black text-green-500 overflow-hidden relative font-mono">
-            {children}
-        </div>
+        <SessionProvider>
+            <AuthProvider>
+                <div className="flex h-screen w-full bg-black text-green-500 overflow-hidden relative font-mono">
+                    {children}
+                </div>
+            </AuthProvider>
+        </SessionProvider>
     )
 }
