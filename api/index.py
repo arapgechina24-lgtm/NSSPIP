@@ -33,15 +33,47 @@ class SurveillanceResponse(BaseModel):
     detected_objects: List[ObjectDetection]
     alert_triggered: bool
 
-# --- Mock Logic ---
+import pandas as pd
+import joblib
+import os
+import random
+import nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-def calculate_risk(lat: float, lng: float) -> int:
-    # MVP: Mock logic based on "Nairobi" coordinates
-    # Higher risk in CBD approx coords
+# Serverless environments restrict file writing to /tmp
+NLTK_DATA_DIR = "/tmp/nltk_data"
+os.makedirs(NLTK_DATA_DIR, exist_ok=True)
+nltk.data.path.append(NLTK_DATA_DIR)
+try:
+    nltk.data.find('sentiment/vader_lexicon.zip')
+except LookupError:
+    nltk.download('vader_lexicon', download_dir=NLTK_DATA_DIR)
+
+sia = SentimentIntensityAnalyzer()
+
+# Load model on Cold Start
+MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'ai-models', 'risk_model.joblib')
+try:
+    risk_model = joblib.load(MODEL_PATH)
+    print("✅ NSSPIP Random Forest Model Loaded Successfully")
+except Exception as e:
+    print(f"⚠️ Failed to load AI model (Running in degrade mode): {e}")
+    risk_model = None
+
+# --- Mock Logic & AI Inference ---
+
+def calculate_risk(lat: float, lng: float, time_of_day: str = None) -> int:
+    if risk_model:
+        # AI Inference
+        is_night = 1 if time_of_day == "night" else 0
+        
+        # Scikit-Learn expects a dataframe matching training features
+        features = pd.DataFrame({'latitude': [lat], 'longitude': [lng], 'is_night': [is_night]})
+        score = risk_model.predict(features)[0]
+        return int(score)
+
+    # Fallback MVP: Mock logic based on "Nairobi" coordinates
     base_score = random.randint(10, 30)
-    
-    # Simple proximity mock to "hotspots"
-    # CBD: -1.282, 36.821
     if -1.29 < lat < -1.27 and 36.81 < lng < 36.83:
         base_score += random.randint(40, 60)
     
@@ -55,7 +87,7 @@ def health_check():
 
 @app.post("/predict/risk-score", response_model=RiskResponse)
 def get_risk_score(request: RiskRequest):
-    score = calculate_risk(request.latitude, request.longitude)
+    score = calculate_risk(request.latitude, request.longitude, request.time_of_day)
     
     level = "LOW"
     if score > 40: level = "MEDIUM"
@@ -108,24 +140,26 @@ def analyze_surveillance(request: SurveillanceRequest):
 
 @app.post("/analyze/sentiment")
 def analyze_sentiment(text: str):
-    # MVP: Simple keyword based sentiment
-    # In production, use NLTK or HuggingFace transformers
-    keywords_negative = ["riot", "protest", "violence", "fail", "danger", "scared"]
-    keywords_positive = ["safe", "calm", "police helped", "secure"]
-    
-    text_lower = text.lower()
-    score = 0
-    for word in keywords_negative:
-        if word in text_lower: score -= 1
-    for word in keywords_positive:
-        if word in text_lower: score += 1
+    # Live ML NLP inference via NLTK VADER
+    try:
+        scores = sia.polarity_scores(text)
+        compound = scores['compound']
         
-    sentiment = "NEUTRAL"
-    if score > 0: sentiment = "POSITIVE"
-    if score < 0: sentiment = "NEGATIVE"
-    
-    return {
-        "text_preview": text[:50],
-        "sentiment": sentiment,
-        "score": score
-    }
+        sentiment = "NEUTRAL"
+        if compound >= 0.05:
+            sentiment = "POSITIVE"
+        elif compound <= -0.05:
+            sentiment = "NEGATIVE"
+            
+        return {
+            "text_preview": text[:50],
+            "sentiment": sentiment,
+            "score": compound
+        }
+    except Exception as e:
+        # Fallback in case of serverless init errors
+        return {
+            "text_preview": text[:50],
+            "sentiment": "ERROR",
+            "score": 0.0
+        }
