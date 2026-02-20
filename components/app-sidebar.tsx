@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-BookOpen,
+import {
+    BookOpen,
     Command,
     Frame,
     LifeBuoy,
