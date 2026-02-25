@@ -1,0 +1,150 @@
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/app/(dashboard)/intelligence/[id]/page.tsx
+  3:10  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/dashboard/incident-map-client.tsx
+  3:43  warning  'Popup' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/incidents/data-table.tsx
+   53:19  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/incidents/data-table.tsx:53:19
+  51 |     const [rowSelection, setRowSelection] = React.useState({})
+  52 |
+> 53 |     const table = useReactTable({
+     |                   ^^^^^^^^^^^^^ TanStack Table's `useReactTable()` API returns functions that cannot be memoized safely
+  54 |         data,
+  55 |         columns,
+  56 |         onSortingChange: setSorting,  react-hooks/incompatible-library
+  110:21  error    Do not use an `<a>` element to navigate to `/incidents/new/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @next/next/no-html-link-for-pages
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/intelligence/intelligence-table.tsx
+  53:19  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/intelligence/intelligence-table.tsx:53:19
+  51 |     const [rowSelection, setRowSelection] = React.useState({})
+  52 |
+> 53 |     const table = useReactTable({
+     |                   ^^^^^^^^^^^^^ TanStack Table's `useReactTable()` API returns functions that cannot be memoized safely
+  54 |         data,
+  55 |         columns,
+  56 |         onSortingChange: setSorting,  react-hooks/incompatible-library
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/components/nctirs/intelligence/AIAssistantPanel.tsx
+  29:18  warning  '_e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/middleware.ts
+  3:22  warning  '_req' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/matplotlib/backends/web_backend/js/mpl.js
+   58:9   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  107:54  warning  '_canvas_div' is defined but never used          @typescript-eslint/no-unused-vars
+  109:52  warning  '_canvas_div' is defined but never used          @typescript-eslint/no-unused-vars
+  112:9   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  333:58  warning  '_e' is defined but never used                   @typescript-eslint/no-unused-vars
+  347:9   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  354:26  warning  '_event' is defined but never used               @typescript-eslint/no-unused-vars
+  444:51  warning  '_msg' is defined but never used                 @typescript-eslint/no-unused-vars
+  495:51  warning  '_msg' is defined but never used                 @typescript-eslint/no-unused-vars
+  576:18  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  654:51  warning  '_event' is defined but never used               @typescript-eslint/no-unused-vars
+  654:59  warning  '_name' is defined but never used                @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/matplotlib/backends/web_backend/js/mpl_tornado.js
+  6:10  warning  'mpl_ondownload' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/matplotlib/backends/web_backend/js/nbagg_mpl.js
+   11:31  warning  '_event' is defined but never used               @typescript-eslint/no-unused-vars
+   54:33  warning  '_format' is defined but never used              @typescript-eslint/no-unused-vars
+  101:49  warning  '_remove_interactive' is defined but never used  @typescript-eslint/no-unused-vars
+  113:9   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  122:9   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  129:26  warning  '_event' is defined but never used               @typescript-eslint/no-unused-vars
+  190:48  warning  '_evt' is defined but never used                 @typescript-eslint/no-unused-vars
+  230:58  warning  '_name' is defined but never used                @typescript-eslint/no-unused-vars
+  240:51  warning  '_msg' is defined but never used                 @typescript-eslint/no-unused-vars
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/torch/utils/model_dump/code.js
+   57:17  warning  'children' is defined but never used             @typescript-eslint/no-unused-vars
+  524:21  warning  'offset' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  524:29  warning  'size' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  524:35  warning  'stride' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  524:43  warning  'grad' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  525:12  warning  'dtype' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  525:24  warning  'device' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  525:32  warning  'numel' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  529:21  warning  'offset' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  529:29  warning  'size' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  529:35  warning  'stride' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  529:43  warning  'quantizer' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  529:54  warning  'grad' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  530:12  warning  'dtype' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  530:24  warning  'device' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  530:32  warning  'numel' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  538:15  warning  'name' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  544:19  warning  'key' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  631:11  error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/torch/utils/model_dump/htm.mjs
+  2:117  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:331  warning  Unexpected default export of anonymous function                        import/no-anonymous-default-export
+  2:501  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:763  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:814  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/Users/mac/.gemini/antigravity/scratch/NSSPIP/venv/lib/python3.9/site-packages/torch/utils/model_dump/preact.mjs
+  2:180   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:256   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:464   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:803   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:1219  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:1358  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:1450  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:2155  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:2513  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:2720  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:2984  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3078  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3170  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3267  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3332  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3465  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3699  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3742  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:3807  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:4208  warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  2:4212  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:4531  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:5092  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:5448  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:5556  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:5602  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:5744  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6185  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6263  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6291  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6387  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6428  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6681  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6759  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:6878  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:7120  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:7370  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:7390  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:7606  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:7988  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:8006  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:8095  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:8428  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:8858  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:8991  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:9091  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:9467  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:9686  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 101 problems (7 errors, 94 warnings)
+
