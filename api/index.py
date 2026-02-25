@@ -1,8 +1,17 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import random
 from typing import List, Optional
 from datetime import datetime
+import os
+
+# --- Config (env flags for production hardening) ---
+# Set NSSPIP_ENABLE_CV=0 to disable YOLO load and CV inference (mock-only).
+ENABLE_CV_INFERENCE = os.environ.get("NSSPIP_ENABLE_CV", "true").lower() in ("1", "true", "yes")
+# Set NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD=1 to allow downloading images from URLs; default off for production.
+ENABLE_CV_EXTERNAL_DOWNLOAD = os.environ.get("NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD", "false").lower() in ("1", "true", "yes")
+# Set NSSPIP_ENABLE_NLP_EXTERNAL_NEWS=1 to allow live RSS/news scrape in volatility/sentiment; default off.
+ENABLE_NLP_EXTERNAL_NEWS = os.environ.get("NSSPIP_ENABLE_NLP_EXTERNAL_NEWS", "false").lower() in ("1", "true", "yes")
 
 # Define root_path for Vercel integration
 app = FastAPI(title="NSSPIP AI Engine", version="1.0.0", root_path="/api/ai")
@@ -33,10 +42,31 @@ class SurveillanceResponse(BaseModel):
     detected_objects: List[ObjectDetection]
     alert_triggered: bool
 
+
+class SentimentRequest(BaseModel):
+    text: str
+
+
+class VolatilityRequest(BaseModel):
+    latitude: float
+    longitude: float
+    time_of_day: Optional[str] = None
+    image_url: Optional[str] = None
+    text_for_sentiment: Optional[str] = None
+    use_live_news: bool = False
+
+
+class VolatilityResponse(BaseModel):
+    volatility_score: int
+    level: str
+    risk_score: int
+    cv_contribution: Optional[int] = None
+    nlp_contribution: Optional[float] = None
+    contributing_factors: List[str]
+    breakdown: dict
+
 import pandas as pd
 import joblib
-import os
-import random
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -71,11 +101,23 @@ except Exception as e:
 def calculate_risk(lat: float, lng: float, time_of_day: str = None) -> int:
     if risk_model:
         # AI Inference
-        # Get current hour if time_of_day is provided or just use 12
-        hour = 22 if time_of_day == "night" else 12
-        
-        # Scikit-Learn expects a dataframe matching training features: latitude, longitude, hour
-        features = pd.DataFrame({'latitude': [lat], 'longitude': [lng], 'hour': [hour]})
+        # Derive temporal features consistent with training pipeline
+        now = datetime.utcnow()
+        hour = 22 if time_of_day == "night" else now.hour
+        month = now.month
+        year_feat = now.year
+
+        # Scikit-Learn expects a dataframe matching training features:
+        # ['latitude', 'longitude', 'hour', 'month', 'year_feat']
+        features = pd.DataFrame(
+            {
+                "latitude": [lat],
+                "longitude": [lng],
+                "hour": [hour],
+                "month": [month],
+                "year_feat": [year_feat],
+            }
+        )
         score = risk_model.predict(features)[0]
         return int(score)
 
@@ -127,62 +169,78 @@ def get_risk_score(request: RiskRequest):
         "contributing_factors": factors
     }
 
-# Try to load YOLOv8 locally for CV
+# Load YOLOv8 only when CV inference is enabled (avoids heavy load in production when disabled)
 cv_model = None
-try:
-    from ultralytics import YOLO
-    import urllib.request
-    import tempfile
-    CV_MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'yolov8n.pt')
-    if os.path.exists(CV_MODEL_PATH):
-       cv_model = YOLO(CV_MODEL_PATH)
-       print("✅ NSSPIP YOLOv8 CV Model Loaded Successfully")
-    else:
-       # If it doesn't exist, it will download on first run
-       cv_model = YOLO('yolov8n.pt')
-       print("✅ NSSPIP YOLOv8 CV Model Initialized")
-except ImportError:
-    print("⚠️ Ultralytics not found. CV endpoint will run in mock Serverless degrade mode.")
+if ENABLE_CV_INFERENCE:
+    try:
+        from ultralytics import YOLO
+        import urllib.request
+        CV_MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'yolov8n.pt')
+        if os.path.exists(CV_MODEL_PATH):
+            cv_model = YOLO(CV_MODEL_PATH)
+            print("✅ NSSPIP YOLOv8 CV Model Loaded Successfully")
+        else:
+            cv_model = YOLO('yolov8n.pt')
+            print("✅ NSSPIP YOLOv8 CV Model Initialized")
+    except ImportError:
+        print("⚠️ Ultralytics not found. CV endpoint will run in mock Serverless degrade mode.")
+    except Exception as e:
+        print(f"⚠️ YOLOv8 load failed: {e}. CV endpoint will use mock mode.")
+else:
+    print("ℹ️ NSSPIP_ENABLE_CV is disabled. CV endpoint will use mock mode only.")
+
+def _run_cv_inference(image_path: str) -> tuple:
+    """Run YOLO inference; returns (detections list, alert_triggered). Hardened with try/except."""
+    if not cv_model or not os.path.exists(image_path):
+        return [], False
+    try:
+        TARGET_CLASSES = [0, 24, 26, 28, 43]
+        results = cv_model(image_path, classes=TARGET_CLASSES, conf=0.35)
+        detections = []
+        triggered = False
+        if results and len(results) > 0:
+            for box in results[0].boxes:
+                cls_id = int(box.cls[0])
+                conf = float(box.conf[0])
+                label = cv_model.names[cls_id]
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                detections.append({
+                    "label": label,
+                    "confidence": conf,
+                    "bbox": [x1, y1, int(x2 - x1), int(y2 - y1)]
+                })
+                if cls_id in [24, 26, 28, 43]:
+                    triggered = True
+        return detections, triggered
+    except Exception as e:
+        print(f"YOLO Inference Error: {e}")
+        return [], False
+
 
 @app.post("/analyze/surveillance", response_model=SurveillanceResponse)
 def analyze_surveillance(request: SurveillanceRequest):
     detections = []
     triggered = False
-    
-    if cv_model and request.image_url:
-        try:
-            # We would download the image or use a local test path
-            # For the demo, we use a placeholder image if image_url is just 'live_stream_placeholder'
-            img_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ai-models", "surveillance_input.jpg")
-            if not os.path.exists(img_path):
-                 # Download the sample if missing
-                 urllib.request.urlretrieve("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1470&auto=format&fit=crop", img_path)
-                 
-            # Run inference targeting people, bags, knives
-            TARGET_CLASSES = [0, 24, 26, 28, 43]
-            results = cv_model(img_path, classes=TARGET_CLASSES, conf=0.35)
-            
-            if results:
-                for box in results[0].boxes:
-                    cls_id = int(box.cls[0])
-                    conf = float(box.conf[0])
-                    label = cv_model.names[cls_id]
-                    
-                    x1, y1, x2, y2 = map(int, box.xyxy[0])
-                    detections.append({
-                        "label": label,
-                        "confidence": conf,
-                        "bbox": [x1, y1, int(x2-x1), int(y2-y1)]
-                    })
-                    
-                    if cls_id in [24, 26, 28, 43]: # Suspicious bags/weapons
-                        triggered = True
-                        
-        except Exception as e:
-            print(f"YOLO Inference Error: {e}")
-            pass # Fallthrough to mock if error
+    use_path = None
+    img_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ai-models", "surveillance_input.jpg")
 
-    # Run mock if no model or YOLO failed
+    if cv_model:
+        try:
+            if request.image_url and request.image_url.startswith(("http://", "https://")):
+                if ENABLE_CV_EXTERNAL_DOWNLOAD:
+                    import urllib.request
+                    use_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ai-models", "surveillance_downloaded.jpg")
+                    urllib.request.urlretrieve(request.image_url, use_path)
+            if use_path is None and os.path.exists(img_path):
+                use_path = img_path
+            elif use_path is None and ENABLE_CV_EXTERNAL_DOWNLOAD and request.image_url:
+                pass  # already tried download
+            if use_path and os.path.exists(use_path):
+                detections, triggered = _run_cv_inference(use_path)
+        except Exception as e:
+            print(f"Surveillance image fetch/inference error: {e}")
+
+    # Run mock if no model or no detections
     if not detections and not triggered:
         # Randomly simulate finding a weapon or abandoned bag
         if random.random() < 0.2: # 20% chance of threat in simulation
@@ -208,31 +266,166 @@ def analyze_surveillance(request: SurveillanceRequest):
         "alert_triggered": triggered
     }
 
-@app.post("/analyze/sentiment")
-def analyze_sentiment(text: str):
-    # Live ML NLP inference via NLTK VADER
+def _sentiment_from_text(text: str) -> tuple:
+    """Returns (sentiment label, compound score). Hardened."""
+    if not text or not text.strip():
+        return "NEUTRAL", 0.0
     try:
         scores = sia.polarity_scores(text)
-        compound = scores['compound']
-        
-        sentiment = "NEUTRAL"
+        compound = scores["compound"]
         if compound >= 0.05:
-            sentiment = "POSITIVE"
-        elif compound <= -0.05:
-            sentiment = "NEGATIVE"
-            
-        return {
-            "text_preview": text[:50],
-            "sentiment": sentiment,
-            "score": compound
-        }
+            return "POSITIVE", compound
+        if compound <= -0.05:
+            return "NEGATIVE", compound
+        return "NEUTRAL", compound
     except Exception as e:
-        # Fallback in case of serverless init errors
-        return {
-            "text_preview": text[:50],
-            "sentiment": "ERROR",
-            "score": 0.0
-        }
+        print(f"NLP sentiment error: {e}")
+        return "ERROR", 0.0
+
+
+def _fetch_live_news_compound() -> float:
+    """Fetch RSS headlines and return average VADER compound. Only when ENABLE_NLP_EXTERNAL_NEWS. Hardened."""
+    if not ENABLE_NLP_EXTERNAL_NEWS:
+        return 0.0
+    try:
+        import requests
+        from bs4 import BeautifulSoup
+        RSS_URL = "https://www.aljazeera.com/xml/rss/all.xml"
+        resp = requests.get(RSS_URL, timeout=8)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.content, features="xml")
+        items = soup.findAll("item")[:20]
+        TARGET_KEYWORDS = ["police", "protest", "unrest", "attack", "security", "government", "violence", "threat", "kenya"]
+        compounds = []
+        for item in items:
+            title = item.title.text if item.title else ""
+            desc = item.description.text if item.description else ""
+            full = f"{title}. {desc}"
+            if any(k in full.lower() for k in TARGET_KEYWORDS):
+                _, comp = _sentiment_from_text(full)
+                compounds.append(comp)
+        return sum(compounds) / len(compounds) if compounds else 0.0
+    except Exception as e:
+        print(f"Live news fetch error: {e}")
+        return 0.0
+
+
+@app.post("/analyze/sentiment")
+def analyze_sentiment(request: SentimentRequest):
+    """NLP sentiment via NLTK VADER. Pass JSON body: {\"text\": \"...\"}."""
+    text = request.text
+    sentiment, score = _sentiment_from_text(text)
+    return {
+        "text_preview": (text[:50] + "..." if len(text) > 50 else text) if text else "",
+        "sentiment": sentiment,
+        "score": score,
+    }
+
+
+@app.post("/volatility", response_model=VolatilityResponse)
+def compute_volatility(request: VolatilityRequest):
+    """
+    Unified volatility endpoint combining geospatial risk, CV surveillance, and NLP sentiment.
+    """
+    if not (-90.0 <= request.latitude <= 90.0 and -180.0 <= request.longitude <= 180.0):
+        raise HTTPException(status_code=400, detail="Invalid coordinates.")
+
+    risk_score = calculate_risk(request.latitude, request.longitude, request.time_of_day)
+    level = "LOW"
+    if risk_score > 40:
+        level = "MEDIUM"
+    if risk_score > 70:
+        level = "HIGH"
+    if risk_score > 90:
+        level = "CRITICAL"
+
+    factors: List[str] = []
+    if -1.29 < request.latitude < -1.27 and 36.81 < request.longitude < 36.83:
+        factors.append(
+            "Geographic Anomaly: Target coordinates match high-density historical sector (Nairobi CBD)."
+        )
+    if request.time_of_day == "night":
+        factors.append(
+            "Temporal Risk: Elevated activity profile during curfew/nightlight hours (+15% score bias)."
+        )
+    if risk_model:
+        factors.append(
+            f"Model Inference: Random Forest ensemble identifies spatial-temporal patterns characteristic of {level} risk."
+        )
+    else:
+        factors.append(
+            "Heuristic Fallback: Pattern matching based on proximity to critical infrastructure nodes."
+        )
+    if risk_score > 85:
+        factors.append(
+            "Tactical Warning: Risk score exceeds escalation thresholds for immediate inter-agency review."
+        )
+
+    cv_contribution = 0
+    cv_alert_triggered = False
+    cv_labels: List[str] = []
+    try:
+        surv_resp = analyze_surveillance(
+            SurveillanceRequest(feed_id="volatility", image_url=request.image_url)
+        )
+        cv_alert_triggered = surv_resp.alert_triggered
+        for det in surv_resp.detected_objects:
+            cv_labels.append(det.label)
+        if cv_alert_triggered:
+            cv_contribution = min(30, 10 + 5 * len(surv_resp.detected_objects))
+            factors.append(
+                f"Computer Vision: Suspicious artifacts detected ({', '.join(cv_labels) or 'unknown'})."
+            )
+        elif surv_resp.detected_objects:
+            factors.append(f"Computer Vision: Non-threatening activity ({', '.join(cv_labels)}).")
+    except Exception as e:
+        print(f"Volatility CV aggregation error: {e}")
+
+    nlp_contribution: float = 0.0
+    sentiment_compound = 0.0
+    news_compound = 0.0
+    if request.text_for_sentiment:
+        _, sentiment_compound = _sentiment_from_text(request.text_for_sentiment)
+    if request.use_live_news:
+        news_compound = _fetch_live_news_compound()
+    combined_compound = sentiment_compound + news_compound
+    if combined_compound < 0:
+        nlp_contribution = min(30.0, abs(combined_compound) * 40.0)
+        factors.append("NLP: Elevated negative sentiment in news/intelligence streams.")
+    elif combined_compound > 0.2:
+        nlp_contribution = max(-10.0, -combined_compound * 20.0)
+        factors.append("NLP: Predominantly stabilizing/positive sentiment observed.")
+
+    raw_volatility = risk_score + cv_contribution + nlp_contribution
+    volatility_score = max(0, min(100, int(round(raw_volatility))))
+    vol_level = "LOW"
+    if volatility_score > 40:
+        vol_level = "MEDIUM"
+    if volatility_score > 70:
+        vol_level = "HIGH"
+    if volatility_score > 90:
+        vol_level = "CRITICAL"
+
+    breakdown = {
+        "risk_score": risk_score,
+        "cv_contribution": cv_contribution,
+        "nlp_contribution": nlp_contribution,
+        "sentiment_compound": sentiment_compound,
+        "live_news_compound": news_compound,
+        "cv_alert_triggered": cv_alert_triggered,
+        "cv_labels": cv_labels,
+    }
+
+    return VolatilityResponse(
+        volatility_score=volatility_score,
+        level=vol_level,
+        risk_score=risk_score,
+        cv_contribution=cv_contribution if cv_contribution else None,
+        nlp_contribution=nlp_contribution if nlp_contribution else None,
+        contributing_factors=factors,
+        breakdown=breakdown,
+    )
+
 
 @app.get("/api/verified-events")
 async def get_verified_events():

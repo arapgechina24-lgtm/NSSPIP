@@ -70,11 +70,15 @@ The backend consists of two integrated layers:
 ### 3. Intelligence Sentiment
 
 * **Endpoint:** `POST /api/ai/analyze/sentiment`
-* **Description:** Assesses the volatility or safety sentiment of unstructured intelligence reports.
+* **Description:** Assesses the volatility or safety sentiment of unstructured intelligence reports using NLTK VADER.
 
-#### Query Parameters
+**Request Body (`application/json`)**
 
-* `text` (string): The text to analyze.
+```json
+{
+  "text": "The protest turned violent after an armed dispute near the CBD."
+}
+```
 
 **Response (`200 OK`)**
 
@@ -82,6 +86,56 @@ The backend consists of two integrated layers:
 {
   "text_preview": "The protest turned violent after an armed dispute...",
   "sentiment": "NEGATIVE",
-  "score": -2
+  "score": -0.52
 }
 ```
+
+### 4. Unified Volatility (Risk + CV + NLP)
+
+* **Endpoint:** `POST /api/ai/volatility`
+* **Description:** Combines geospatial risk, optional surveillance (CV), and optional NLP sentiment (or live news when enabled) into a single threat/volatility score (0–100) with XAI factors.
+
+**Request Body (`application/json`)**
+
+```json
+{
+  "latitude": -1.282,
+  "longitude": 36.821,
+  "time_of_day": "night",
+  "image_url": "https://example.com/frame.jpg",
+  "text_for_sentiment": "Crowds gathering in central district. Police deployed.",
+  "use_live_news": false
+}
+```
+
+All fields except `latitude` and `longitude` are optional. Set `use_live_news: true` only when `NSSPIP_ENABLE_NLP_EXTERNAL_NEWS` is enabled.
+
+**Response (`200 OK`)**
+
+```json
+{
+  "volatility_score": 72,
+  "level": "HIGH",
+  "risk_score": 65,
+  "cv_contribution": 15,
+  "nlp_contribution": -2.5,
+  "contributing_factors": ["Geographic Anomaly: ...", "Computer Vision: Suspicious artifacts detected (backpack)."],
+  "breakdown": {
+    "risk_score": 65,
+    "cv_contribution": 15,
+    "nlp_contribution": -2.5,
+    "sentiment_compound": -0.1,
+    "live_news_compound": 0.0,
+    "cv_alert_triggered": true,
+    "cv_labels": ["backpack"]
+  }
+}
+```
+
+### AI Engine Configuration (Environment Variables)
+
+| Variable | Default | Description |
+| -------- | ------- | ----------- |
+| `NSSPIP_ENABLE_CV` | `true` | Set to `0` to disable YOLO load and CV inference (mock-only). |
+| `NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD` | `false` | Set to `1` to allow downloading images from URLs for surveillance. |
+| `NSSPIP_ENABLE_NLP_EXTERNAL_NEWS` | `false` | Set to `1` to allow live RSS/news scrape in volatility and sentiment. |
