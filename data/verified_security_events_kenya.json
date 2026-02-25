@@ -1,702 +1,4002 @@
 [
   {
-    "type": "Conflict Incident",
-    "sub_type": "Kalenjin - Kikuyu",
-    "location": "Kondoo farm",
-    "county": "Rift Valley province",
-    "coordinates": [
-      0.5,
-      36.0
-    ],
-    "fatalities": 6,
-    "timestamp": "1994-01-03 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Rer Ahmad subclan (Hawiye) - Hawarsame Rer Hasan and Habar Ya'qub subclan of Marehan clan (Darod)",
-    "location": "Mandera town",
-    "county": "North Eastern province",
-    "coordinates": [
-      3.936804,
-      41.858383
-    ],
-    "fatalities": 7,
-    "timestamp": "2004-05-08 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "MDF - SLDF",
-    "location": "Mt. Elgon district",
-    "county": "Western province",
-    "coordinates": [
-      0.95,
-      34.616667
-    ],
-    "fatalities": 32,
-    "timestamp": "2008-01-01 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
+    "id": "UCDP-28738.0",
+    "type": "CONFLICT_ZONE",
     "sub_type": "Dassanetch - Turkana",
-    "location": "Lake Turkana, on the Kenya-Ethiopia border",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.620821,
-      36.051335
-    ],
-    "fatalities": 6,
-    "timestamp": "2012-06-28 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todonyang Village",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
+    "title": "Verified Conflict Incident: Todonyang Village",
+    "description": "Detected Dassanetch - Turkana conflict in Todonyang Village. Tactical engagement between Dassanetch and Turkana.",
+    "location": {
+      "name": "Todonyang Village",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        4.533333,
+        35.933333
+      ]
+    },
     "fatalities": 14,
+    "civilian_deaths": 0,
     "timestamp": "2011-08-07 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todonyang (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 5,
-    "timestamp": "2011-05-02 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todonyang Police Post (1 km from)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 25,
-    "timestamp": "2011-05-02 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todonyang Village",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 6,
-    "timestamp": "2011-05-02 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Kipau village, Tana River",
-    "county": "Coast province",
-    "coordinates": [
-      -2.422849,
-      40.222452
-    ],
-    "fatalities": 45,
-    "timestamp": "2012-12-21 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todenyang, Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 23,
-    "timestamp": "2009-03-21 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Parar area (between Todonyang Police Post and Todonyang GSU camp), Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 5,
-    "timestamp": "2009-03-10 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Nduru village in the Tana River delta area",
-    "county": "Coast province",
-    "coordinates": [
-      -2.50554,
-      40.27026
-    ],
-    "fatalities": 9,
-    "timestamp": "2013-01-09 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Kibusu village in Tana River delta region of southeast Kenya",
-    "county": "Coast province",
-    "coordinates": [
-      -2.35,
-      40.133333
-    ],
-    "fatalities": 11,
-    "timestamp": "2013-01-10 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todonyang sub-location, Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 12,
-    "timestamp": "2005-07-01 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todenyang area, Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 5,
-    "timestamp": "2005-06-21 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Lokitaung town (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.266667,
-      35.75
-    ],
-    "fatalities": 5,
-    "timestamp": "2002-09-20 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Todenyang town",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.533333,
-      35.933333
-    ],
-    "fatalities": 7,
-    "timestamp": "2002-09-16 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Loarengak town (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.266667,
-      35.916667
-    ],
-    "fatalities": 10,
-    "timestamp": "2002-09-10 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Lokitaung town (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.266667,
-      35.75
-    ],
-    "fatalities": 135,
-    "timestamp": "2000-02-23 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Lokitaung town (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      4.266667,
-      35.75
-    ],
-    "fatalities": 7,
-    "timestamp": "2000-01-20 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "northern Kenya",
-    "county": "Rift Valley province",
-    "coordinates": [
-      0.5,
-      36.0
-    ],
-    "fatalities": 28,
-    "timestamp": "1997-06-30 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Dassanetch - Turkana",
-    "location": "Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 16,
-    "timestamp": "1991-01-01 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Tana River county",
-    "county": "Tana River county",
-    "coordinates": [
-      -1.533333,
-      39.416667
-    ],
-    "fatalities": 9,
-    "timestamp": "2016-06-09 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kikuyu - Luo",
-    "location": "Nairobi city",
-    "county": "Nairobi province",
-    "coordinates": [
-      -1.283333,
-      36.816667
-    ],
-    "fatalities": 6,
-    "timestamp": "2008-01-30 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kikuyu - Luo",
-    "location": "Naivasha town",
-    "county": "Rift Valley province",
-    "coordinates": [
-      -0.716667,
-      36.433333
-    ],
-    "fatalities": 9,
-    "timestamp": "2008-01-29 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kikuyu - Luo",
-    "location": "Naivasha town",
-    "county": "Rift Valley province",
-    "coordinates": [
-      -0.716667,
-      36.433333
-    ],
-    "fatalities": 19,
-    "timestamp": "2008-01-27 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kenya: Northeastern Province and Coast",
-    "location": "Baure area, Lamu County",
-    "county": "Lamu county",
-    "coordinates": [
-      -1.722025,
-      40.966245
-    ],
-    "fatalities": 13,
-    "timestamp": "2015-06-14 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kikuyu - Luo",
-    "location": "Mombasa town",
-    "county": "Coast province",
-    "coordinates": [
-      -4.05,
-      39.666667
-    ],
-    "fatalities": 19,
-    "timestamp": "2007-12-31 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kalenjin - Kisii",
-    "location": "Rift Valley province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      0.5,
-      36.0
-    ],
-    "fatalities": 74,
-    "timestamp": "2008-02-05 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Kalenjin - Kisii",
-    "location": "Rift Valley province (155 miles west of the capital)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      0.5,
-      36.0
-    ],
-    "fatalities": 7,
-    "timestamp": "2008-02-03 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
+    "id": "UCDP-43689.0",
+    "type": "CONFLICT_ZONE",
     "sub_type": "Kalenjin - Kikuyu",
-    "location": "Naivasha town",
-    "county": "Rift Valley province",
-    "coordinates": [
-      -0.716667,
-      36.433333
-    ],
-    "fatalities": 10,
-    "timestamp": "2008-01-29 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "title": "Verified Conflict Incident: Ngarua town",
+    "description": "Detected Kalenjin - Kikuyu conflict in Ngarua town. High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Ngarua town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.366666,
+        36.45
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2007-12-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Nyangatom , Toposa - Turkana",
-    "location": "Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      5.041775,
-      35.641494
-    ],
-    "fatalities": 58,
-    "timestamp": "2006-01-13 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43441.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Samburu - Somali",
+    "title": "Verified Conflict Incident: Isiolo town",
+    "description": "Detected Samburu - Somali conflict in Isiolo town. Tactical engagement between Samburu and Somali.",
+    "location": {
+      "name": "Isiolo town",
+      "region": "EASTERN PROVINCE",
+      "coordinates": [
+        0.35,
+        37.583333
+      ]
+    },
+    "fatalities": 40,
+    "civilian_deaths": 0,
+    "timestamp": "1996-06-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 40"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Samburu"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Toposa - Turkana",
-    "location": "Turkana district",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 7,
-    "timestamp": "1993-07-09 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Borana - Turkana",
-    "location": "Kambi Juu estate, Isiolo town",
-    "county": "Eastern province",
-    "coordinates": [
-      0.329774,
-      37.569224
-    ],
-    "fatalities": 8,
-    "timestamp": "2011-12-31 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Toposa - Turkana",
-    "location": "Turkana district",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 8,
-    "timestamp": "2004-04-15 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Turkana district, Rift Valley province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 7,
-    "timestamp": "2010-08-17 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Katilia area, Lokori division, Turkana district, Rift Valley province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      2.117361,
-      36.116572
-    ],
-    "fatalities": 5,
-    "timestamp": "2010-03-26 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
-  },
-  {
-    "type": "Conflict Incident",
+    "id": "UCDP-40798.0",
+    "type": "CONFLICT_ZONE",
     "sub_type": "Orma - Pokomo",
-    "location": "Reketa area of Tarassa, Tana River district",
-    "county": "Coast province",
-    "coordinates": [
-      -2.44188,
-      40.17075
-    ],
-    "fatalities": 53,
-    "timestamp": "2012-08-21 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "title": "Verified Conflict Incident: Kipau village, Tana River",
+    "description": "Detected Orma - Pokomo conflict in Kipau village, Tana River. Tactical engagement between Orma and Pokomo.",
+    "location": {
+      "name": "Kipau village, Tana River",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -2.422849,
+        40.222452
+      ]
+    },
+    "fatalities": 45,
+    "civilian_deaths": 0,
+    "timestamp": "2012-12-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 45"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Orma"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Turkana district (Kalemngorok town )",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 16,
-    "timestamp": "2009-08-11 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43675.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kikuyu - Luo",
+    "title": "Verified Conflict Incident: Naivasha town",
+    "description": "Detected Kikuyu - Luo conflict in Naivasha town. Tactical engagement between Kikuyu and Luo.",
+    "location": {
+      "name": "Naivasha town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        -0.716667,
+        36.433333
+      ]
+    },
+    "fatalities": 19,
+    "civilian_deaths": 0,
+    "timestamp": "2008-01-27 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 19"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kikuyu"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Turkana district",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
+    "id": "UCDP-44222.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kikuyu - Luo",
+    "title": "Verified Conflict Incident: Mombasa town",
+    "description": "Detected Kikuyu - Luo conflict in Mombasa town. Tactical engagement between Kikuyu and Luo.",
+    "location": {
+      "name": "Mombasa town",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -4.05,
+        39.666667
+      ]
+    },
+    "fatalities": 19,
+    "civilian_deaths": 0,
+    "timestamp": "2007-12-31 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 19"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kikuyu"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43623.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kisii",
+    "title": "Verified Conflict Incident: Rift Valley province",
+    "description": "Detected Kalenjin - Kisii conflict in Rift Valley province. Tactical engagement between Kalenjin and Kisii.",
+    "location": {
+      "name": "Rift Valley province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.5,
+        36.0
+      ]
+    },
     "fatalities": 74,
-    "timestamp": "2008-07-30 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "civilian_deaths": 0,
+    "timestamp": "2008-02-05 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 74"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Chamwana Muma village in Tana Delta",
-    "county": "Coast province",
-    "coordinates": [
-      -2.583823,
-      40.338178
-    ],
-    "fatalities": 12,
-    "timestamp": "2012-09-07 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-34202.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Gabra",
+    "title": "Verified Conflict Incident: Kokoy, Eastern Province",
+    "description": "Detected Dassanetch - Gabra conflict in Kokoy, Eastern Province. Tactical engagement between Dassanetch and Gabra.",
+    "location": {
+      "name": "Kokoy, Eastern Province",
+      "region": "EASTERN PROVINCE",
+      "coordinates": [
+        4.08333,
+        36.26667
+      ]
+    },
+    "fatalities": 100,
+    "civilian_deaths": 0,
+    "timestamp": "1997-03-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 100"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Orma - Pokomo",
-    "location": "Kilelengwani village",
-    "county": "Coast province",
-    "coordinates": [
-      -2.449116,
-      40.485851
-    ],
-    "fatalities": 38,
-    "timestamp": "2012-09-10 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43704.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Eldoret town",
+    "description": "Detected Kalenjin - Kikuyu conflict in Eldoret town. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Eldoret town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.516667,
+        35.283333
+      ]
+    },
+    "fatalities": 31,
+    "civilian_deaths": 0,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 31"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Loko (Nawoiarengan area, Katilia location along Lokori and Lomelo corridors)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      1.915869,
-      36.003683
-    ],
-    "fatalities": 9,
-    "timestamp": "2008-02-01 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-44110.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Eldoret town",
+    "description": "Detected Kalenjin - Kikuyu conflict in Eldoret town. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Eldoret town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.516667,
+        35.283333
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2007-12-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Loko (Nakoria sublocation of Katili location, Lokori Division, Turkana South)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      1.915869,
-      36.003683
-    ],
-    "fatalities": 13,
-    "timestamp": "2007-07-22 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43862.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Laikipia district (Olmoran village)",
+    "description": "Detected Kalenjin - Kikuyu conflict in Laikipia district (Olmoran village). Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Laikipia district (Olmoran village)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.416667,
+        36.75
+      ]
+    },
+    "fatalities": 16,
+    "civilian_deaths": 0,
+    "timestamp": "1998-01-14 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 16"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Loko (Lokwamusing Sub-Location, Lochakula Location, Lokori Division, Turkana south)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      2.00221,
-      35.93958
-    ],
-    "fatalities": 14,
-    "timestamp": "2007-04-30 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43752.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 7,
+    "civilian_deaths": 7,
+    "timestamp": "2008-05-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 7"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Turkana district",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 11,
-    "timestamp": "2006-12-29 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-43717.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Rift Valley province",
+    "description": "Detected Kalenjin - Kikuyu conflict in Rift Valley province. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Rift Valley province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.5,
+        36.0
+      ]
+    },
+    "fatalities": 22,
+    "civilian_deaths": 0,
+    "timestamp": "1998-01-11 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 22"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Turkana district (Lorengippi town)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      3.0,
-      35.5
-    ],
-    "fatalities": 14,
-    "timestamp": "2006-12-13 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-151298.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Degodia - Garre",
+    "title": "Verified Conflict Incident: Tarbaj district of Wajir",
+    "description": "Detected Degodia - Garre conflict in Tarbaj district of Wajir. Tactical engagement between Degodia and Garre.",
+    "location": {
+      "name": "Tarbaj district of Wajir",
+      "region": "WAJIR COUNTY",
+      "coordinates": [
+        2.214,
+        40.115
+      ]
+    },
+    "fatalities": 20,
+    "civilian_deaths": 0,
+    "timestamp": "2014-06-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 20"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Degodia"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Kainuk location",
-    "county": "Rift Valley province",
-    "coordinates": [
-      1.774422,
-      35.500639
-    ],
-    "fatalities": 28,
-    "timestamp": "2005-01-22 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-44188.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Laikipia district",
+    "description": "Detected Kalenjin - Kikuyu conflict in Laikipia district. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Laikipia district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.416667,
+        36.75
+      ]
+    },
+    "fatalities": 25,
+    "civilian_deaths": 0,
+    "timestamp": "1998-01-11 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 25"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Kapedo town (near)",
-    "county": "Rift Valley province",
-    "coordinates": [
-      1.166667,
-      36.1
-    ],
-    "fatalities": 11,
-    "timestamp": "2000-04-02 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "id": "UCDP-44186.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Nakuru district",
+    "description": "Detected Kalenjin - Kikuyu conflict in Nakuru district. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Nakuru district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        -0.333333,
+        36.0
+      ]
+    },
+    "fatalities": 26,
+    "civilian_deaths": 0,
+    "timestamp": "1998-01-11 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 26"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
   },
   {
-    "type": "Conflict Incident",
-    "sub_type": "Pokot - Turkana",
-    "location": "Rift Valley province",
-    "county": "Rift Valley province",
-    "coordinates": [
-      0.5,
-      36.0
-    ],
+    "id": "UCDP-43793.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Baringo district",
+    "description": "Detected Kalenjin - Kikuyu conflict in Baringo district. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Baringo district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.666667,
+        36.0
+      ]
+    },
+    "fatalities": 26,
+    "civilian_deaths": 0,
+    "timestamp": "1998-01-11 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 26"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43846.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Molo town",
+    "description": "Detected Kalenjin - Kikuyu conflict in Molo town. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Molo town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        -0.25,
+        35.733333
+      ]
+    },
     "fatalities": 15,
+    "civilian_deaths": 0,
+    "timestamp": "1993-08-16 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 15"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44149.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Kikuyu",
+    "title": "Verified Conflict Incident: Burnt Forest",
+    "description": "Detected Kalenjin - Kikuyu conflict in Burnt Forest. Tactical engagement between Kalenjin and Kikuyu.",
+    "location": {
+      "name": "Burnt Forest",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.216667,
+        35.433333
+      ]
+    },
+    "fatalities": 16,
+    "civilian_deaths": 0,
+    "timestamp": "1992-12-12 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 16"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-37271.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Jie - Turkana",
+    "title": "Verified Conflict Incident: Oropoi location (Lokipoto sub location of Letea Location, Oropoi division)",
+    "description": "Detected Jie - Turkana conflict in Oropoi location (Lokipoto sub location of Letea Location, Oropoi division). Tactical engagement between Jie and Turkana.",
+    "location": {
+      "name": "Oropoi location (Lokipoto sub location of Letea Location, Oropoi division)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.783638,
+        34.231822
+      ]
+    },
+    "fatalities": 16,
+    "civilian_deaths": 0,
+    "timestamp": "2008-02-09 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 16"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Jie"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43912.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 7,
+    "civilian_deaths": 7,
+    "timestamp": "2008-05-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 7"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-34284.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Turkana",
+    "title": "Verified Conflict Incident: Turkana district, Rift Valley Province",
+    "description": "Detected Dassanetch - Turkana conflict in Turkana district, Rift Valley Province. Tactical engagement between Dassanetch and Turkana.",
+    "location": {
+      "name": "Turkana district, Rift Valley Province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 16,
+    "civilian_deaths": 0,
+    "timestamp": "1991-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 16"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43670.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Turkana",
+    "title": "Verified Conflict Incident: Rift Valley province",
+    "description": "Detected Pokot - Turkana conflict in Rift Valley province. Tactical engagement between Pokot and Turkana.",
+    "location": {
+      "name": "Rift Valley province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.5,
+        36.0
+      ]
+    },
+    "fatalities": 15,
+    "civilian_deaths": 0,
     "timestamp": "1999-06-22 00:00:00.000",
-    "source": "UCDP-GED-Official",
-    "risk_score": 100
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 15"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43707.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 7,
+    "civilian_deaths": 7,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 7"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43531.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Turkana",
+    "title": "Verified Conflict Incident: Arurum [phonetic] and Kaputir areas Turkana settlements",
+    "description": "Detected Pokot - Turkana conflict in Arurum [phonetic] and Kaputir areas Turkana settlements. Tactical engagement between Pokot and Turkana.",
+    "location": {
+      "name": "Arurum [phonetic] and Kaputir areas Turkana settlements",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 35,
+    "civilian_deaths": 0,
+    "timestamp": "1999-03-05 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 35"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44221.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Turkana",
+    "title": "Verified Conflict Incident: Samburu district",
+    "description": "Detected Pokot - Turkana conflict in Samburu district. Tactical engagement between Pokot and Turkana.",
+    "location": {
+      "name": "Samburu district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        1.25,
+        37.0
+      ]
+    },
+    "fatalities": 44,
+    "civilian_deaths": 0,
+    "timestamp": "1995-12-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 44"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43473.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Toposa - Turkana",
+    "title": "Verified Conflict Incident: Turkana district",
+    "description": "Detected Toposa - Turkana conflict in Turkana district. Tactical engagement between Toposa and Turkana.",
+    "location": {
+      "name": "Turkana district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 20,
+    "civilian_deaths": 0,
+    "timestamp": "2008-05-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 20"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Toposa"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-35777.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Nyangatom , Toposa - Turkana",
+    "title": "Verified Conflict Incident: Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province",
+    "description": "Detected Nyangatom , Toposa - Turkana conflict in Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province. Tactical engagement between Nyangatom , Toposa and Turkana.",
+    "location": {
+      "name": "Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        5.041775,
+        35.641494
+      ]
+    },
+    "fatalities": 58,
+    "civilian_deaths": 0,
+    "timestamp": "2006-01-13 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 58"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Nyangatom , Toposa"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43638.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "MDF - SLDF",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected MDF - SLDF conflict in Mt. Elgon district. Tactical engagement between MDF and SLDF.",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 32,
+    "civilian_deaths": 0,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 32"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving MDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-64432.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Samburu - Turkana",
+    "title": "Verified Conflict Incident: Baragoi area of Samburu North Sub County",
+    "description": "Detected Samburu - Turkana conflict in Baragoi area of Samburu North Sub County. Tactical engagement between Samburu and Turkana.",
+    "location": {
+      "name": "Baragoi area of Samburu North Sub County",
+      "region": "SAMBURU COUNTY",
+      "coordinates": [
+        1.783333,
+        36.783333
+      ]
+    },
+    "fatalities": 17,
+    "civilian_deaths": 0,
+    "timestamp": "2013-09-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 17"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Samburu"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43739.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (23 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 23,
+    "civilian_deaths": 23,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 23"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-29764.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Turkana",
+    "title": "Verified Conflict Incident: Todonyang Police Post (1 km from)",
+    "description": "Detected Dassanetch - Turkana conflict in Todonyang Police Post (1 km from). Tactical engagement between Dassanetch and Turkana.",
+    "location": {
+      "name": "Todonyang Police Post (1 km from)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        4.533333,
+        35.933333
+      ]
+    },
+    "fatalities": 25,
+    "civilian_deaths": 0,
+    "timestamp": "2011-05-02 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 25"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43708.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Kisumu town",
+    "description": "Detected Government of Kenya - Civilians conflict in Kisumu town. High civilian impact (44 fatalities).",
+    "location": {
+      "name": "Kisumu town",
+      "region": "NYANZA PROVINCE",
+      "coordinates": [
+        -0.1,
+        34.75
+      ]
+    },
+    "fatalities": 44,
+    "civilian_deaths": 44,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 44"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44432.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Turkana",
+    "title": "Verified Conflict Incident: northern Kenya",
+    "description": "Detected Dassanetch - Turkana conflict in northern Kenya. High civilian impact (4 fatalities).",
+    "location": {
+      "name": "northern Kenya",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.5,
+        36.0
+      ]
+    },
+    "fatalities": 28,
+    "civilian_deaths": 4,
+    "timestamp": "1997-06-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 28"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-206891.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Samburu - Turkana",
+    "title": "Verified Conflict Incident: Isiolo county",
+    "description": "Detected Samburu - Turkana conflict in Isiolo county. Tactical engagement between Samburu and Turkana.",
+    "location": {
+      "name": "Isiolo county",
+      "region": "ISIOLO COUNTY",
+      "coordinates": [
+        0.983333,
+        38.533333
+      ]
+    },
+    "fatalities": 17,
+    "civilian_deaths": 0,
+    "timestamp": "2015-05-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 17"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Samburu"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-208868.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Samburu - Turkana",
+    "title": "Verified Conflict Incident: Samburu county",
+    "description": "Detected Samburu - Turkana conflict in Samburu county. Tactical engagement between Samburu and Turkana.",
+    "location": {
+      "name": "Samburu county",
+      "region": "SAMBURU COUNTY",
+      "coordinates": [
+        1.333333,
+        37.116667
+      ]
+    },
+    "fatalities": 17,
+    "civilian_deaths": 0,
+    "timestamp": "2015-05-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 17"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Samburu"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43620.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Kisumu town",
+    "description": "Detected Government of Kenya - Civilians conflict in Kisumu town. High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Kisumu town",
+      "region": "NYANZA PROVINCE",
+      "coordinates": [
+        -0.1,
+        34.75
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2008-01-16 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-34264.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Turkana",
+    "title": "Verified Conflict Incident: Todenyang, Turkana district, Rift Valley Province",
+    "description": "Detected Dassanetch - Turkana conflict in Todenyang, Turkana district, Rift Valley Province. Tactical engagement between Dassanetch and Turkana.",
+    "location": {
+      "name": "Todenyang, Turkana district, Rift Valley Province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        4.533333,
+        35.933333
+      ]
+    },
+    "fatalities": 23,
+    "civilian_deaths": 0,
+    "timestamp": "2009-03-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 23"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44418.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (72 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 72,
+    "civilian_deaths": 72,
+    "timestamp": "2008-03-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 72"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-34231.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Nyangatom , Toposa",
+    "title": "Verified Conflict Incident: Dassenech country",
+    "description": "Detected Dassanetch - Nyangatom , Toposa conflict in Dassenech country. Tactical engagement between Dassanetch and Nyangatom , Toposa.",
+    "location": {
+      "name": "Dassenech country",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        4.443028,
+        35.988161
+      ]
+    },
+    "fatalities": 60,
+    "civilian_deaths": 0,
+    "timestamp": "1989-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 60"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43379.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Dassanetch - Turkana",
+    "title": "Verified Conflict Incident: Lokitaung town (near)",
+    "description": "Detected Dassanetch - Turkana conflict in Lokitaung town (near). Tactical engagement between Dassanetch and Turkana.",
+    "location": {
+      "name": "Lokitaung town (near)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        4.266667,
+        35.75
+      ]
+    },
+    "fatalities": 135,
+    "civilian_deaths": 0,
+    "timestamp": "2000-02-23 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 135"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Dassanetch"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43694.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (8 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 8,
+    "civilian_deaths": 8,
+    "timestamp": "2008-04-02 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 8"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-37556.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Jie - Turkana",
+    "title": "Verified Conflict Incident: Turkana district",
+    "description": "Detected Jie - Turkana conflict in Turkana district. Tactical engagement between Jie and Turkana.",
+    "location": {
+      "name": "Turkana district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 40,
+    "civilian_deaths": 0,
+    "timestamp": "2008-01-24 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 40"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Jie"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-37553.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Jie - Turkana",
+    "title": "Verified Conflict Incident: Turkana district",
+    "description": "Detected Jie - Turkana conflict in Turkana district. Tactical engagement between Jie and Turkana.",
+    "location": {
+      "name": "Turkana district",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 40,
+    "civilian_deaths": 0,
+    "timestamp": "1999-07-04 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 40"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Jie"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44063.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Garre subclan of Digil clan (Digil-Mirifle) - Murule subclan of Gugundabe clan (Hawiye)",
+    "title": "Verified Conflict Incident: Mandera town (Elgolisha village near)",
+    "description": "Detected Garre subclan of Digil clan (Digil-Mirifle) - Murule subclan of Gugundabe clan (Hawiye) conflict in Mandera town (Elgolisha village near). Tactical engagement between Garre subclan of Digil clan (Digil-Mirifle) and Murule subclan of Gugundabe clan (Hawiye).",
+    "location": {
+      "name": "Mandera town (Elgolisha village near)",
+      "region": "NORTH EASTERN PROVINCE",
+      "coordinates": [
+        3.936804,
+        41.858383
+      ]
+    },
+    "fatalities": 23,
+    "civilian_deaths": 0,
+    "timestamp": "2005-03-15 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 23"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Garre subclan of Digil clan (Digil-Mirifle)"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-290451.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Dandora Phase Four",
+    "description": "Detected Government of Kenya - Civilians conflict in Dandora Phase Four. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Dandora Phase Four",
+      "region": "NAIROBI CITY COUNTY",
+      "coordinates": [
+        -1.248506,
+        36.901874
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2018-10-26 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-31644.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Nairobi city (Eastleigh)",
+    "description": "Detected Al-Shabaab - Civilians conflict in Nairobi city (Eastleigh). High civilian impact (10 fatalities).",
+    "location": {
+      "name": "Nairobi city (Eastleigh)",
+      "region": "NAIROBI PROVINCE",
+      "coordinates": [
+        -1.283333,
+        36.816667
+      ]
+    },
+    "fatalities": 10,
+    "civilian_deaths": 10,
+    "timestamp": "2012-11-18 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 10"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-31591.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Garissa town",
+    "description": "Detected Al-Shabaab - Civilians conflict in Garissa town. High civilian impact (17 fatalities).",
+    "location": {
+      "name": "Garissa town",
+      "region": "NORTH EASTERN PROVINCE",
+      "coordinates": [
+        -0.453548,
+        39.640108
+      ]
+    },
+    "fatalities": 17,
+    "civilian_deaths": 17,
+    "timestamp": "2012-07-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 17"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-427556.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kenya: Northeastern Province and Coast",
+    "title": "Verified Conflict Incident: Bodhei area",
+    "description": "Detected Kenya: Northeastern Province and Coast conflict in Bodhei area. Tactical engagement between Government of Kenya and Al-Shabaab.",
+    "location": {
+      "name": "Bodhei area",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -1.85991,
+        40.71624
+      ]
+    },
+    "fatalities": 15,
+    "civilian_deaths": 0,
+    "timestamp": "2022-01-17 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 15"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-427605.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kenya: Northeastern Province and Coast",
+    "title": "Verified Conflict Incident: eight kilometres from Mandera town",
+    "description": "Detected Kenya: Northeastern Province and Coast conflict in eight kilometres from Mandera town. High civilian impact (10 fatalities).",
+    "location": {
+      "name": "eight kilometres from Mandera town",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 10,
+    "civilian_deaths": 10,
+    "timestamp": "2022-01-31 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 10"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-31069.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Mandera",
+    "description": "Detected Al-Shabaab - Civilians conflict in Mandera. High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Mandera",
+      "region": "NORTH EASTERN PROVINCE",
+      "coordinates": [
+        3.936804,
+        41.858383
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2011-11-24 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43769.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Mungiki - Civilians",
+    "title": "Verified Conflict Incident: Gathaithi (and Kiaruhiu villages inlarger Kirinyaga District, boundary to Nyeri East)",
+    "description": "Detected Mungiki - Civilians conflict in Gathaithi (and Kiaruhiu villages inlarger Kirinyaga District, boundary to Nyeri East). High civilian impact (29 fatalities).",
+    "location": {
+      "name": "Gathaithi (and Kiaruhiu villages inlarger Kirinyaga District, boundary to Nyeri East)",
+      "region": "CENTRAL PROVINCE",
+      "coordinates": [
+        -0.5,
+        37.333333
+      ]
+    },
+    "fatalities": 29,
+    "civilian_deaths": 29,
+    "timestamp": "2009-04-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 29"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Mungiki"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-262212.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Dandora",
+    "description": "Detected Government of Kenya - Civilians conflict in Dandora. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Dandora",
+      "region": "NAIROBI CITY COUNTY",
+      "coordinates": [
+        -1.248506,
+        36.901874
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2018-08-28 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43698.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Mungiki - Civilians",
+    "title": "Verified Conflict Incident: Nairobi city",
+    "description": "Detected Mungiki - Civilians conflict in Nairobi city. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Nairobi city",
+      "region": "NAIROBI PROVINCE",
+      "coordinates": [
+        -1.283333,
+        36.816667
+      ]
+    },
+    "fatalities": 7,
+    "civilian_deaths": 7,
+    "timestamp": "2009-01-10 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 7"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Mungiki"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43762.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Mungiki - Civilians",
+    "title": "Verified Conflict Incident: Naivasha town",
+    "description": "Detected Mungiki - Civilians conflict in Naivasha town. High civilian impact (19 fatalities).",
+    "location": {
+      "name": "Naivasha town",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        -0.716667,
+        36.433333
+      ]
+    },
+    "fatalities": 19,
+    "civilian_deaths": 19,
+    "timestamp": "2008-01-27 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 19"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Mungiki"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44298.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Orma, Wardei - Pokomo",
+    "title": "Verified Conflict Incident: Tana River district",
+    "description": "Detected Orma, Wardei - Pokomo conflict in Tana River district. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Tana River district",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -1.5,
+        39.5
+      ]
+    },
+    "fatalities": 14,
+    "civilian_deaths": 7,
+    "timestamp": "2001-11-17 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Orma, Wardei"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43573.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Mungiki - Civilians",
+    "title": "Verified Conflict Incident: Kariobangi village",
+    "description": "Detected Mungiki - Civilians conflict in Kariobangi village. High civilian impact (38 fatalities).",
+    "location": {
+      "name": "Kariobangi village",
+      "region": "NAIROBI PROVINCE",
+      "coordinates": [
+        -1.25,
+        36.883333
+      ]
+    },
+    "fatalities": 38,
+    "civilian_deaths": 38,
+    "timestamp": "2007-12-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 38"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Mungiki"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-249844.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Masaek and Kutere villages, Kopsiro",
+    "description": "Detected SLDF - Civilians conflict in Masaek and Kutere villages, Kopsiro. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Masaek and Kutere villages, Kopsiro",
+      "region": "BUNGOMA COUNTY",
+      "coordinates": [
+        0.871228,
+        34.594268
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2017-12-04 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44154.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Trans Nzoia district (Embakasi town)",
+    "description": "Detected SLDF - Civilians conflict in Trans Nzoia district (Embakasi town). High civilian impact (13 fatalities).",
+    "location": {
+      "name": "Trans Nzoia district (Embakasi town)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        1.016667,
+        35.0
+      ]
+    },
+    "fatalities": 13,
+    "civilian_deaths": 13,
+    "timestamp": "2008-03-03 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 13"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43850.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district (Chepyuk town)",
+    "description": "Detected SLDF - Civilians conflict in Mt. Elgon district (Chepyuk town). High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district (Chepyuk town)",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2008-02-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44375.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Chesakaki village",
+    "description": "Detected SLDF - Civilians conflict in Chesakaki village. High civilian impact (22 fatalities).",
+    "location": {
+      "name": "Chesakaki village",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.800175,
+        34.509092
+      ]
+    },
+    "fatalities": 22,
+    "civilian_deaths": 22,
+    "timestamp": "2008-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 22"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44421.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district (Kimama village)",
+    "description": "Detected SLDF - Civilians conflict in Mt. Elgon district (Kimama village). High civilian impact (22 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district (Kimama village)",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 22,
+    "civilian_deaths": 22,
+    "timestamp": "2007-12-31 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 22"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43455.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2007-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44098.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (15 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 15,
+    "civilian_deaths": 15,
+    "timestamp": "2006-04-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 15"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-62674.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Degodia - Garre",
+    "title": "Verified Conflict Incident: Jiriko village some 50 kms from Banisa town, Mandera County",
+    "description": "Detected Degodia - Garre conflict in Jiriko village some 50 kms from Banisa town, Mandera County. Tactical engagement between Degodia and Garre.",
+    "location": {
+      "name": "Jiriko village some 50 kms from Banisa town, Mandera County",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.9,
+        40.3
+      ]
+    },
+    "fatalities": 16,
+    "civilian_deaths": 0,
+    "timestamp": "2013-06-23 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 16"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Degodia"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-416006.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kenya: Northeastern Province and Coast",
+    "title": "Verified Conflict Incident: between Kayunga and Shangani in Lamu County \n\nnear the Somali border \n\nbetween Kiunga and Ishakani near Kenya-Somalia border",
+    "description": "Detected Kenya: Northeastern Province and Coast conflict in between Kayunga and Shangani in Lamu County \n\nnear the Somali border \n\nbetween Kiunga and Ishakani near Kenya-Somalia border. Tactical engagement between Government of Kenya and Al-Shabaab.",
+    "location": {
+      "name": "between Kayunga and Shangani in Lamu County \n\nnear the Somali border \n\nbetween Kiunga and Ishakani near Kenya-Somalia border",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -1.74544,
+        41.49081
+      ]
+    },
+    "fatalities": 15,
+    "civilian_deaths": 0,
+    "timestamp": "2021-09-26 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 15"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-62690.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Westgate shopping mall in Nairobi",
+    "description": "Detected Al-Shabaab - Civilians conflict in Westgate shopping mall in Nairobi. High civilian impact (61 fatalities).",
+    "location": {
+      "name": "Westgate shopping mall in Nairobi",
+      "region": "NAIROBI CITY COUNTY",
+      "coordinates": [
+        -1.283333,
+        36.816667
+      ]
+    },
+    "fatalities": 61,
+    "civilian_deaths": 61,
+    "timestamp": "2013-09-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 61"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-151294.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Mpeketoni which lies on the mainland some 30 kilometres (20 miles) southwest of Lamu island",
+    "description": "Detected Al-Shabaab - Civilians conflict in Mpeketoni which lies on the mainland some 30 kilometres (20 miles) southwest of Lamu island. High civilian impact (48 fatalities).",
+    "location": {
+      "name": "Mpeketoni which lies on the mainland some 30 kilometres (20 miles) southwest of Lamu island",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.392715,
+        40.694218
+      ]
+    },
+    "fatalities": 48,
+    "civilian_deaths": 48,
+    "timestamp": "2014-06-15 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 48"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-35769.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Nyangatom  - Turkana",
+    "title": "Verified Conflict Incident: Turkana district, Rift Valley Province",
+    "description": "Detected Nyangatom  - Turkana conflict in Turkana district, Rift Valley Province. Tactical engagement between Nyangatom and Turkana.",
+    "location": {
+      "name": "Turkana district, Rift Valley Province",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        3.0,
+        35.5
+      ]
+    },
+    "fatalities": 157,
+    "civilian_deaths": 0,
+    "timestamp": "1993-07-05 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 157"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Nyangatom"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44383.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "al-Qaida  - Civilians",
+    "title": "Verified Conflict Incident: Mombasa town",
+    "description": "Detected al-Qaida  - Civilians conflict in Mombasa town. High civilian impact (13 fatalities).",
+    "location": {
+      "name": "Mombasa town",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -4.05,
+        39.666667
+      ]
+    },
+    "fatalities": 13,
+    "civilian_deaths": 13,
+    "timestamp": "2002-11-28 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 13"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving al-Qaida"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-480575.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: villages of Juhudi and Salama\n\nnear Mpeketoni",
+    "description": "Detected Al-Shabaab - Civilians conflict in villages of Juhudi and Salama\n\nnear Mpeketoni. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "villages of Juhudi and Salama\n\nnear Mpeketoni",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.392715,
+        40.694218
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2023-06-24 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-433917.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Majengo, within Boni forest",
+    "description": "Detected Al-Shabaab - Civilians conflict in Majengo, within Boni forest. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Majengo, within Boni forest",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -1.717327,
+        41.33483
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2022-03-12 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-433920.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: a construction site in Lamu County",
+    "description": "Detected Al-Shabaab - Civilians conflict in a construction site in Lamu County. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "a construction site in Lamu County",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.033333,
+        40.783333
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2022-03-11 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-428271.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Lango la Simba area",
+    "description": "Detected Al-Shabaab - Civilians conflict in Lango la Simba area. High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Lango la Simba area",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.29594,
+        40.258
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2022-01-26 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-277166.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: the DusitD2 compound, 14 Riverside Drive, Nairobi",
+    "description": "Detected Al-Shabaab - Civilians conflict in the DusitD2 compound, 14 Riverside Drive, Nairobi. High civilian impact (20 fatalities).",
+    "location": {
+      "name": "the DusitD2 compound, 14 Riverside Drive, Nairobi",
+      "region": "NAIROBI CITY COUNTY",
+      "coordinates": [
+        -1.283333,
+        36.816667
+      ]
+    },
+    "fatalities": 20,
+    "civilian_deaths": 20,
+    "timestamp": "2019-01-15 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 20"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-239544.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Pandaguo village",
+    "description": "Detected Al-Shabaab - Civilians conflict in Pandaguo village. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Pandaguo village",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.234716,
+        40.47781
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2017-07-08 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-233620.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Mandera town",
+    "description": "Detected Al-Shabaab - Civilians conflict in Mandera town. High civilian impact (12 fatalities).",
+    "location": {
+      "name": "Mandera town",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 12,
+    "civilian_deaths": 12,
+    "timestamp": "2016-10-25 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 12"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-233615.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Mandera town",
+    "description": "Detected Al-Shabaab - Civilians conflict in Mandera town. High civilian impact (6 fatalities).",
+    "location": {
+      "name": "Mandera town",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 6,
+    "timestamp": "2016-10-06 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-233265.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: near El Wak in Mandera county",
+    "description": "Detected Al-Shabaab - Civilians conflict in near El Wak in Mandera county. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "near El Wak in Mandera county",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        2.811916,
+        40.92966
+      ]
+    },
+    "fatalities": 6,
+    "civilian_deaths": 5,
+    "timestamp": "2016-06-30 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 6"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-206610.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Soko Mbuzi, a livestock market just outside the town of Mandera",
+    "description": "Detected Al-Shabaab - Civilians conflict in Soko Mbuzi, a livestock market just outside the town of Mandera. High civilian impact (14 fatalities).",
+    "location": {
+      "name": "Soko Mbuzi, a livestock market just outside the town of Mandera",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 14,
+    "civilian_deaths": 14,
+    "timestamp": "2015-07-07 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-206331.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Moi University's College in Garissa",
+    "description": "Detected Al-Shabaab - Civilians conflict in Moi University's College in Garissa. High civilian impact (142 fatalities).",
+    "location": {
+      "name": "Moi University's College in Garissa",
+      "region": "GARISSA COUNTY",
+      "coordinates": [
+        -0.453548,
+        39.640108
+      ]
+    },
+    "fatalities": 152,
+    "civilian_deaths": 142,
+    "timestamp": "2015-04-02 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 152"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-152567.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Koromey, about 20 km from Mandera",
+    "description": "Detected Al-Shabaab - Civilians conflict in Koromey, about 20 km from Mandera. High civilian impact (36 fatalities).",
+    "location": {
+      "name": "Koromey, about 20 km from Mandera",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 36,
+    "civilian_deaths": 36,
+    "timestamp": "2014-12-02 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 36"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-152545.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: a few kilometres from Mandera, northern Kenya",
+    "description": "Detected Al-Shabaab - Civilians conflict in a few kilometres from Mandera, northern Kenya. High civilian impact (28 fatalities).",
+    "location": {
+      "name": "a few kilometres from Mandera, northern Kenya",
+      "region": "MANDERA COUNTY",
+      "coordinates": [
+        3.936631,
+        41.867011
+      ]
+    },
+    "fatalities": 28,
+    "civilian_deaths": 28,
+    "timestamp": "2014-11-22 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 28"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-151302.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Hindi trading centre near the town of Mpeketoni and ca 15 km from Lamu",
+    "description": "Detected Al-Shabaab - Civilians conflict in Hindi trading centre near the town of Mpeketoni and ca 15 km from Lamu. High civilian impact (13 fatalities).",
+    "location": {
+      "name": "Hindi trading centre near the town of Mpeketoni and ca 15 km from Lamu",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.17838,
+        40.81878
+      ]
+    },
+    "fatalities": 13,
+    "civilian_deaths": 13,
+    "timestamp": "2014-07-05 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 13"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-151296.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Al-Shabaab - Civilians",
+    "title": "Verified Conflict Incident: Poromoko area near Mpeketoni",
+    "description": "Detected Al-Shabaab - Civilians conflict in Poromoko area near Mpeketoni. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Poromoko area near Mpeketoni",
+      "region": "LAMU COUNTY",
+      "coordinates": [
+        -2.392715,
+        40.694218
+      ]
+    },
+    "fatalities": 9,
+    "civilian_deaths": 7,
+    "timestamp": "2014-06-16 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 9"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Al-Shabaab"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44066.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Turkana",
+    "title": "Verified Conflict Incident: Turkana - Pokot border",
+    "description": "Detected Pokot - Turkana conflict in Turkana - Pokot border. Tactical engagement between Pokot and Turkana.",
+    "location": {
+      "name": "Turkana - Pokot border",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        2.066667,
+        35.466667
+      ]
+    },
+    "fatalities": 100,
+    "civilian_deaths": 0,
+    "timestamp": "1999-03-05 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 100"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44116.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "SLDF - Civilians",
+    "title": "Verified Conflict Incident: Mt. Elgon district",
+    "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
+    "location": {
+      "name": "Mt. Elgon district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.95,
+        34.616667
+      ]
+    },
+    "fatalities": 7,
+    "civilian_deaths": 7,
+    "timestamp": "2006-01-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 7"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving SLDF"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44376.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Borana - Gabra",
+    "title": "Verified Conflict Incident: Dukana village",
+    "description": "Detected Borana - Gabra conflict in Dukana village. Tactical engagement between Borana and Gabra.",
+    "location": {
+      "name": "Dukana village",
+      "region": "EASTERN PROVINCE",
+      "coordinates": [
+        3.983333,
+        37.266667
+      ]
+    },
+    "fatalities": 21,
+    "civilian_deaths": 0,
+    "timestamp": "2006-08-26 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 21"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Borana"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43719.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Samburu",
+    "title": "Verified Conflict Incident: Laikipia North District (Mogurak village)",
+    "description": "Detected Pokot - Samburu conflict in Laikipia North District (Mogurak village). Tactical engagement between Pokot and Samburu.",
+    "location": {
+      "name": "Laikipia North District (Mogurak village)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        0.416667,
+        36.75
+      ]
+    },
+    "fatalities": 32,
+    "civilian_deaths": 0,
+    "timestamp": "2009-09-14 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 32"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44433.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Samburu",
+    "title": "Verified Conflict Incident: Samburu district (Samburu central)",
+    "description": "Detected Pokot - Samburu conflict in Samburu district (Samburu central). Tactical engagement between Pokot and Samburu.",
+    "location": {
+      "name": "Samburu district (Samburu central)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        1.25,
+        37.0
+      ]
+    },
+    "fatalities": 14,
+    "civilian_deaths": 0,
+    "timestamp": "2009-09-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-44113.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Government of Kenya - Civilians",
+    "title": "Verified Conflict Incident: Kenya",
+    "description": "Detected Government of Kenya - Civilians conflict in Kenya. High civilian impact (5 fatalities).",
+    "location": {
+      "name": "Kenya",
+      "region": "NAN",
+      "coordinates": [
+        1.0,
+        38.0
+      ]
+    },
+    "fatalities": 5,
+    "civilian_deaths": 5,
+    "timestamp": "2005-05-01 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 5"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-35263.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Ethiopia: Oromiya",
+    "title": "Verified Conflict Incident: Dambala Fuchana village (65 km from the north Kenyan border town of Moyale)",
+    "description": "Detected Ethiopia: Oromiya conflict in Dambala Fuchana village (65 km from the north Kenyan border town of Moyale). Tactical engagement between Government of Ethiopia and OLF.",
+    "location": {
+      "name": "Dambala Fuchana village (65 km from the north Kenyan border town of Moyale)",
+      "region": "EASTERN PROVINCE",
+      "coordinates": [
+        3.5,
+        38.75
+      ]
+    },
+    "fatalities": 18,
+    "civilian_deaths": 0,
+    "timestamp": "1999-01-16 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 18"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Ethiopia"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43963.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Orma, Wardei - Pokomo",
+    "title": "Verified Conflict Incident: Tana River district",
+    "description": "Detected Orma, Wardei - Pokomo conflict in Tana River district. Tactical engagement between Orma, Wardei and Pokomo.",
+    "location": {
+      "name": "Tana River district",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -1.5,
+        39.5
+      ]
+    },
+    "fatalities": 14,
+    "civilian_deaths": 0,
+    "timestamp": "2001-12-08 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Orma, Wardei"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-40790.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Orma - Pokomo",
+    "title": "Verified Conflict Incident: Kilelengwani village",
+    "description": "Detected Orma - Pokomo conflict in Kilelengwani village. Tactical engagement between Orma and Pokomo.",
+    "location": {
+      "name": "Kilelengwani village",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -2.449116,
+        40.485851
+      ]
+    },
+    "fatalities": 38,
+    "civilian_deaths": 0,
+    "timestamp": "2012-09-10 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 38"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Orma"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-40795.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Orma - Pokomo",
+    "title": "Verified Conflict Incident: Reketa area of Tarassa, Tana River district",
+    "description": "Detected Orma - Pokomo conflict in Reketa area of Tarassa, Tana River district. Tactical engagement between Orma and Pokomo.",
+    "location": {
+      "name": "Reketa area of Tarassa, Tana River district",
+      "region": "COAST PROVINCE",
+      "coordinates": [
+        -2.44188,
+        40.17075
+      ]
+    },
+    "fatalities": 53,
+    "civilian_deaths": 0,
+    "timestamp": "2012-08-21 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 53"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Orma"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43699.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kalenjin - Luhya",
+    "title": "Verified Conflict Incident: Bungoma district",
+    "description": "Detected Kalenjin - Luhya conflict in Bungoma district. Tactical engagement between Kalenjin and Luhya.",
+    "location": {
+      "name": "Bungoma district",
+      "region": "WESTERN PROVINCE",
+      "coordinates": [
+        0.75,
+        34.583333
+      ]
+    },
+    "fatalities": 14,
+    "civilian_deaths": 0,
+    "timestamp": "1992-04-12 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 14"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Kalenjin"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-322375.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kenya: Northeastern Province and Coast",
+    "title": "Verified Conflict Incident: area called Kotulo between Wargadadud and Kutulo town in in Tarbaj subcounty Wajir county\n\n20 Kms from Kotulo town in Tarbaj constituency, Wajir,\n\nat Maadathe area some 5 kilometres from Kotulo in the northeastern part of the country",
+    "description": "Detected Kenya: Northeastern Province and Coast conflict in area called Kotulo between Wargadadud and Kutulo town in in Tarbaj subcounty Wajir county\n\n20 Kms from Kotulo town in Tarbaj constituency, Wajir,\n\nat Maadathe area some 5 kilometres from Kotulo in the northeastern part of the country. High civilian impact (3 fatalities).",
+    "location": {
+      "name": "area called Kotulo between Wargadadud and Kutulo town in in Tarbaj subcounty Wajir county\n\n20 Kms from Kotulo town in Tarbaj constituency, Wajir,\n\nat Maadathe area some 5 kilometres from Kotulo in the northeastern part of the country",
+      "region": "WAJIR COUNTY",
+      "coordinates": [
+        2.31,
+        40.3616
+      ]
+    },
+    "fatalities": 11,
+    "civilian_deaths": 3,
+    "timestamp": "2019-12-06 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 11"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-484293.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Kenya: Northeastern Province and Coast",
+    "title": "Verified Conflict Incident: along Lamu-Garsen road, Lamu County.",
+    "description": "Detected Kenya: Northeastern Province and Coast conflict in along Lamu-Garsen road, Lamu County.. Tactical engagement between Government of Kenya and Al-Shabaab.",
+    "location": {
+      "name": "along Lamu-Garsen road, Lamu County.",
+      "region": "NAN",
+      "coordinates": [
+        -2.389862,
+        40.526797
+      ]
+    },
+    "fatalities": 60,
+    "civilian_deaths": 0,
+    "timestamp": "2023-08-02 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 60"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Government of Kenya"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-43691.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot, Samburu - Turkana",
+    "title": "Verified Conflict Incident: Marti area (near)",
+    "description": "Detected Pokot, Samburu - Turkana conflict in Marti area (near). Tactical engagement between Pokot, Samburu and Turkana.",
+    "location": {
+      "name": "Marti area (near)",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        1.466667,
+        36.716667
+      ]
+    },
+    "fatalities": 51,
+    "civilian_deaths": 0,
+    "timestamp": "1996-12-03 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 51"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot, Samburu"
+      }
+    ]
+  },
+  {
+    "id": "UCDP-62637.0",
+    "type": "CONFLICT_ZONE",
+    "sub_type": "Pokot - Turkana",
+    "title": "Verified Conflict Incident: Kaptir, a remote village in the arid northern Turkana region",
+    "description": "Detected Pokot - Turkana conflict in Kaptir, a remote village in the arid northern Turkana region. High civilian impact (4 fatalities).",
+    "location": {
+      "name": "Kaptir, a remote village in the arid northern Turkana region",
+      "region": "RIFT VALLEY PROVINCE",
+      "coordinates": [
+        2.076558,
+        35.455778
+      ]
+    },
+    "fatalities": 8,
+    "civilian_deaths": 4,
+    "timestamp": "2013-02-08 00:00:00.000",
+    "source": "UCDP-GED-V24",
+    "risk_score": 100,
+    "threatLevel": "CRITICAL",
+    "status": "VERIFIED_HISTORICAL",
+    "aiConfidence": 98,
+    "aiFactors": [
+      {
+        "name": "Spatial Proximity",
+        "weight": 0.4,
+        "description": "Recurring conflict corridor"
+      },
+      {
+        "name": "Fatality Intensity",
+        "weight": 0.5,
+        "description": "Best estimate: 8"
+      },
+      {
+        "name": "Actor Attribution",
+        "weight": 0.1,
+        "description": "Involving Pokot"
+      }
+    ]
   }
 ]
