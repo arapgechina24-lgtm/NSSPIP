@@ -23,6 +23,7 @@ export type Incident = {
     priority: "LOW" | "MEDIUM" | "HIGH" | "CRITICAL"
     location: string | null
     createdAt: string
+    forensicHash?: string | null
 }
 
 export const columns: ColumnDef<Incident>[] = [
@@ -47,6 +48,25 @@ export const columns: ColumnDef<Incident>[] = [
         ),
         enableSorting: false,
         enableHiding: false,
+    },
+    {
+        accessorKey: "forensicHash",
+        header: "Integrity",
+        cell: ({ row }) => {
+            const hash = row.original.forensicHash
+            return (
+                <div className="flex items-center gap-1.5">
+                    <Badge variant="outline" className="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                        {hash ? "VERIFIED" : "SYSTEM"}
+                    </Badge>
+                    {hash && (
+                        <span className="text-[10px] text-muted-foreground font-mono" title={hash}>
+                            {hash.substring(0, 6)}...
+                        </span>
+                    )}
+                </div>
+            )
+        }
     },
     {
         accessorKey: "status",

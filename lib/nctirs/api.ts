@@ -57,6 +57,9 @@ export interface DBIncident {
     detectedAt: string
     resolvedAt: string | null
     createdById: string | null
+    forensicHash: string | null
+    aiScore: number | null
+    aiFactors: string | null
 }
 
 export async function fetchIncidents(options?: {
@@ -122,7 +125,9 @@ function mapDBIncidentToSecurityIncident(db: DBIncident): SecurityIncident {
         affectedArea: Math.floor(Math.random() * 50) + 1, // Not stored in DB, generate placeholder
         casualties: undefined, // Not stored in DB
         suspects: undefined, // Not stored in DB
-        aiConfidence: 75 + Math.floor(Math.random() * 20), // Not stored in DB, generate realistic value
+        aiConfidence: db.aiScore || 75 + Math.floor(Math.random() * 20),
+        aiFactors: db.aiFactors ? JSON.parse(db.aiFactors) : [],
+        forensicHash: db.forensicHash || undefined,
         sources: ['Database', 'API'].slice(0, Math.floor(Math.random() * 2) + 1), // Placeholder
     }
 }

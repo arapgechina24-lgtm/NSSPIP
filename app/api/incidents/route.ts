@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
+import { createHash } from "crypto";
 
 const prisma = new PrismaClient();
 
@@ -42,6 +43,13 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
+        // --- FORENSIC-GRADE AUDIT TRAIL ---
+        // Generate a SHA-256 fingerprint of the core evidence data
+        // (timestamp + author + location + description)
+        const timestamp = new Date().toISOString();
+        const forensicPayload = `${timestamp}|${reportedBy}|${location}|${description}`;
+        const hash = createHash("sha256").update(forensicPayload).digest("hex");
+
         // 1. Save Preliminary Incident to Database
         const incident = await prisma.incident.create({
             data: {
@@ -53,11 +61,11 @@ export async function POST(request: NextRequest) {
                 reportedBy,
                 priority: priority || "MEDIUM",
                 status: "OPEN",
+                forensicHash: hash,
             },
         });
 
         // 2. Trigger AI Risk Scoring (Async)
-        // We don't await this to keep the response snappy for the mobile app
         if (latitude && longitude) {
             fetch(`${AI_ENGINE_URL}/predict/risk-score`, {
                 method: "POST",
@@ -70,21 +78,22 @@ export async function POST(request: NextRequest) {
             })
                 .then((res) => res.json())
                 .then(async (aiResult) => {
-                    // 3. Update Incident with AI Score and Results
-                    // Note: In a production app, we might use a background job or WebSockets to push this to the UI
+                    // 3. Update Incident with Persisted XAI Scores and Factors
                     await prisma.incident.update({
                         where: { id: incident.id },
                         data: {
-                            // We store the result in encryptedDetails or a new field if we chose to add it
-                            // For now, let's prepend it to the description or store in encryptedDetails
+                            aiScore: aiResult.risk_score,
+                            aiFactors: JSON.stringify(aiResult.contributing_factors),
+                            // Backwards compatibility for the generic details field
                             encryptedDetails: JSON.stringify({
                                 ai_score: aiResult.risk_score,
                                 ai_level: aiResult.risk_level,
                                 factors: aiResult.contributing_factors,
+                                evidence_id: hash,
                             }),
                         },
                     });
-                    console.log(`✅ AI Risk Scored for Incident ${incident.id}: ${aiResult.risk_score}`);
+                    console.log(`✅ AI Risk Scored & Hashed for Incident ${incident.id}: ${aiResult.risk_score}`);
                 })
                 .catch((err) => console.error("AI Scoring Failed:", err));
         }

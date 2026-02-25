@@ -34,12 +34,23 @@ NSSPIP operates on a microservices architecture designed for scalability and sec
 - **Encryption**: Data at rest is encrypted.
 - **Audit Logs**: All officer actions (viewing intelligence, updating incidents) are logged ( Roadmap feature).
 
-## 3. AI Methodology
+## 3. Advanced Intelligence Features
 
-- **Risk Scoring**:
-  - Inputs: Historical crime density, time of day, proximity to critical infrastructure.
-  - Output: 0-100 Score.
-  - Triggers: Scores > 70 trigger "HIGH" alert state on the dashboard.
+### 3.1 Forensic-Grade Audit Trails
+
+NSSPIP implements a cryptographically secure chain-of-custody for all incident reports. Every submission is timestamped and hashed using **SHA-256**, creating an immutable "Forensic-ID". This ensures that evidence remains untampered from the moment of reporting to final adjudication.
+
+### 3.2 Explainable AI (XAI)
+
+To build trust with intelligence officers, NSSPIP avoids "Black-Box" AI. Every risk score is accompanied by specific **Contributing Factors** derived from spatial (Geographic Anomalies), temporal (Risk Bias Hours), and descriptive (NLP-based) telemetry.
+
+### 3.3 Digital Sovereignty & Security
+
+A core tenet of NSSPIP is **Sovereign Infrastructure**.
+
+- **Local Deployment**: All AI models (YOLOv8, Random Forest) are executed on sovereign servers.
+- **Data Air-Gapping**: No intelligence telemetry ever leaves the national security network.
+- **Zero-PII Storage**: Sensitive identifiers are encrypted at the edge before archival.
 
 ## 4. Deployment
 

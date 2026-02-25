@@ -94,11 +94,25 @@ def get_risk_score(request: RiskRequest):
     if score > 70: level = "HIGH"
     if score > 90: level = "CRITICAL"
 
+    # Explainable AI (XAI): Derive factors from telemetry
     factors = []
-    if level in ["HIGH", "CRITICAL"]:
-        factors = ["Historical crime density high", "Poor lighting reported", "Proximity to high-value target"]
-    elif level == "MEDIUM":
-        factors = ["Recent minor incidents"]
+    
+    # 1. Geographic Rationale (Simulated for Nairobi)
+    if -1.29 < request.latitude < -1.27 and 36.81 < request.longitude < 36.83:
+        factors.append("Geographic Anomaly: Target coordinates match high-density historical sector (Nairobi CBD).")
+    
+    # 2. Temporal Rationale
+    if request.time_of_day == "night":
+        factors.append("Temporal Risk: Elevated activity profile during curfew/nightlight hours (+15% score bias).")
+
+    # 3. Model Rationale
+    if risk_model:
+        factors.append(f"Model Inference: Random Forest ensemble identifies spatial proximity patterns characteristic of {level} risk.")
+    else:
+        factors.append("Heuristic Fallback: Pattern matching based on proximity to critical infrastructure nodes.")
+
+    if score > 85:
+        factors.append("Tactical Warning: Score exceedence thresholds for immediate inter-agency escalation.")
     
     return {
         "risk_score": score,

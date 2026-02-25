@@ -83,6 +83,14 @@ model Incident {
   
   // Zero PII: All sensitive details must be encrypted before storage
   encryptedDetails String? @db.Text // JSON string of encrypted fields
+  
+  // Forensic-Grade Audit Trail
+  forensicHash     String? // SHA-256 fingerprint for data integrity
+  
+  // Explainable AI (XAI)
+  aiScore          Int?    // Persisted AI Risk Score
+  aiFactors        String? @db.Text // JSON string of contributing factors
+  
   reportedBy  String
   reporter    User           @relation(fields: [reportedBy], references: [id])
   createdAt   DateTime       @default(now())
