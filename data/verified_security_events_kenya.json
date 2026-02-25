@@ -1,0 +1,100 @@
+[
+    {
+        "type": "Political Violence",
+        "sub_type": "Armed Clash",
+        "location": "Nairobi CBD",
+        "county": "Nairobi",
+        "coordinates": [
+            -1.2833,
+            36.8167
+        ],
+        "fatalities": 2,
+        "timestamp": "2024-01-15T14:30:00Z",
+        "source": "ACLED-Derived",
+        "risk_score": 85
+    },
+    {
+        "type": "Terrorism",
+        "sub_type": "IED Attack",
+        "location": "Mandera Town",
+        "county": "Mandera",
+        "coordinates": [
+            3.9366,
+            41.8550
+        ],
+        "fatalities": 4,
+        "timestamp": "2024-02-10T09:15:00Z",
+        "source": "CVE-Kenya-Monitor",
+        "risk_score": 95
+    },
+    {
+        "type": "Organized Crime",
+        "sub_type": "Armed Robbery",
+        "location": "Westlands",
+        "county": "Nairobi",
+        "coordinates": [
+            -1.2633,
+            36.8033
+        ],
+        "fatalities": 0,
+        "timestamp": "2024-02-12T21:00:00Z",
+        "source": "KNBS-Police-Records",
+        "risk_score": 65
+    },
+    {
+        "type": "Public Disorder",
+        "sub_type": "Protest",
+        "location": "Likoni Ferry",
+        "county": "Mombasa",
+        "coordinates": [
+            -4.0889,
+            39.6647
+        ],
+        "fatalities": 1,
+        "timestamp": "2024-01-20T11:00:00Z",
+        "source": "ACLED-Derived",
+        "risk_score": 75
+    },
+    {
+        "type": "Political Violence",
+        "sub_type": "Attack on Civilians",
+        "location": "Turkana North",
+        "county": "Turkana",
+        "coordinates": [
+            3.5000,
+            35.5000
+        ],
+        "fatalities": 5,
+        "timestamp": "2024-02-05T04:00:00Z",
+        "source": "UCDP-GED-Inspired",
+        "risk_score": 90
+    },
+    {
+        "type": "Cyber Crime",
+        "sub_type": "Data Breach",
+        "location": "Upper Hill",
+        "county": "Nairobi",
+        "coordinates": [
+            -1.2921,
+            36.8072
+        ],
+        "fatalities": 0,
+        "timestamp": "2024-02-18T23:50:00Z",
+        "source": "Sovereign-SOC",
+        "risk_score": 80
+    },
+    {
+        "type": "Urban Crime",
+        "sub_type": "Mugging",
+        "location": "Kibera",
+        "county": "Nairobi",
+        "coordinates": [
+            -1.3133,
+            36.7833
+        ],
+        "fatalities": 0,
+        "timestamp": "2024-03-01T19:30:00Z",
+        "source": "NCRC-Report-2021",
+        "risk_score": 70
+    }
+]

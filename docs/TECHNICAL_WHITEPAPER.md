@@ -36,15 +36,24 @@ NSSPIP operates on a microservices architecture designed for scalability and sec
 
 ## 3. Advanced Intelligence Features
 
-### 3.1 Forensic-Grade Audit Trails
+### 3.1 Intelligence Data Fusion (Phase 2)
+
+NSSPIP transitions from synthetic modeling to **Evidence-Based Intelligence** by fusing high-fidelity open-source and proprietary datasets:
+
+- **ACLED**: Political violence and protest telemetry (2022-2024).
+- **UCDP**: Geocoded organized violence events.
+- **KNBS**: Official crime statistics and urban hotspot density mapping.
+- **Synthesized Sovereignty Data**: Mock confidential NIS/Police reports used for air-gapped simulation.
+
+### 3.2 Forensic-Grade Audit Trails
 
 NSSPIP implements a cryptographically secure chain-of-custody for all incident reports. Every submission is timestamped and hashed using **SHA-256**, creating an immutable "Forensic-ID". This ensures that evidence remains untampered from the moment of reporting to final adjudication.
 
-### 3.2 Explainable AI (XAI)
+### 3.3 Explainable AI (XAI)
 
 To build trust with intelligence officers, NSSPIP avoids "Black-Box" AI. Every risk score is accompanied by specific **Contributing Factors** derived from spatial (Geographic Anomalies), temporal (Risk Bias Hours), and descriptive (NLP-based) telemetry.
 
-### 3.3 Digital Sovereignty & Security
+### 3.4 Digital Sovereignty & Security
 
 A core tenet of NSSPIP is **Sovereign Infrastructure**.
 

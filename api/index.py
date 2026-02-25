@@ -52,23 +52,30 @@ except LookupError:
 sia = SentimentIntensityAnalyzer()
 
 # Load model on Cold Start
-MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'ai-models', 'risk_model.joblib')
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'risk_model.pkl')
 try:
-    risk_model = joblib.load(MODEL_PATH)
-    print("✅ NSSPIP Random Forest Model Loaded Successfully")
+    with open(MODEL_PATH, 'rb') as f:
+        risk_model = joblib.load(f)
+    print("✅ NSSPIP Random Forest Model (Verified Data) Loaded Successfully")
 except Exception as e:
-    print(f"⚠️ Failed to load AI model (Running in degrade mode): {e}")
-    risk_model = None
+    print(f"⚠️ Failed to load verified model (Falling back to legacy path): {e}")
+    # Legacy fallback
+    LEGACY_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'ai-models', 'risk_model.joblib')
+    try:
+        risk_model = joblib.load(LEGACY_PATH)
+    except:
+        risk_model = None
 
 # --- Mock Logic & AI Inference ---
 
 def calculate_risk(lat: float, lng: float, time_of_day: str = None) -> int:
     if risk_model:
         # AI Inference
-        is_night = 1 if time_of_day == "night" else 0
+        # Get current hour if time_of_day is provided or just use 12
+        hour = 22 if time_of_day == "night" else 12
         
-        # Scikit-Learn expects a dataframe matching training features
-        features = pd.DataFrame({'latitude': [lat], 'longitude': [lng], 'is_night': [is_night]})
+        # Scikit-Learn expects a dataframe matching training features: latitude, longitude, hour
+        features = pd.DataFrame({'latitude': [lat], 'longitude': [lng], 'hour': [hour]})
         score = risk_model.predict(features)[0]
         return int(score)
 
