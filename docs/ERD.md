@@ -60,7 +60,10 @@ erDiagram
         String location
         Float latitude
         Float longitude
-        String encryptedDetails "JSON encrypted specifics"
+        String forensicHash "SHA-256 Audit Fingerprint"
+        Int aiScore "XAI Risk Score"
+        String aiFactors "XAI Rationale (JSON)"
+        String encryptedDetails "JSON encrypted PII"
         String reportedBy FK
         DateTime createdAt
         DateTime updatedAt

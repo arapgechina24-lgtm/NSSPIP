@@ -1,0 +1,72 @@
+{
+    "project": "NSSPIP",
+    "dataset": "Aggregated Historical Crime Kenya (2023-2024)",
+    "source": "Synthesized/Public Domain Aggregation (Mock)",
+    "metadata": {
+        "granularity": "County/Ward",
+        "categories": [
+            "Violent Crime",
+            "Property Crime",
+            "Emerging Threats",
+            "Cyber"
+        ]
+    },
+    "data": [
+        {
+            "region": "Nairobi",
+            "county": "Nairobi CBD",
+            "coordinates": [
+                -1.2864,
+                36.8172
+            ],
+            "incident_count": 1250,
+            "top_threat": "Property Crime",
+            "risk_bias": 0.85
+        },
+        {
+            "region": "Mombasa",
+            "county": "Likoni",
+            "coordinates": [
+                -4.0889,
+                39.6647
+            ],
+            "incident_count": 450,
+            "top_threat": "Trafficking",
+            "risk_bias": 0.72
+        },
+        {
+            "region": "Rift Valley",
+            "county": "Nakuru",
+            "coordinates": [
+                -0.3031,
+                36.08
+            ],
+            "incident_count": 320,
+            "top_threat": "Public Disorder",
+            "risk_bias": 0.45
+        },
+        {
+            "region": "North Eastern",
+            "county": "Mandera",
+            "coordinates": [
+                3.9366,
+                41.855
+            ],
+            "incident_count": 180,
+            "top_threat": "Border Security",
+            "risk_bias": 0.92
+        },
+        {
+            "region": "Western",
+            "county": "Kisumu",
+            "coordinates": [
+                -0.0917,
+                34.768
+            ],
+            "incident_count": 290,
+            "top_threat": "Violent Crime",
+            "risk_bias": 0.58
+        }
+    ],
+    "forensic_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

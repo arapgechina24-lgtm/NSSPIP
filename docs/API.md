@@ -29,9 +29,9 @@ The backend consists of two integrated layers:
   "risk_score": 77,
   "risk_level": "HIGH",
   "contributing_factors": [
-    "Historical crime density high",
-    "Poor lighting reported",
-    "Proximity to high-value target"
+    "Geographic Anomaly: Target coordinates match high-density historical sector (Nairobi CBD).",
+    "Temporal Risk: Elevated activity profile during curfew hours (+15% score bias).",
+    "Model Inference: Random Forest ensemble identifies spatial proximity patterns."
   ]
 }
 ```
