@@ -35,7 +35,7 @@ import { VoiceCommandPanel } from "@/components/nctirs/shared/VoiceCommandPanel"
 // Analytics tracking
 import { trackPageView, trackAction, trackPerformance } from "@/lib/nctirs/analytics"
 // API Client for real data
-import { fetchIncidents, fetchThreats } from "@/lib/nctirs/api"
+import { fetchIncidents, fetchThreats, fetchVerifiedEvents, VerifiedEvent } from "@/lib/nctirs/api"
 // Types
 import type {
     SecurityIncident,
@@ -129,6 +129,7 @@ interface DashboardData {
     wildlife: WildlifePing[];
     sentiment: SocialSentiment[];
     cyberTraces: ISPTrace[];
+    verifiedEvents: VerifiedEvent[];
 }
 
 // KeyMetrics Component
@@ -210,9 +211,10 @@ export default function Home() {
 
             try {
                 // Fetch from API (with fallback to mock data)
-                const [incidents, cyberThreats] = await Promise.all([
+                const [incidents, cyberThreats, verifiedEvents] = await Promise.all([
                     fetchIncidents({ limit: 30 }),
                     fetchThreats({ limit: 20 }),
+                    fetchVerifiedEvents(),
                 ])
 
                 // Generate remaining mock data for components without API yet
@@ -272,7 +274,8 @@ export default function Home() {
                     borderLogs,
                     wildlife,
                     sentiment,
-                    cyberTraces
+                    cyberTraces,
+                    verifiedEvents
                 })
             } catch (error) {
                 console.error('Critical Error loading dashboard data:', error);
@@ -443,6 +446,7 @@ export default function Home() {
                                         incidents={data.incidents}
                                         predictions={data.predictions}
                                         surveillance={data.surveillanceFeeds}
+                                        verifiedEvents={data.verifiedEvents}
                                     />
                                 </div>
 
@@ -487,6 +491,7 @@ export default function Home() {
                                     incidents={data.incidents}
                                     predictions={data.predictions}
                                     surveillance={data.surveillanceFeeds}
+                                    verifiedEvents={data.verifiedEvents}
                                 />
                             </div>
                             <div className="grid grid-cols-2 gap-4">
@@ -536,6 +541,7 @@ export default function Home() {
                                     incidents={data.incidents}
                                     predictions={data.predictions}
                                     surveillance={data.surveillanceFeeds}
+                                    verifiedEvents={data.verifiedEvents}
                                 />
                             </div>
                         </div>

@@ -233,3 +233,22 @@ def analyze_sentiment(text: str):
             "sentiment": "ERROR",
             "score": 0.0
         }
+
+@app.get("/api/verified-events")
+async def get_verified_events():
+    """
+    Returns the high-fidelity geocoded security event data for Kenya.
+    This data is used for high-fidelity heatmaps and forensic analysis.
+    """
+    import os
+    import json
+    path = 'data/verified_security_events_kenya.json'
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            return json.load(f)
+    return []
+
+# Health check endpoint
+@app.get("/api/health")
+async def health_check():
+    return {"status": "ok", "engine": "NSSPIP-AI-Kernel", "version": "2.1.0"}

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/nctirs/ui/card"
 import { SecurityIncident, CrimePrediction, SurveillanceFeed } from "@/lib/nctirs/mockData"
+import { VerifiedEvent } from "@/lib/nctirs/api"
 import { Map as MapIcon } from "lucide-react"
 import type * as L from 'leaflet'
 
@@ -10,9 +11,10 @@ interface ThreatMapProps {
   incidents: SecurityIncident[];
   predictions: CrimePrediction[];
   surveillance: SurveillanceFeed[];
+  verifiedEvents?: VerifiedEvent[];
 }
 
-export function ThreatMap({ incidents, predictions, surveillance }: ThreatMapProps) {
+export function ThreatMap({ incidents, predictions, surveillance, verifiedEvents = [] }: ThreatMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
 
@@ -40,7 +42,13 @@ export function ThreatMap({ incidents, predictions, surveillance }: ThreatMapPro
       // --- HEATMAP LAYER ---
       // @ts-expect-error - leaflet.heat lack types
       await import('leaflet.heat');
-      const heatData = incidents.map(i => [...i.location.coordinates, i.threatLevel === 'CRITICAL' ? 1.0 : i.threatLevel === 'HIGH' ? 0.7 : 0.4]);
+
+      // Combine incidents and verified events for heatmap
+      const heatData = [
+        ...incidents.map(i => [...i.location.coordinates, i.threatLevel === 'CRITICAL' ? 1.0 : i.threatLevel === 'HIGH' ? 0.7 : 0.4]),
+        ...verifiedEvents.map(e => [...e.coordinates, (e.risk_score / 100)])
+      ];
+
       // @ts-expect-error - L.heatLayer injected by plugin
       const heat = L.heatLayer(heatData, {
         radius: 25,
@@ -54,6 +62,34 @@ export function ThreatMap({ incidents, predictions, surveillance }: ThreatMapPro
         className: 'custom-marker',
         html: `<div style="background-color: ${color}; width: 16px; height: 16px; border-radius: 0px; border: 1px solid #00ff41; box-shadow: 0 0 10px ${color}80;"></div>`,
         iconSize: [16, 16],
+      });
+
+      // Forensic-style icon for verified conflict events
+      const conflictIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div style="background-color: #ef4444; width: 12px; height: 12px; transform: rotate(45deg); border: 2px solid #fff; box-shadow: 0 0 15px #ef4444;"></div>`,
+        iconSize: [12, 12],
+      });
+
+      // Add verified conflict markers
+      verifiedEvents.slice(0, 30).forEach((event) => {
+        const marker = L.marker(event.coordinates, {
+          icon: conflictIcon,
+        }).addTo(map);
+
+        marker.bindPopup(`
+          <div style="background: #000; color: #fff; border: 1px solid #ef4444; padding: 10px; font-family: monospace; font-size: 11px;">
+            <h3 style="color: #ef4444; font-weight: bold; margin-bottom: 4px; border-bottom: 1px solid #330000; padding-bottom: 4px;">FORENSIC_INTEL: CONFLICT</h3>
+            <div style="font-size: 10px; line-height: 1.5;">
+              <div><strong>CONFLICT:</strong> ${event.sub_type}</div>
+              <div><strong>LOCATION:</strong> ${event.location}</div>
+              <div><strong>FATALITIES:</strong> ${event.fatalities}</div>
+              <div><strong>RISK_SCORE:</strong> ${event.risk_score}</div>
+              <div style="margin-top: 4px; color: #888;">SOURCE: ${event.source}</div>
+              <div style="color: #888;">DATE: ${event.timestamp}</div>
+            </div>
+          </div>
+        `, { className: 'custom-popupMatrix' });
       });
 
       // Add incident markers
@@ -138,7 +174,7 @@ export function ThreatMap({ incidents, predictions, surveillance }: ThreatMapPro
         mapInstanceRef.current = null;
       }
     };
-  }, [incidents, predictions, surveillance]);
+  }, [incidents, predictions, surveillance, verifiedEvents]);
 
   return (
     <Card>

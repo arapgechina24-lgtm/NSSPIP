@@ -300,6 +300,30 @@ export async function createAuditLog(log: {
     })
 }
 
+// ===== VERIFIED EVENTS API =====
+
+export interface VerifiedEvent {
+    type: string;
+    sub_type: string;
+    location: string;
+    county: string;
+    coordinates: [number, number];
+    fatalities: number;
+    timestamp: string;
+    source: string;
+    risk_score: number;
+}
+
+export async function fetchVerifiedEvents(): Promise<VerifiedEvent[]> {
+    try {
+        const data = await apiFetch<VerifiedEvent[]>('/verified-events');
+        return data || [];
+    } catch (error) {
+        console.warn('Failed to fetch verified events, using empty array:', error);
+        return [];
+    }
+}
+
 // ===== DATA HOOKS (re-exported from src/hooks/useData.ts) =====
 // Hooks have been moved to src/hooks/useData.ts for proper separation of concerns.
 // These re-exports maintain backward compatibility.
