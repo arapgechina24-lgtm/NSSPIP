@@ -1,6 +1,6 @@
 # NSSPIP Technical Whitepaper
 
-**AI-Powered National Security & Smart Policing Intelligence Platform**
+### AI-Powered National Security & Smart Policing Intelligence Platform
 
 ## 1. Architecture Overview
 

@@ -72,7 +72,7 @@ The backend consists of two integrated layers:
 * **Endpoint:** `POST /api/ai/analyze/sentiment`
 * **Description:** Assesses the volatility or safety sentiment of unstructured intelligence reports.
 
-**Query Parameter**
+#### Query Parameters
 
 * `text` (string): The text to analyze.
 
