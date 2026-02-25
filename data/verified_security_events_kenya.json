@@ -1,7 +1,7 @@
 [
   {
     "id": "UCDP-28738.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: Todonyang Village",
     "description": "Detected Dassanetch - Turkana conflict in Todonyang Village. Tactical engagement between Dassanetch and Turkana.",
@@ -41,7 +41,7 @@
   },
   {
     "id": "UCDP-43689.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Ngarua town",
     "description": "Detected Kalenjin - Kikuyu conflict in Ngarua town. High civilian impact (6 fatalities).",
@@ -81,7 +81,7 @@
   },
   {
     "id": "UCDP-43441.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Samburu - Somali",
     "title": "Verified Conflict Incident: Isiolo town",
     "description": "Detected Samburu - Somali conflict in Isiolo town. Tactical engagement between Samburu and Somali.",
@@ -121,7 +121,7 @@
   },
   {
     "id": "UCDP-40798.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Orma - Pokomo",
     "title": "Verified Conflict Incident: Kipau village, Tana River",
     "description": "Detected Orma - Pokomo conflict in Kipau village, Tana River. Tactical engagement between Orma and Pokomo.",
@@ -161,7 +161,7 @@
   },
   {
     "id": "UCDP-43675.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kikuyu - Luo",
     "title": "Verified Conflict Incident: Naivasha town",
     "description": "Detected Kikuyu - Luo conflict in Naivasha town. Tactical engagement between Kikuyu and Luo.",
@@ -201,7 +201,7 @@
   },
   {
     "id": "UCDP-44222.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kikuyu - Luo",
     "title": "Verified Conflict Incident: Mombasa town",
     "description": "Detected Kikuyu - Luo conflict in Mombasa town. Tactical engagement between Kikuyu and Luo.",
@@ -241,7 +241,7 @@
   },
   {
     "id": "UCDP-43623.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kisii",
     "title": "Verified Conflict Incident: Rift Valley province",
     "description": "Detected Kalenjin - Kisii conflict in Rift Valley province. Tactical engagement between Kalenjin and Kisii.",
@@ -281,7 +281,7 @@
   },
   {
     "id": "UCDP-34202.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Gabra",
     "title": "Verified Conflict Incident: Kokoy, Eastern Province",
     "description": "Detected Dassanetch - Gabra conflict in Kokoy, Eastern Province. Tactical engagement between Dassanetch and Gabra.",
@@ -321,7 +321,7 @@
   },
   {
     "id": "UCDP-43704.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Eldoret town",
     "description": "Detected Kalenjin - Kikuyu conflict in Eldoret town. Tactical engagement between Kalenjin and Kikuyu.",
@@ -361,7 +361,7 @@
   },
   {
     "id": "UCDP-44110.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Eldoret town",
     "description": "Detected Kalenjin - Kikuyu conflict in Eldoret town. High civilian impact (5 fatalities).",
@@ -401,7 +401,7 @@
   },
   {
     "id": "UCDP-43862.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Laikipia district (Olmoran village)",
     "description": "Detected Kalenjin - Kikuyu conflict in Laikipia district (Olmoran village). Tactical engagement between Kalenjin and Kikuyu.",
@@ -441,7 +441,7 @@
   },
   {
     "id": "UCDP-43752.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
@@ -481,7 +481,7 @@
   },
   {
     "id": "UCDP-43717.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Rift Valley province",
     "description": "Detected Kalenjin - Kikuyu conflict in Rift Valley province. Tactical engagement between Kalenjin and Kikuyu.",
@@ -521,7 +521,7 @@
   },
   {
     "id": "UCDP-151298.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Degodia - Garre",
     "title": "Verified Conflict Incident: Tarbaj district of Wajir",
     "description": "Detected Degodia - Garre conflict in Tarbaj district of Wajir. Tactical engagement between Degodia and Garre.",
@@ -561,7 +561,7 @@
   },
   {
     "id": "UCDP-44188.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Laikipia district",
     "description": "Detected Kalenjin - Kikuyu conflict in Laikipia district. Tactical engagement between Kalenjin and Kikuyu.",
@@ -601,7 +601,7 @@
   },
   {
     "id": "UCDP-44186.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Nakuru district",
     "description": "Detected Kalenjin - Kikuyu conflict in Nakuru district. Tactical engagement between Kalenjin and Kikuyu.",
@@ -641,7 +641,7 @@
   },
   {
     "id": "UCDP-43793.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Baringo district",
     "description": "Detected Kalenjin - Kikuyu conflict in Baringo district. Tactical engagement between Kalenjin and Kikuyu.",
@@ -681,7 +681,7 @@
   },
   {
     "id": "UCDP-43846.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Molo town",
     "description": "Detected Kalenjin - Kikuyu conflict in Molo town. Tactical engagement between Kalenjin and Kikuyu.",
@@ -721,7 +721,7 @@
   },
   {
     "id": "UCDP-44149.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Kikuyu",
     "title": "Verified Conflict Incident: Burnt Forest",
     "description": "Detected Kalenjin - Kikuyu conflict in Burnt Forest. Tactical engagement between Kalenjin and Kikuyu.",
@@ -761,7 +761,7 @@
   },
   {
     "id": "UCDP-37271.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Jie - Turkana",
     "title": "Verified Conflict Incident: Oropoi location (Lokipoto sub location of Letea Location, Oropoi division)",
     "description": "Detected Jie - Turkana conflict in Oropoi location (Lokipoto sub location of Letea Location, Oropoi division). Tactical engagement between Jie and Turkana.",
@@ -801,7 +801,7 @@
   },
   {
     "id": "UCDP-43912.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
@@ -841,7 +841,7 @@
   },
   {
     "id": "UCDP-34284.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: Turkana district, Rift Valley Province",
     "description": "Detected Dassanetch - Turkana conflict in Turkana district, Rift Valley Province. Tactical engagement between Dassanetch and Turkana.",
@@ -881,7 +881,7 @@
   },
   {
     "id": "UCDP-43670.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Turkana",
     "title": "Verified Conflict Incident: Rift Valley province",
     "description": "Detected Pokot - Turkana conflict in Rift Valley province. Tactical engagement between Pokot and Turkana.",
@@ -921,7 +921,7 @@
   },
   {
     "id": "UCDP-43707.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
@@ -961,7 +961,7 @@
   },
   {
     "id": "UCDP-43531.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Turkana",
     "title": "Verified Conflict Incident: Arurum [phonetic] and Kaputir areas Turkana settlements",
     "description": "Detected Pokot - Turkana conflict in Arurum [phonetic] and Kaputir areas Turkana settlements. Tactical engagement between Pokot and Turkana.",
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "UCDP-44221.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Turkana",
     "title": "Verified Conflict Incident: Samburu district",
     "description": "Detected Pokot - Turkana conflict in Samburu district. Tactical engagement between Pokot and Turkana.",
@@ -1041,7 +1041,7 @@
   },
   {
     "id": "UCDP-43473.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Toposa - Turkana",
     "title": "Verified Conflict Incident: Turkana district",
     "description": "Detected Toposa - Turkana conflict in Turkana district. Tactical engagement between Toposa and Turkana.",
@@ -1081,7 +1081,7 @@
   },
   {
     "id": "UCDP-35777.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Nyangatom , Toposa - Turkana",
     "title": "Verified Conflict Incident: Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province",
     "description": "Detected Nyangatom , Toposa - Turkana conflict in Soya village (near the border with Sudan), Kibish location, Lokarmarinyang sub location, Turkana district, Rift Valley Province. Tactical engagement between Nyangatom , Toposa and Turkana.",
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "UCDP-43638.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "MDF - SLDF",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected MDF - SLDF conflict in Mt. Elgon district. Tactical engagement between MDF and SLDF.",
@@ -1161,7 +1161,7 @@
   },
   {
     "id": "UCDP-64432.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Samburu - Turkana",
     "title": "Verified Conflict Incident: Baragoi area of Samburu North Sub County",
     "description": "Detected Samburu - Turkana conflict in Baragoi area of Samburu North Sub County. Tactical engagement between Samburu and Turkana.",
@@ -1201,7 +1201,7 @@
   },
   {
     "id": "UCDP-43739.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (23 fatalities).",
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "UCDP-29764.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: Todonyang Police Post (1 km from)",
     "description": "Detected Dassanetch - Turkana conflict in Todonyang Police Post (1 km from). Tactical engagement between Dassanetch and Turkana.",
@@ -1281,7 +1281,7 @@
   },
   {
     "id": "UCDP-43708.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Kisumu town",
     "description": "Detected Government of Kenya - Civilians conflict in Kisumu town. High civilian impact (44 fatalities).",
@@ -1321,7 +1321,7 @@
   },
   {
     "id": "UCDP-44432.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: northern Kenya",
     "description": "Detected Dassanetch - Turkana conflict in northern Kenya. High civilian impact (4 fatalities).",
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "UCDP-206891.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Samburu - Turkana",
     "title": "Verified Conflict Incident: Isiolo county",
     "description": "Detected Samburu - Turkana conflict in Isiolo county. Tactical engagement between Samburu and Turkana.",
@@ -1401,7 +1401,7 @@
   },
   {
     "id": "UCDP-208868.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Samburu - Turkana",
     "title": "Verified Conflict Incident: Samburu county",
     "description": "Detected Samburu - Turkana conflict in Samburu county. Tactical engagement between Samburu and Turkana.",
@@ -1441,7 +1441,7 @@
   },
   {
     "id": "UCDP-43620.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Kisumu town",
     "description": "Detected Government of Kenya - Civilians conflict in Kisumu town. High civilian impact (6 fatalities).",
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "UCDP-34264.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: Todenyang, Turkana district, Rift Valley Province",
     "description": "Detected Dassanetch - Turkana conflict in Todenyang, Turkana district, Rift Valley Province. Tactical engagement between Dassanetch and Turkana.",
@@ -1521,7 +1521,7 @@
   },
   {
     "id": "UCDP-44418.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (72 fatalities).",
@@ -1561,7 +1561,7 @@
   },
   {
     "id": "UCDP-34231.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Nyangatom , Toposa",
     "title": "Verified Conflict Incident: Dassenech country",
     "description": "Detected Dassanetch - Nyangatom , Toposa conflict in Dassenech country. Tactical engagement between Dassanetch and Nyangatom , Toposa.",
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "UCDP-43379.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Dassanetch - Turkana",
     "title": "Verified Conflict Incident: Lokitaung town (near)",
     "description": "Detected Dassanetch - Turkana conflict in Lokitaung town (near). Tactical engagement between Dassanetch and Turkana.",
@@ -1641,7 +1641,7 @@
   },
   {
     "id": "UCDP-43694.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected Government of Kenya - Civilians conflict in Mt. Elgon district. High civilian impact (8 fatalities).",
@@ -1681,7 +1681,7 @@
   },
   {
     "id": "UCDP-37556.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Jie - Turkana",
     "title": "Verified Conflict Incident: Turkana district",
     "description": "Detected Jie - Turkana conflict in Turkana district. Tactical engagement between Jie and Turkana.",
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "UCDP-37553.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Jie - Turkana",
     "title": "Verified Conflict Incident: Turkana district",
     "description": "Detected Jie - Turkana conflict in Turkana district. Tactical engagement between Jie and Turkana.",
@@ -1761,7 +1761,7 @@
   },
   {
     "id": "UCDP-44063.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Garre subclan of Digil clan (Digil-Mirifle) - Murule subclan of Gugundabe clan (Hawiye)",
     "title": "Verified Conflict Incident: Mandera town (Elgolisha village near)",
     "description": "Detected Garre subclan of Digil clan (Digil-Mirifle) - Murule subclan of Gugundabe clan (Hawiye) conflict in Mandera town (Elgolisha village near). Tactical engagement between Garre subclan of Digil clan (Digil-Mirifle) and Murule subclan of Gugundabe clan (Hawiye).",
@@ -1801,7 +1801,7 @@
   },
   {
     "id": "UCDP-290451.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Dandora Phase Four",
     "description": "Detected Government of Kenya - Civilians conflict in Dandora Phase Four. High civilian impact (5 fatalities).",
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "UCDP-31644.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Nairobi city (Eastleigh)",
     "description": "Detected Al-Shabaab - Civilians conflict in Nairobi city (Eastleigh). High civilian impact (10 fatalities).",
@@ -1881,7 +1881,7 @@
   },
   {
     "id": "UCDP-31591.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Garissa town",
     "description": "Detected Al-Shabaab - Civilians conflict in Garissa town. High civilian impact (17 fatalities).",
@@ -1921,7 +1921,7 @@
   },
   {
     "id": "UCDP-427556.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kenya: Northeastern Province and Coast",
     "title": "Verified Conflict Incident: Bodhei area",
     "description": "Detected Kenya: Northeastern Province and Coast conflict in Bodhei area. Tactical engagement between Government of Kenya and Al-Shabaab.",
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "UCDP-427605.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kenya: Northeastern Province and Coast",
     "title": "Verified Conflict Incident: eight kilometres from Mandera town",
     "description": "Detected Kenya: Northeastern Province and Coast conflict in eight kilometres from Mandera town. High civilian impact (10 fatalities).",
@@ -2001,7 +2001,7 @@
   },
   {
     "id": "UCDP-31069.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Mandera",
     "description": "Detected Al-Shabaab - Civilians conflict in Mandera. High civilian impact (6 fatalities).",
@@ -2041,7 +2041,7 @@
   },
   {
     "id": "UCDP-43769.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Mungiki - Civilians",
     "title": "Verified Conflict Incident: Gathaithi (and Kiaruhiu villages inlarger Kirinyaga District, boundary to Nyeri East)",
     "description": "Detected Mungiki - Civilians conflict in Gathaithi (and Kiaruhiu villages inlarger Kirinyaga District, boundary to Nyeri East). High civilian impact (29 fatalities).",
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "UCDP-262212.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Dandora",
     "description": "Detected Government of Kenya - Civilians conflict in Dandora. High civilian impact (5 fatalities).",
@@ -2121,7 +2121,7 @@
   },
   {
     "id": "UCDP-43698.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Mungiki - Civilians",
     "title": "Verified Conflict Incident: Nairobi city",
     "description": "Detected Mungiki - Civilians conflict in Nairobi city. High civilian impact (7 fatalities).",
@@ -2161,7 +2161,7 @@
   },
   {
     "id": "UCDP-43762.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Mungiki - Civilians",
     "title": "Verified Conflict Incident: Naivasha town",
     "description": "Detected Mungiki - Civilians conflict in Naivasha town. High civilian impact (19 fatalities).",
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "UCDP-44298.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Orma, Wardei - Pokomo",
     "title": "Verified Conflict Incident: Tana River district",
     "description": "Detected Orma, Wardei - Pokomo conflict in Tana River district. High civilian impact (7 fatalities).",
@@ -2241,7 +2241,7 @@
   },
   {
     "id": "UCDP-43573.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Mungiki - Civilians",
     "title": "Verified Conflict Incident: Kariobangi village",
     "description": "Detected Mungiki - Civilians conflict in Kariobangi village. High civilian impact (38 fatalities).",
@@ -2281,7 +2281,7 @@
   },
   {
     "id": "UCDP-249844.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Masaek and Kutere villages, Kopsiro",
     "description": "Detected SLDF - Civilians conflict in Masaek and Kutere villages, Kopsiro. High civilian impact (5 fatalities).",
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "UCDP-44154.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Trans Nzoia district (Embakasi town)",
     "description": "Detected SLDF - Civilians conflict in Trans Nzoia district (Embakasi town). High civilian impact (13 fatalities).",
@@ -2361,7 +2361,7 @@
   },
   {
     "id": "UCDP-43850.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district (Chepyuk town)",
     "description": "Detected SLDF - Civilians conflict in Mt. Elgon district (Chepyuk town). High civilian impact (6 fatalities).",
@@ -2401,7 +2401,7 @@
   },
   {
     "id": "UCDP-44375.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Chesakaki village",
     "description": "Detected SLDF - Civilians conflict in Chesakaki village. High civilian impact (22 fatalities).",
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "UCDP-44421.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district (Kimama village)",
     "description": "Detected SLDF - Civilians conflict in Mt. Elgon district (Kimama village). High civilian impact (22 fatalities).",
@@ -2481,7 +2481,7 @@
   },
   {
     "id": "UCDP-43455.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (5 fatalities).",
@@ -2521,7 +2521,7 @@
   },
   {
     "id": "UCDP-44098.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (15 fatalities).",
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "UCDP-62674.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Degodia - Garre",
     "title": "Verified Conflict Incident: Jiriko village some 50 kms from Banisa town, Mandera County",
     "description": "Detected Degodia - Garre conflict in Jiriko village some 50 kms from Banisa town, Mandera County. Tactical engagement between Degodia and Garre.",
@@ -2601,7 +2601,7 @@
   },
   {
     "id": "UCDP-416006.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kenya: Northeastern Province and Coast",
     "title": "Verified Conflict Incident: between Kayunga and Shangani in Lamu County \n\nnear the Somali border \n\nbetween Kiunga and Ishakani near Kenya-Somalia border",
     "description": "Detected Kenya: Northeastern Province and Coast conflict in between Kayunga and Shangani in Lamu County \n\nnear the Somali border \n\nbetween Kiunga and Ishakani near Kenya-Somalia border. Tactical engagement between Government of Kenya and Al-Shabaab.",
@@ -2641,7 +2641,7 @@
   },
   {
     "id": "UCDP-62690.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Westgate shopping mall in Nairobi",
     "description": "Detected Al-Shabaab - Civilians conflict in Westgate shopping mall in Nairobi. High civilian impact (61 fatalities).",
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "UCDP-151294.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Mpeketoni which lies on the mainland some 30 kilometres (20 miles) southwest of Lamu island",
     "description": "Detected Al-Shabaab - Civilians conflict in Mpeketoni which lies on the mainland some 30 kilometres (20 miles) southwest of Lamu island. High civilian impact (48 fatalities).",
@@ -2721,7 +2721,7 @@
   },
   {
     "id": "UCDP-35769.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Nyangatom  - Turkana",
     "title": "Verified Conflict Incident: Turkana district, Rift Valley Province",
     "description": "Detected Nyangatom  - Turkana conflict in Turkana district, Rift Valley Province. Tactical engagement between Nyangatom and Turkana.",
@@ -2761,7 +2761,7 @@
   },
   {
     "id": "UCDP-44383.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "al-Qaida  - Civilians",
     "title": "Verified Conflict Incident: Mombasa town",
     "description": "Detected al-Qaida  - Civilians conflict in Mombasa town. High civilian impact (13 fatalities).",
@@ -2801,7 +2801,7 @@
   },
   {
     "id": "UCDP-480575.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: villages of Juhudi and Salama\n\nnear Mpeketoni",
     "description": "Detected Al-Shabaab - Civilians conflict in villages of Juhudi and Salama\n\nnear Mpeketoni. High civilian impact (5 fatalities).",
@@ -2841,7 +2841,7 @@
   },
   {
     "id": "UCDP-433917.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Majengo, within Boni forest",
     "description": "Detected Al-Shabaab - Civilians conflict in Majengo, within Boni forest. High civilian impact (5 fatalities).",
@@ -2881,7 +2881,7 @@
   },
   {
     "id": "UCDP-433920.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: a construction site in Lamu County",
     "description": "Detected Al-Shabaab - Civilians conflict in a construction site in Lamu County. High civilian impact (5 fatalities).",
@@ -2921,7 +2921,7 @@
   },
   {
     "id": "UCDP-428271.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Lango la Simba area",
     "description": "Detected Al-Shabaab - Civilians conflict in Lango la Simba area. High civilian impact (6 fatalities).",
@@ -2961,7 +2961,7 @@
   },
   {
     "id": "UCDP-277166.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: the DusitD2 compound, 14 Riverside Drive, Nairobi",
     "description": "Detected Al-Shabaab - Civilians conflict in the DusitD2 compound, 14 Riverside Drive, Nairobi. High civilian impact (20 fatalities).",
@@ -3001,7 +3001,7 @@
   },
   {
     "id": "UCDP-239544.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Pandaguo village",
     "description": "Detected Al-Shabaab - Civilians conflict in Pandaguo village. High civilian impact (5 fatalities).",
@@ -3041,7 +3041,7 @@
   },
   {
     "id": "UCDP-233620.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Mandera town",
     "description": "Detected Al-Shabaab - Civilians conflict in Mandera town. High civilian impact (12 fatalities).",
@@ -3081,7 +3081,7 @@
   },
   {
     "id": "UCDP-233615.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Mandera town",
     "description": "Detected Al-Shabaab - Civilians conflict in Mandera town. High civilian impact (6 fatalities).",
@@ -3121,7 +3121,7 @@
   },
   {
     "id": "UCDP-233265.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: near El Wak in Mandera county",
     "description": "Detected Al-Shabaab - Civilians conflict in near El Wak in Mandera county. High civilian impact (5 fatalities).",
@@ -3161,7 +3161,7 @@
   },
   {
     "id": "UCDP-206610.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Soko Mbuzi, a livestock market just outside the town of Mandera",
     "description": "Detected Al-Shabaab - Civilians conflict in Soko Mbuzi, a livestock market just outside the town of Mandera. High civilian impact (14 fatalities).",
@@ -3201,7 +3201,7 @@
   },
   {
     "id": "UCDP-206331.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Moi University's College in Garissa",
     "description": "Detected Al-Shabaab - Civilians conflict in Moi University's College in Garissa. High civilian impact (142 fatalities).",
@@ -3241,7 +3241,7 @@
   },
   {
     "id": "UCDP-152567.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Koromey, about 20 km from Mandera",
     "description": "Detected Al-Shabaab - Civilians conflict in Koromey, about 20 km from Mandera. High civilian impact (36 fatalities).",
@@ -3281,7 +3281,7 @@
   },
   {
     "id": "UCDP-152545.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: a few kilometres from Mandera, northern Kenya",
     "description": "Detected Al-Shabaab - Civilians conflict in a few kilometres from Mandera, northern Kenya. High civilian impact (28 fatalities).",
@@ -3321,7 +3321,7 @@
   },
   {
     "id": "UCDP-151302.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Hindi trading centre near the town of Mpeketoni and ca 15 km from Lamu",
     "description": "Detected Al-Shabaab - Civilians conflict in Hindi trading centre near the town of Mpeketoni and ca 15 km from Lamu. High civilian impact (13 fatalities).",
@@ -3361,7 +3361,7 @@
   },
   {
     "id": "UCDP-151296.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Al-Shabaab - Civilians",
     "title": "Verified Conflict Incident: Poromoko area near Mpeketoni",
     "description": "Detected Al-Shabaab - Civilians conflict in Poromoko area near Mpeketoni. High civilian impact (7 fatalities).",
@@ -3401,7 +3401,7 @@
   },
   {
     "id": "UCDP-44066.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Turkana",
     "title": "Verified Conflict Incident: Turkana - Pokot border",
     "description": "Detected Pokot - Turkana conflict in Turkana - Pokot border. Tactical engagement between Pokot and Turkana.",
@@ -3441,7 +3441,7 @@
   },
   {
     "id": "UCDP-44116.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "SLDF - Civilians",
     "title": "Verified Conflict Incident: Mt. Elgon district",
     "description": "Detected SLDF - Civilians conflict in Mt. Elgon district. High civilian impact (7 fatalities).",
@@ -3481,7 +3481,7 @@
   },
   {
     "id": "UCDP-44376.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Borana - Gabra",
     "title": "Verified Conflict Incident: Dukana village",
     "description": "Detected Borana - Gabra conflict in Dukana village. Tactical engagement between Borana and Gabra.",
@@ -3521,7 +3521,7 @@
   },
   {
     "id": "UCDP-43719.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Samburu",
     "title": "Verified Conflict Incident: Laikipia North District (Mogurak village)",
     "description": "Detected Pokot - Samburu conflict in Laikipia North District (Mogurak village). Tactical engagement between Pokot and Samburu.",
@@ -3561,7 +3561,7 @@
   },
   {
     "id": "UCDP-44433.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Samburu",
     "title": "Verified Conflict Incident: Samburu district (Samburu central)",
     "description": "Detected Pokot - Samburu conflict in Samburu district (Samburu central). Tactical engagement between Pokot and Samburu.",
@@ -3601,7 +3601,7 @@
   },
   {
     "id": "UCDP-44113.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Government of Kenya - Civilians",
     "title": "Verified Conflict Incident: Kenya",
     "description": "Detected Government of Kenya - Civilians conflict in Kenya. High civilian impact (5 fatalities).",
@@ -3641,7 +3641,7 @@
   },
   {
     "id": "UCDP-35263.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Ethiopia: Oromiya",
     "title": "Verified Conflict Incident: Dambala Fuchana village (65 km from the north Kenyan border town of Moyale)",
     "description": "Detected Ethiopia: Oromiya conflict in Dambala Fuchana village (65 km from the north Kenyan border town of Moyale). Tactical engagement between Government of Ethiopia and OLF.",
@@ -3681,7 +3681,7 @@
   },
   {
     "id": "UCDP-43963.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Orma, Wardei - Pokomo",
     "title": "Verified Conflict Incident: Tana River district",
     "description": "Detected Orma, Wardei - Pokomo conflict in Tana River district. Tactical engagement between Orma, Wardei and Pokomo.",
@@ -3721,7 +3721,7 @@
   },
   {
     "id": "UCDP-40790.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Orma - Pokomo",
     "title": "Verified Conflict Incident: Kilelengwani village",
     "description": "Detected Orma - Pokomo conflict in Kilelengwani village. Tactical engagement between Orma and Pokomo.",
@@ -3761,7 +3761,7 @@
   },
   {
     "id": "UCDP-40795.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Orma - Pokomo",
     "title": "Verified Conflict Incident: Reketa area of Tarassa, Tana River district",
     "description": "Detected Orma - Pokomo conflict in Reketa area of Tarassa, Tana River district. Tactical engagement between Orma and Pokomo.",
@@ -3801,7 +3801,7 @@
   },
   {
     "id": "UCDP-43699.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kalenjin - Luhya",
     "title": "Verified Conflict Incident: Bungoma district",
     "description": "Detected Kalenjin - Luhya conflict in Bungoma district. Tactical engagement between Kalenjin and Luhya.",
@@ -3841,7 +3841,7 @@
   },
   {
     "id": "UCDP-322375.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kenya: Northeastern Province and Coast",
     "title": "Verified Conflict Incident: area called Kotulo between Wargadadud and Kutulo town in in Tarbaj subcounty Wajir county\n\n20 Kms from Kotulo town in Tarbaj constituency, Wajir,\n\nat Maadathe area some 5 kilometres from Kotulo in the northeastern part of the country",
     "description": "Detected Kenya: Northeastern Province and Coast conflict in area called Kotulo between Wargadadud and Kutulo town in in Tarbaj subcounty Wajir county\n\n20 Kms from Kotulo town in Tarbaj constituency, Wajir,\n\nat Maadathe area some 5 kilometres from Kotulo in the northeastern part of the country. High civilian impact (3 fatalities).",
@@ -3881,7 +3881,7 @@
   },
   {
     "id": "UCDP-484293.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Kenya: Northeastern Province and Coast",
     "title": "Verified Conflict Incident: along Lamu-Garsen road, Lamu County.",
     "description": "Detected Kenya: Northeastern Province and Coast conflict in along Lamu-Garsen road, Lamu County.. Tactical engagement between Government of Kenya and Al-Shabaab.",
@@ -3921,7 +3921,7 @@
   },
   {
     "id": "UCDP-43691.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot, Samburu - Turkana",
     "title": "Verified Conflict Incident: Marti area (near)",
     "description": "Detected Pokot, Samburu - Turkana conflict in Marti area (near). Tactical engagement between Pokot, Samburu and Turkana.",
@@ -3961,7 +3961,7 @@
   },
   {
     "id": "UCDP-62637.0",
-    "type": "CONFLICT_ZONE",
+    "type": "CONFLICT",
     "sub_type": "Pokot - Turkana",
     "title": "Verified Conflict Incident: Kaptir, a remote village in the arid northern Turkana region",
     "description": "Detected Pokot - Turkana conflict in Kaptir, a remote village in the arid northern Turkana region. High civilian impact (4 fatalities).",

@@ -81,7 +81,7 @@ def train_model():
 
         dashboard_data.append({
             "id": f"UCDP-{row['id']}",
-            "type": "CONFLICT_ZONE",
+            "type": "CONFLICT",
             "sub_type": str(row['conflict_name']),
             "title": f"Verified Conflict Incident: {row['where_description']}",
             "description": rationale,

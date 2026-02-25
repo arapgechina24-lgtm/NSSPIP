@@ -11,7 +11,7 @@
 // ============================================================
 
 export type ThreatLevel = 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
-export type IncidentType = 'TERRORISM' | 'ORGANIZED_CRIME' | 'CYBER_ATTACK' | 'VIOLENT_CRIME' | 'TRAFFICKING' | 'RADICALIZATION' | 'BORDER_SECURITY' | 'PUBLIC_DISORDER';
+export type IncidentType = 'TERRORISM' | 'ORGANIZED_CRIME' | 'CYBER_ATTACK' | 'VIOLENT_CRIME' | 'TRAFFICKING' | 'RADICALIZATION' | 'BORDER_SECURITY' | 'PUBLIC_DISORDER' | 'CONFLICT';
 export type IncidentStatus = 'ACTIVE' | 'INVESTIGATING' | 'RESOLVED' | 'MONITORING';
 export type Region = 'NAIROBI' | 'MOMBASA' | 'KISUMU' | 'NAKURU' | 'ELDORET' | 'TURKANA' | 'GARISSA' | 'MANDERA';
 

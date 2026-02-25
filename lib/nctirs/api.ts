@@ -303,15 +303,29 @@ export async function createAuditLog(log: {
 // ===== VERIFIED EVENTS API =====
 
 export interface VerifiedEvent {
+    id: string;
     type: string;
     sub_type: string;
-    location: string;
-    county: string;
-    coordinates: [number, number];
+    title: string;
+    description: string;
+    location: {
+        name: string;
+        region: string;
+        coordinates: [number, number];
+    };
     fatalities: number;
+    civilian_deaths: number;
     timestamp: string;
     source: string;
     risk_score: number;
+    threatLevel: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
+    status: string;
+    aiConfidence: number;
+    aiFactors: {
+        name: string;
+        weight: number;
+        description: string;
+    }[];
 }
 
 export async function fetchVerifiedEvents(): Promise<VerifiedEvent[]> {
@@ -322,6 +336,27 @@ export async function fetchVerifiedEvents(): Promise<VerifiedEvent[]> {
         console.warn('Failed to fetch verified events, using empty array:', error);
         return [];
     }
+}
+
+export function mapVerifiedEventToSecurityIncident(event: VerifiedEvent): SecurityIncident {
+    return {
+        id: event.id,
+        type: 'CONFLICT',
+        title: event.title,
+        description: event.description,
+        location: {
+            name: event.location.name,
+            region: event.location.region.toUpperCase() as SecurityIncident['location']['region'],
+            coordinates: event.location.coordinates,
+        },
+        threatLevel: event.threatLevel as SecurityIncident['threatLevel'],
+        status: 'ACTIVE',
+        timestamp: new Date(event.timestamp),
+        affectedArea: 5,
+        casualties: event.fatalities,
+        aiConfidence: event.aiConfidence,
+        sources: [event.source],
+    };
 }
 
 // ===== DATA HOOKS (re-exported from src/hooks/useData.ts) =====

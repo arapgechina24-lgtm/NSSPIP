@@ -93,14 +93,23 @@ export function ThreatMap({ incidents, predictions, surveillance, verifiedEvents
       });
 
       // Add incident markers
-      incidents.slice(0, 20).forEach((incident) => {
+      incidents.slice(0, 50).forEach((incident) => {
         const color =
           incident.threatLevel === 'CRITICAL' ? '#dc2626' :
             incident.threatLevel === 'HIGH' ? '#ea580c' :
               incident.threatLevel === 'MEDIUM' ? '#ca8a04' : '#16a34a';
 
+        // Specialized icon for CONFLICT type
+        const icon = incident.type === 'CONFLICT'
+          ? L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="background-color: #ef4444; width: 14px; height: 14px; transform: rotate(45deg); border: 2px solid #fff; box-shadow: 0 0 15px #ef4444;"></div>`,
+            iconSize: [14, 14],
+          })
+          : incidentIcon(color);
+
         const marker = L.marker(incident.location.coordinates, {
-          icon: incidentIcon(color),
+          icon: icon,
         }).addTo(map);
 
         marker.bindPopup(`

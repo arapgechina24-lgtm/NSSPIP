@@ -35,7 +35,7 @@ import { VoiceCommandPanel } from "@/components/nctirs/shared/VoiceCommandPanel"
 // Analytics tracking
 import { trackPageView, trackAction, trackPerformance } from "@/lib/nctirs/analytics"
 // API Client for real data
-import { fetchIncidents, fetchThreats, fetchVerifiedEvents, VerifiedEvent } from "@/lib/nctirs/api"
+import { fetchIncidents, fetchThreats, fetchVerifiedEvents, mapVerifiedEventToSecurityIncident, VerifiedEvent } from "@/lib/nctirs/api"
 // Types
 import type {
     SecurityIncident,
@@ -247,8 +247,16 @@ export default function Home() {
                 const sentiment = generateSocialSentiment();
                 const cyberTraces = generateCyberAttribution();
 
+                // MAP VERIFIED EVENTS TO SECURITY INCIDENTS
+                const verifiedSecurityIncidents = verifiedEvents.map(mapVerifiedEventToSecurityIncident);
+
+                // Prioritize real-world conflict events over mock incidents
+                const combinedIncidents = [...verifiedSecurityIncidents, ...incidents].sort(
+                    (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+                );
+
                 setData({
-                    incidents,
+                    incidents: combinedIncidents,
                     predictions,
                     surveillanceFeeds,
                     communityReports,
