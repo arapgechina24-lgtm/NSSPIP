@@ -1,0 +1,49 @@
+# NSSPIP Sovereign Deployment
+# Zero foreign dependencies, air-gap capable
+
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY . .
+RUN npm run build
+
+# Production stage - minimal attack surface
+FROM node:20-alpine AS production
+
+# Install security updates
+RUN apk update && apk upgrade && \
+    apk add --no-cache dumb-init curl && \
+    rm -rf /var/cache/apk/*
+
+# Create non-root user
+RUN addgroup -g 1001 -S nsspip && \
+    adduser -S nsspip -u 1001
+
+WORKDIR /app
+
+# Copy only necessary files
+COPY --from=builder --chown=nsspip:nsspip /app/dist ./dist
+COPY --from=builder --chown=nsspip:nsspip /app/node_modules ./node_modules
+COPY --from=builder --chown=nsspip:nsspip /app/package.json ./
+
+# Sovereign mode configuration
+ENV NODE_ENV=production \
+    SOVEREIGN_MODE=true \
+    AI_ENGINE=ollama \
+    OLLAMA_ENDPOINT=http://nsspip-ai:11434 \
+    DISABLE_EXTERNAL_APIS=true \
+    ENCRYPTION_KEY_PATH=/data/keys
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000/api/health/sovereign || exit 1
+
+USER nsspip
+
+EXPOSE 3000
+
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "dist/server.js"]

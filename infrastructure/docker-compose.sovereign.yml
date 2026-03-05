@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  nsspip-core:
+    build:
+      context: ..
+      dockerfile: infrastructure/Dockerfile.sovereign
+    container_name: nsspip-sovereign
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - SOVEREIGN_MODE=true
+      - AI_ENGINE=local
+      - DATABASE_URL=file:/data/nsspip.db
+      - REDIS_URL=redis://localhost:6379
+    volumes:
+      - nsspip-data:/data
+      - ./models:/app/models:ro
+    networks:
+      - nsspip-net
+    restart: unless-stopped
+    # No external internet access for sovereign mode
+    sysctls:
+      - net.ipv4.conf.all.route_localnet=1
+
+  ai-engine:
+    image: ollama/ollama:latest
+    container_name: nsspip-ai
+    volumes:
+      - ollama-models:/root/.ollama
+      - ./models:/models:ro
+    environment:
+      - OLLAMA_MODELS=/root/.ollama
+    # Pre-load Kenyan security models
+    command: >
+      sh -c "ollama pull mistral:7b && 
+             ollama pull nomic-embed-text &&
+             ollama create nsspip-security -f /models/Modelfile &&
+             ollama serve"
+    networks:
+      - nsspip-net
+    # No external network access
+
+  edge-node:
+    build:
+      context: ..
+      dockerfile: infrastructure/Dockerfile.edge
+    container_name: nsspip-edge
+    environment:
+      - EDGE_MODE=true
+      - SYNC_INTERVAL=300
+    volumes:
+      - edge-data:/data
+    networks:
+      - nsspip-net
+    # Works offline, syncs when connected
+
+volumes:
+  nsspip-data:
+  ollama-models:
+  edge-data:
+
+networks:
+  nsspip-net:
+    driver: bridge
+    internal: true  # No external access
