@@ -20,7 +20,7 @@ async function main() {
             data: {
                 name: 'System Administrator',
                 email: adminEmail,
-                role: 'ADMIN',
+                role: 'L4',
                 encryptedDetails: mockEncrypt({ phone: '+254700000000', nationalId: '12345678' }),
             },
         })
@@ -57,12 +57,12 @@ async function main() {
             ]),
             description: safeDescription, // Public description
             encryptedDetails: mockEncrypt(pii), // Sensitive data
-            status: faker.helpers.arrayElement(['OPEN', 'IN_PROGRESS', 'RESOLVED']),
-            priority: faker.helpers.arrayElement(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']),
+            status: faker.helpers.arrayElement(['ACTIVE', 'INVESTIGATING', 'RESOLVED']),
+            severity: faker.helpers.arrayElement(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']),
             location: `Nairobi Region (Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)})`,
             latitude: lat,
             longitude: lng,
-            reportedBy: admin!.id,
+            createdById: admin!.id,
         })
     }
 

@@ -43,12 +43,12 @@ async function main() {
             title: faker.helpers.arrayElement(riotTitles),
             description: `URGENT: ${faker.lorem.sentence()} Multiple actors involved. Situation escalating.`,
             encryptedDetails: mockEncrypt({ pii: "Redacted witness info" }),
-            status: IncidentStatus.OPEN,
+            status: IncidentStatus.ACTIVE,
             priority: Priority.CRITICAL, // Force Critical for simulation
             location: `CBD Sector ${faker.number.int({ min: 1, max: 5 })}`,
             latitude: lat,
             longitude: lng,
-            reportedBy: systemUser.id,
+            createdById: systemUser.id,
         })
     }
 

@@ -46,7 +46,7 @@ export function ThreatMap({ incidents, predictions, surveillance, verifiedEvents
       // Combine incidents and verified events for heatmap
       const heatData = [
         ...incidents.map(i => [...i.location.coordinates, i.threatLevel === 'CRITICAL' ? 1.0 : i.threatLevel === 'HIGH' ? 0.7 : 0.4]),
-        ...verifiedEvents.map(e => [...e.coordinates, (e.risk_score / 100)])
+        ...verifiedEvents.map(e => [...e.location.coordinates, (e.risk_score / 100)])
       ];
 
       // @ts-expect-error - L.heatLayer injected by plugin
@@ -73,7 +73,7 @@ export function ThreatMap({ incidents, predictions, surveillance, verifiedEvents
 
       // Add verified conflict markers
       verifiedEvents.slice(0, 30).forEach((event) => {
-        const marker = L.marker(event.coordinates, {
+        const marker = L.marker(event.location.coordinates, {
           icon: conflictIcon,
         }).addTo(map);
 
@@ -82,7 +82,7 @@ export function ThreatMap({ incidents, predictions, surveillance, verifiedEvents
             <h3 style="color: #ef4444; font-weight: bold; margin-bottom: 4px; border-bottom: 1px solid #330000; padding-bottom: 4px;">FORENSIC_INTEL: CONFLICT</h3>
             <div style="font-size: 10px; line-height: 1.5;">
               <div><strong>CONFLICT:</strong> ${event.sub_type}</div>
-              <div><strong>LOCATION:</strong> ${event.location}</div>
+              <div><strong>LOCATION:</strong> ${event.location.name}</div>
               <div><strong>FATALITIES:</strong> ${event.fatalities}</div>
               <div><strong>RISK_SCORE:</strong> ${event.risk_score}</div>
               <div style="margin-top: 4px; color: #888;">SOURCE: ${event.source}</div>

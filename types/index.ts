@@ -32,6 +32,8 @@ export interface SecurityIncident {
     casualties?: number;
     suspects?: number;
     aiConfidence: number;
+    aiFactors?: string[];
+    forensicHash?: string;
     sources: string[];
 }
 

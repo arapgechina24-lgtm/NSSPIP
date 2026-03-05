@@ -139,6 +139,12 @@ const incidentTitles: Record<IncidentType, string[]> = {
     'Public violence outbreak',
     'Mob justice incident',
   ],
+  CONFLICT: [
+    'Verified combat engagement',
+    'Asymmetric tactical incursion',
+    'Armed confrontation detected',
+    'Strategic outpost engagement',
+  ],
 };
 
 // Generate mock security incidents

@@ -17,7 +17,7 @@ async function main() {
         data: {
             name: 'System Admin',
             email: 'admin@nis.go.ke',
-            role: 'ADMIN',
+            role: 'L4',
             encryptedDetails: 'System Administrator Account'
         }
     });
@@ -29,13 +29,13 @@ async function main() {
         data: {
             title: 'Unauthorized Access Attempt Detected',
             description: 'Multiple failed login attempts detected on the central intelligence database from an external IP.',
-            status: 'OPEN',
-            priority: 'HIGH',
+            status: 'ACTIVE',
+            severity: 'HIGH',
             location: 'Nairobi HQ Server Farm',
             latitude: -1.2921,
             longitude: 36.8219,
             encryptedDetails: '{"ip": "192.168.1.105", "attempts": 15}',
-            reportedBy: adminUser.id
+            createdById: adminUser.id
         }
     });
 

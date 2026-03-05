@@ -16,21 +16,28 @@ model User {
   emailVerified DateTime?
   image         String?
   encryptedDetails String? @db.Text // Encrypted PII (Phone, Home Address, etc.)
-  role          UserRole  @default(OFFICER)
+  password      String?
+  role          UserRole  @default(L1)
+  agency        String?
+  department    String?
+  clearanceLevel Int?     @default(1)
+  isActive      Boolean  @default(true)
+  lastLogin     DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
   accounts      Account[]
   sessions      Session[]
-  incidents     Incident[]
+  incidents     Incident[] @relation("UserIncidents")
   intelligence  Intelligence[]
+  auditLogs     AuditLog[]
 }
 
 enum UserRole {
-  ADMIN
-  COMMANDER
-  OFFICER
-  ANALYST
+  L1
+  L2
+  L3
+  L4
 }
 
 model Account {
@@ -73,13 +80,20 @@ model VerificationToken {
 model Incident {
   id          String         @id @default(cuid())
   title       String
-  description String
-  status      IncidentStatus @default(OPEN)
-  priority    Priority       @default(MEDIUM)
+  description String         @db.Text
+  type        String         @default("GENERAL")
+  status      IncidentStatus @default(ACTIVE)
+  severity    Priority       @default(MEDIUM)
   location    String?
   // Geospatial Data: Stored as floats for Prisma compatibility, indexed in DB for PostGIS
   latitude    Float?
   longitude   Float?
+  county      String?
+  targetAsset String?
+  attackVector String?
+  indicators  String?        @db.Text
+  dataProtectionImpact String?
+  mitreAttackId String?
   
   // Zero PII: All sensitive details must be encrypted before storage
   encryptedDetails String? @db.Text // JSON string of encrypted fields
@@ -91,17 +105,19 @@ model Incident {
   aiScore          Int?    // Persisted AI Risk Score
   aiFactors        String? @db.Text // JSON string of contributing factors
   
-  reportedBy  String
-  reporter    User           @relation(fields: [reportedBy], references: [id])
+  createdById String?
+  createdBy   User?          @relation("UserIncidents", fields: [createdById], references: [id])
+  threats     Threat[]
+  responses   Response[]
   createdAt   DateTime       @default(now())
   updatedAt   DateTime       @updatedAt
 }
 
 enum IncidentStatus {
-  OPEN
-  IN_PROGRESS
+  ACTIVE
+  INVESTIGATING
   RESOLVED
-  CLOSED
+  MONITORING
 }
 
 enum Priority {
@@ -128,4 +144,63 @@ enum Classification {
   CONFIDENTIAL
   SECRET
   TOP_SECRET
+}
+
+model Threat {
+  id           String   @id @default(cuid())
+  name         String
+  type         String
+  severity     Priority @default(MEDIUM)
+  source       String?
+  targetSector String?
+  confidence   Float?
+  mitreId      String?
+  description  String?  @db.Text
+  indicators   String?  @db.Text
+  affectedCitizens Int?
+  dpaViolation String?
+  incidentId   String?
+  incident     Incident? @relation(fields: [incidentId], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SurveillanceFeed {
+  id        String   @id @default(cuid())
+  location  String
+  type      String
+  status    String   @default("ACTIVE")
+  latitude  Float
+  longitude Float
+  streamUrl String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Response {
+  id          String   @id @default(cuid())
+  incidentId  String
+  incident    Incident @relation(fields: [incidentId], references: [id])
+  action      String
+  status      String
+  details     String?  @db.Text
+  result      String?  @db.Text
+  completedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  action      String
+  resource    String
+  resourceId  String?
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  details     String?  @db.Text
+  ipAddress   String?
+  userAgent   String?
+  hash        String?  @unique
+  previousHash String?
+  createdAt   DateTime @default(now())
 }

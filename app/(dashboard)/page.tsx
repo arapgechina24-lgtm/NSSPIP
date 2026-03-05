@@ -23,6 +23,8 @@ import { SystemArchitecture } from "@/components/nctirs/infrastructure/SystemArc
 import CNIHeatmap from "@/components/nctirs/infrastructure/CNIHeatmap"
 // Intelligence components
 import AIAssistantPanel from "@/components/nctirs/intelligence/AIAssistantPanel"
+import InterAgencyFusion from "@/components/nctirs/intelligence/InterAgencyFusion"
+import ForensicLedger from "@/components/nctirs/intelligence/ForensicLedger"
 import FederatedLearningHub from "@/components/nctirs/intelligence/FederatedLearningHub"
 import { XAIPanel } from "@/components/nctirs/intelligence/XAIPanel"
 import SovereignAIStatusPanel from "@/components/nctirs/intelligence/SovereignAIStatusPanel"
@@ -514,6 +516,10 @@ export default function Home() {
                                     Inter-Agency Comms
                                 </h2>
                                 <AIAssistantPanel />
+                            </div>
+                            <InterAgencyFusion />
+                            <div className="flex-1 min-h-[200px]">
+                                <ForensicLedger />
                             </div>
                             <CommunityReports reports={data.communityReports} maxItems={8} />
                             <SurveillanceMonitor feeds={data.surveillanceFeeds} maxItems={5} />

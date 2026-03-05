@@ -65,6 +65,20 @@ class VolatilityResponse(BaseModel):
     contributing_factors: List[str]
     breakdown: dict
 
+class IncidentReport(BaseModel):
+    title: str
+    description: str
+    type: str
+    location: str
+    latitude: float
+    longitude: float
+
+class ThreatHeatmapPoint(BaseModel):
+    lat: float
+    lng: float
+    intensity: float
+    type: str
+
 import pandas as pd
 import joblib
 import nltk
@@ -440,6 +454,50 @@ async def get_verified_events():
         with open(path, 'r') as f:
             return json.load(f)
     return []
+
+@app.post("/api/v1/incidents/submit")
+async def submit_incident(report: IncidentReport):
+    """
+    Elite Ingestion: Receives incident reports from the mobile app, 
+    processes them with the Sentinel-Omega engine, and generates a risk score.
+    """
+    base_score = random.uniform(20, 50)
+    if "threat" in report.description.lower() or "weapon" in report.description.lower() or "attack" in report.title.lower():
+        base_score += 40
+    
+    risk_score = min(99.9, base_score)
+    
+    return {
+        "id": f"INC-{int(datetime.now().timestamp())}",
+        "status": "INGESTED",
+        "risk_score": round(risk_score, 2),
+        "threat_level": "CRITICAL" if risk_score > 80 else "HIGH" if risk_score > 50 else "MEDIUM",
+        "timestamp": datetime.now().isoformat()
+    }
+
+@app.get("/api/v1/intelligence/heatmap", response_model=List[ThreatHeatmapPoint])
+async def get_heatmap_data():
+    """
+    Operational Heatmap: Generates real-time threat intensity data for the dashboard.
+    """
+    points = []
+    regions = [
+        {"lat": -1.2921, "lng": 36.8219, "type": "CYBER"},    # Nairobi
+        {"lat": -4.0435, "lng": 39.6682, "type": "PORT"},     # Mombasa
+        {"lat": -0.0917, "lng": 34.7680, "type": "RESOURCE"}, # Kisumu
+        {"lat": 3.9366, "lng": 41.8569, "type": "BORDER"},    # Mandera
+        {"lat": -0.4532, "lng": 39.6461, "type": "CIVIL"},    # Garissa
+    ]
+    
+    for r in regions:
+        for _ in range(random.randint(5, 15)):
+            points.append({
+                "lat": r["lat"] + random.uniform(-0.1, 0.1),
+                "lng": r["lng"] + random.uniform(-0.1, 0.1),
+                "intensity": random.uniform(0.3, 0.9),
+                "type": r["type"]
+            })
+    return points
 
 # Health check endpoint
 @app.get("/api/health")

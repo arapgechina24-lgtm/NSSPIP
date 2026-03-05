@@ -27,7 +27,7 @@ async function generateSovereignIntel() {
 
     // Get an existing user to act as author (Commander/Analyst)
     const user = await prisma.user.findFirst({
-        where: { role: { in: ["COMMANDER", "ANALYST"] } }
+        where: { role: { in: ["L3", "L1"] } }
     })
 
     if (!user) {
