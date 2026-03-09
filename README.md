@@ -47,6 +47,7 @@ npm run dev
 ```
 
 Visit `http://localhost:3000` to open the NSSPIP Command Center.
+Visit `http://localhost:3000/usalama` to open the USALAMA APP citizen reporting portal.
 
 For cloud deployment (Vercel) and database provisioning, see `DEPLOY_GUIDE.md` and `DEPLOY_VARS.md`.
 

@@ -38,6 +38,9 @@ import { VoiceCommandPanel } from "@/components/nctirs/shared/VoiceCommandPanel"
 import { trackPageView, trackAction, trackPerformance } from "@/lib/nctirs/analytics"
 // API Client for real data
 import { fetchIncidents, fetchThreats, fetchVerifiedEvents, mapVerifiedEventToSecurityIncident, VerifiedEvent } from "@/lib/nctirs/api"
+// FCIR Integration — citizen-reported incidents
+import { fetchFCIRIncidents } from "@/lib/fcir/client"
+import { mapFCIRIncidents } from "@/lib/fcir/mapper"
 // Types
 import type {
     SecurityIncident,
@@ -213,11 +216,16 @@ export default function Home() {
 
             try {
                 // Fetch from API (with fallback to mock data)
-                const [incidents, cyberThreats, verifiedEvents] = await Promise.all([
+                const [incidents, cyberThreats, verifiedEvents, fcirData] = await Promise.all([
                     fetchIncidents({ limit: 30 }),
                     fetchThreats({ limit: 20 }),
                     fetchVerifiedEvents(),
+                    fetchFCIRIncidents(),
                 ])
+
+                // Map FCIR citizen reports to SecurityIncident format
+                const fcirIncidents = mapFCIRIncidents(fcirData.incidents);
+                console.log(`📱 USALAMA: Synced ${fcirIncidents.length} citizen reports`);
 
                 // Generate remaining mock data for components without API yet
                 const predictions = generateCrimePredictions(15);
@@ -252,8 +260,8 @@ export default function Home() {
                 // MAP VERIFIED EVENTS TO SECURITY INCIDENTS
                 const verifiedSecurityIncidents = verifiedEvents.map(mapVerifiedEventToSecurityIncident);
 
-                // Prioritize real-world conflict events over mock incidents
-                const combinedIncidents = [...verifiedSecurityIncidents, ...incidents].sort(
+                // Combine all incident sources: verified events + DB incidents + FCIR citizen reports
+                const combinedIncidents = [...verifiedSecurityIncidents, ...incidents, ...fcirIncidents].sort(
                     (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
                 );
 
