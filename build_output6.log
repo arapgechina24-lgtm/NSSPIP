@@ -1,0 +1,39 @@
+
+> app@1.3.0 prebuild
+> node scripts/check-env.mjs
+
+✅ Environment verification passed.
+
+> app@1.3.0 build
+> prisma generate && next build
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.2) to ./node_modules/@prisma/client in 257ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+▲ Next.js 16.1.6 (Turbopack)
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 11.9s
+  Running TypeScript ...
+Failed to compile.
+
+./app/(dashboard)/incidents/[id]/page.tsx:15:20
+Type error: Object literal may only specify known properties, and 'reporter' does not exist in type 'IncidentInclude<DefaultArgs>'.
+
+[0m [90m 13 |[39m     [36mconst[39m incident [33m=[39m [36mawait[39m prisma[33m.[39mincident[33m.[39mfindUnique({
+ [90m 14 |[39m         where[33m:[39m { id }[33m,[39m
+[31m[1m>[22m[39m[90m 15 |[39m         include[33m:[39m { reporter[33m:[39m [36mtrue[39m }
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 16 |[39m     })
+ [90m 17 |[39m
+ [90m 18 |[39m     [36mif[39m ([33m![39mincident) {[0m
+Next.js build worker exited with code: 1 and signal: null

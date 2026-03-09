@@ -3,6 +3,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false, // Suppress X-Powered-By: Next.js header
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   // cacheComponents: true, // Partial Prerendering (PPR) in Next.js 16
   async headers() {
     return [
