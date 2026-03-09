@@ -28,8 +28,9 @@ import ForensicLedger from "@/components/nctirs/intelligence/ForensicLedger"
 import FederatedLearningHub from "@/components/nctirs/intelligence/FederatedLearningHub"
 import { XAIPanel } from "@/components/nctirs/intelligence/XAIPanel"
 import SovereignAIStatusPanel from "@/components/nctirs/intelligence/SovereignAIStatusPanel"
-// Compliance components
+// Compliance & Special components
 import KenyaContextPanel from "@/components/nctirs/compliance/KenyaContextPanel"
+import CrossSectorPanel from "@/components/nctirs/intelligence/CrossSectorPanel"
 // Shared components
 import MultiplayerSession from "@/components/nctirs/shared/MultiplayerSession"
 import DemoModeController from "@/components/nctirs/shared/DemoModeController"
@@ -187,7 +188,7 @@ export default function Home() {
      * View State
      */
     const [currentView, setCurrentView] = useState<'COMMAND_CENTER' | 'FUSION_CENTER' | 'THREAT_MATRIX' | 'ANALYTICS' | 'OPERATIONS'>('COMMAND_CENTER')
-    const [isEmergency, setIsEmergency] = useState(false)
+    const [emergencyType, setEmergencyType] = useState<string | null>(null)
     const [mounted, setMounted] = useState(false)
     const [data, setData] = useState<DashboardData | null>(null)
 
@@ -404,7 +405,7 @@ export default function Home() {
                                 }} />
                             </div>
                             <button
-                                onClick={() => setIsEmergency(true)}
+                                onClick={() => setEmergencyType('CYBER_PHYSICAL')}
                                 className="bg-red-950/50 text-red-400 text-xs border-2 border-red-800 px-5 hover:bg-red-900/60 uppercase font-bold transition-all flex items-center gap-2 shrink-0"
                             >
                                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
@@ -527,6 +528,9 @@ export default function Home() {
                             </div>
                             <InterAgencyFusion />
                             <div className="flex-1 min-h-[200px]">
+                                <CrossSectorPanel />
+                            </div>
+                            <div className="flex-1 min-h-[200px]">
                                 <ForensicLedger />
                             </div>
                             <CommunityReports reports={data.communityReports} maxItems={8} />
@@ -643,23 +647,27 @@ export default function Home() {
             <ThreatMonitor
                 incidents={data?.incidents || []}
                 cyberThreats={data?.cyberThreats || []}
-                onAlert={() => setIsEmergency(true)}
+                onAlert={() => setEmergencyType('CYBER_PHYSICAL')}
             />
 
             <EmergencyOverlay
-                isActive={isEmergency}
-                targetAsset="SEACOM SUBMARINE CABLE - MOMBASA"
+                isActive={emergencyType !== null}
+                targetAsset={
+                    emergencyType === 'TERROR' ? 'WESTGATE MALL - NAIROBI' :
+                    emergencyType === 'DISASTER' ? 'TANA RIVER DAM - GARRISA' :
+                    'SEACOM SUBMARINE CABLE - MOMBASA'
+                }
                 onMitigate={handleMitigation}
-                onDismiss={() => setIsEmergency(false)}
+                onDismiss={() => setEmergencyType(null)}
             />
 
             <VoiceCommandPanel
                 onNavigate={setCurrentView}
-                onEmergency={() => setIsEmergency(true)}
+                onEmergency={() => setEmergencyType('CYBER_PHYSICAL')}
                 onRefresh={() => window.location.reload()}
             />
 
-            <DemoModeController onTriggerEmergency={() => setIsEmergency(true)} />
+            <DemoModeController onTriggerEmergency={(type) => setEmergencyType(type || 'CYBER_PHYSICAL')} />
         </div>
     );
 }

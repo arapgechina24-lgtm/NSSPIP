@@ -1,7 +1,6 @@
 # NSSPIP Deployment Roadmap: From MVP to National Scale
 
 ## Honest Current State (Hackathon MVP)
-
 - **Status**: Functional prototype with synthetic data
 - **AI**: Local Mistral 7B + rule-based fallbacks (87% accuracy)
 - **CV**: YOLOv8n on edge devices (280ms inference)
@@ -9,7 +8,6 @@
 - **Data**: Synthetic incidents based on historical patterns
 
 ## Phase 1: Nairobi CBD Pilot (Months 1-6)
-
 **Goal**: Validate in controlled environment
 
 | Milestone | Deliverable | Success Criteria |
@@ -17,13 +15,12 @@
 | M1.1 | Deploy at NIS HQ | Sovereign mode active, zero foreign calls |
 | M1.2 | KE-CIRT integration | Live threat feed, 1000 IOCs/day |
 | M1.3 | Police pilot | 50 officers trained, 100 incidents processed |
-| M1.4 | Performance validation | &lt;10min response time, &lt;5% false positive |
+| M1.4 | Performance validation | <10min response time, <5% false positive |
 
 **Cost**: KES 12M (hardware + integration)
 **Infrastructure**: 2 racks at NIS data center
 
 ## Phase 2: Major Cities (Months 7-18)
-
 **Goal**: Scale to Mombasa, Kisumu, Nakuru, Eldoret
 
 | Milestone | Deliverable | Success Criteria |
@@ -37,7 +34,6 @@
 **Infrastructure**: Kenya Sovereign Cloud (Safaricom/Liquid)
 
 ## Phase 3: National Rollout (Months 19-36)
-
 **Goal**: Full national coverage + regional leadership
 
 | Milestone | Deliverable | Success Criteria |
