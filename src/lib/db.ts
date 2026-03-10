@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
-import { PrismaLibSql } from '@prisma/adapter-libsql'
+// import { PrismaLibSql } from '@prisma/adapter-libsql'
+
 
 
 const globalForPrisma = globalThis as unknown as {
@@ -13,21 +14,8 @@ const createPrismaClient = () => {
         const authToken = process.env.TURSO_AUTH_TOKEN
 
         if (!url || !authToken) {
-            console.warn('⚠️  DATABASE_URL or TURSO_AUTH_TOKEN missing in production. Proceeding with in-memory SQLite for build/static generation.')
-            // Return a valid client connected to an empty in-memory DB to satisfy build requirements
-            const adapter = new PrismaLibSql({
-                url: 'file::memory:',
-            })
-            return new PrismaClient({ adapter })
         }
-
-        const adapter = new PrismaLibSql({
-            url,
-            authToken,
-        })
-        return new PrismaClient({ adapter })
     }
-
     // 2. Development (Local SQLite natively to avoid libsql caching bugs)
     return new PrismaClient()
 }

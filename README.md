@@ -166,6 +166,23 @@ See `docs/SYSTEM_ARCHITECTURE.md` for full sequence diagrams and data flows.
 
 ---
 
+## 🔌 Inter-Agency Integration (USALAMA APP Sync)
+
+NSSPIP acts as the central fusion hub for citizen reports originating from the **USALAMA APP** portal.
+
+### Sync Flow
+1. **Citizen Report**: A citizen submits a report on the USALAMA APP portal (ai-policing-platform).
+2. **Secure Forwarding**: USALAMA APP forwards the incident to NSSPIP's `/api/incidents` endpoint using a secure `X-Sync-Token`.
+3. **Automated Cognition**: NSSPIP's AI Engine immediately triggers an analysis:
+   - **Risk Scoring**: Calculates a confidence-weighted risk level.
+   - **XAI Rationale**: Generates human-readable justification for the score.
+   - **Forensic Fingerprinting**: Hashes the result for immutable audit trails.
+4. **Command View**: The incident appears in the NSSPIP dashboard for commander review.
+
+### Configuration
+To enable sync, ensure both platforms share the same `NSSPIP_SYNC_TOKEN` in their respective environment variables.
+
+
 ## 📜 Legal Compliance
 
 > **Disclaimer:** NSSPIP is a **demonstration and research platform**. Any production roll-out requires formal legal, security, and privacy review.

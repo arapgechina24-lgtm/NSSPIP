@@ -192,6 +192,7 @@ async function executeAIQuery(
 
     if (!text) {
         source = 'fallback';
+        return { text: '', source }; // Explicitly return empty text and fallback source
     }
 
     return { text, source };

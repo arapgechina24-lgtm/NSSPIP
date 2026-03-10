@@ -57,7 +57,10 @@ export interface DBIncident {
     detectedAt: string
     resolvedAt: string | null
     createdById: string | null
+    aiScore: number | null
+    aiFactors: string | null
 }
+
 
 export async function fetchIncidents(options?: {
     status?: string
@@ -116,12 +119,13 @@ function mapDBIncidentToSecurityIncident(db: DBIncident): SecurityIncident {
         affectedArea: Math.floor(Math.random() * 50) + 1, // Not stored in DB, generate placeholder
         casualties: undefined, // Not stored in DB
         suspects: undefined, // Not stored in DB
-        aiConfidence: 75 + Math.floor(Math.random() * 20),
-        sources: ['Database', 'API'].slice(0, Math.floor(Math.random() * 2) + 1),
+        aiConfidence: db.aiScore || (75 + Math.floor(Math.random() * 20)),
+        sources: db.createdById ? ['INTEL_CORE', 'INTERNAL_DB'] : ['NCTIRS_PORTAL', 'CITIZEN_REPORT'],
         dataProtectionImpact: 'NONE',
         mitreAttackId: undefined,
     }
 }
+
 
 
 

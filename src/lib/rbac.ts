@@ -5,6 +5,8 @@
  */
 
 import { auth } from '@/auth';
+
+
 import { NextResponse } from 'next/server';
 
 export type UserRole = 'L1' | 'L2' | 'L3' | 'L4';
@@ -31,6 +33,8 @@ const ROLE_LEVELS: Record<UserRole, number> = {
  */
 export async function requireRole(minimumRole: UserRole = 'L1') {
     const session = await auth();
+
+
 
     if (!session?.user) {
         return NextResponse.json(
