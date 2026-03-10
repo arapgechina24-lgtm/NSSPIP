@@ -1,48 +1,42 @@
-# NSSPIP User Manual
+# NSSPIP & USALAMA User Manual
 
-**AI-Powered National Security & Smart Policing Intelligence Platform**
+## Part 1: USALAMA App (Citizen Portal)
 
-## 1. Introduction
+### 1. Reporting an Incident
+**Goal:** Submit a distress signal or crime report with zero latency.
+1. Navigate to the USALAMA reporting portal (`/usalama/report`).
+2. Select the **Report Type** (e.g., Terrorism, Violent Crime, Riot/Protest).
+3. Fill in the location details and description.
+4. Click **Submit**. You will immediately receive a unique **Case Reference Number** (e.g., `USL-123456789`).
 
-Welcome to NSSPIP. This platform leverages AI to predict threats, monitor surveillance feeds, and coordinate incident responses.
+### 2. Tracking an Incident
+1. Navigate to the Track page (`/usalama/track`).
+2. Input your Case Reference Number.
+3. Instantly view the status of your report (e.g., `Pending`, `Under Investigation`, `Resolved`).
 
-## 2. Accessing the System
+### 3. Emergency 999
+For immediate life-threatening situations, use the red **Emergency 999** button in the header.
 
-- **URL**: `http://localhost:3000` (Dev) / `https://nsspip.gov.ke` (Prod)
-- **Login**: Use your secure credentials.
-  - *Demo Admin*: `admin@nss.go.ke` / (No password for dev auth)
+---
 
-## 3. Command Dashboard
+## Part 2: NSSPIP Command Center (Analyst Portal)
 
-The dashboard provides a real-time operational picture.
+### 1. Accessing the Platform
+**Clearance Required:** National Security Level 5
+1. Go to the main URL (`/`).
+2. You will be presented with the **Command Center** hub.
 
-- **Risk Score**: Top-right card showing the current AI-assessed threat level (0-100).
-- **Incident Map**: Main view displaying active incidents. Red markers indicate `CRITICAL` priority.
-- **Camera Feeds**: Live surveillance grid. Alerts appear automatically if the AI detects weapons or abandoned objects.
+### 2. Navigating the 5 Views
+Use the top-right navigation grid to switch operational contexts:
 
-## 4. Incident Management
+*   **COMMAND CENTER (Main Hub)**: Your primary dashboard. View live system metrics, active cases, and the high-level CNI Heatmap.
+*   **FUSION CENTER (Intel Feed)**: Deep dive into forensic ledgers, inter-agency communications, and raw surveillance feeds.
+*   **THREAT MATRIX (Live Matrix)**: Focus exclusively on active threats mapped geospatially via Leaflet. Lists all unassigned critical incidents.
+*   **ANALYTICS (AI Insights)**: View predictive models detailing the probability of future crime types across specific vectors.
+*   **OPERATIONS (Response)**: Manage the "4 Winning Pillars" of the AI system and approve/override automated SOAR responses (Security Orchestration).
 
-### Reporting
-
-1. Navigate to **Incidents > New Incident**.
-2. Fill in the Title, Priority, and Description.
-3. Use the Map to pin the exact location.
-4. Click **Submit**.
-
-### Managing
-
-1. Click on an incident in the list to view details.
-2. Use the **Update Status** button to change from `OPEN` to `IN_PROGRESS` or `RESOLVED`.
-
-## 5. Community App (Citizen Reporting)
-
-- **URL**: `/community/report`
-- **Usage**:
-  1. Accessibility: Mobile-optimized for citizens.
-  2. **Location**: Click "Use My Current Location" for GPS tagging.
-  3. **Privacy**: Metrics are anonymized; personal details are encrypted.
-
-## 6. Troubleshooting
-
-- **Missing AI Data**: Ensure the Python AI Engine is running on port 8000.
-- **Location Error**: Enable GPS permissions in your browser.
+### 3. Handling an Emergency (Mock Riot Triage)
+1. Monitor the **Key Metrics Bar**. If "THREAT LEVEL" hits CRITICAL, an incident has occurred.
+2. Locate the incident on the **Threat Map**.
+3. In the event of a catastrophic system threat, click the pulsating red **SIMULATE BREACH** button.
+4. Review the generated NC4 Report and execute the "Emergency Air-Gap Protocol" to isolate the threat.
