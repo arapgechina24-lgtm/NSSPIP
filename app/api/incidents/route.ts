@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
             take: limit,
             orderBy: { createdAt: "desc" },
             include: {
-                reporter: {
+                createdBy: {
                     select: {
                         name: true,
                         role: true,
