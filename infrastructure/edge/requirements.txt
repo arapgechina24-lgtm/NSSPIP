@@ -1,0 +1,6 @@
+# NSSPIP Edge Device Dependencies
+# For Raspberry Pi 4 / ARM64 edge nodes
+
+ultralytics>=8.0.0
+opencv-python-headless>=4.8.0
+requests>=2.31.0

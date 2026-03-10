@@ -14,13 +14,16 @@ services:
       - AI_ENGINE=local
       - DATABASE_URL=file:/data/nsspip.db
       - REDIS_URL=redis://localhost:6379
+      - KAFKA_BROKERS=kafka:9092
     volumes:
       - nsspip-data:/data
       - ./models:/app/models:ro
     networks:
       - nsspip-net
     restart: unless-stopped
-    # No external internet access for sovereign mode
+    depends_on:
+      - ai-engine
+      - kafka
     sysctls:
       - net.ipv4.conf.all.route_localnet=1
 
@@ -32,7 +35,6 @@ services:
       - ./models:/models:ro
     environment:
       - OLLAMA_MODELS=/root/.ollama
-    # Pre-load Kenyan security models
     command: >
       sh -c "ollama pull mistral:7b && 
              ollama pull nomic-embed-text &&
@@ -40,8 +42,41 @@ services:
              ollama serve"
     networks:
       - nsspip-net
-    # No external network access
 
+  # ===== Real-Time Streaming Layer =====
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: nsspip-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+    networks:
+      - nsspip-net
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: nsspip-kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      # Pre-create security topics
+      KAFKA_CREATE_TOPICS: "incidents:3:1,threats:3:1,edge-telemetry:3:1,social-signals:3:1,cross-sector:3:1"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    depends_on:
+      - zookeeper
+    networks:
+      - nsspip-net
+
+  # ===== Edge Computer Vision Node =====
   edge-node:
     build:
       context: ..
@@ -50,18 +85,24 @@ services:
     environment:
       - EDGE_MODE=true
       - SYNC_INTERVAL=300
+      - NSSPIP_SERVER=http://nsspip-core:3000
+      - CAMERA_ID=0
+      - CONFIDENCE=0.5
     volumes:
       - edge-data:/data
     networks:
       - nsspip-net
-    # Works offline, syncs when connected
+    depends_on:
+      - nsspip-core
 
 volumes:
   nsspip-data:
   ollama-models:
   edge-data:
+  zookeeper-data:
+  kafka-data:
 
 networks:
   nsspip-net:
     driver: bridge
-    internal: true  # No external access
+    internal: true  # No external access — sovereign mode

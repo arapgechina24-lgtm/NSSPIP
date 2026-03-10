@@ -31,6 +31,8 @@ import SovereignAIStatusPanel from "@/components/nctirs/intelligence/SovereignAI
 // Compliance & Special components
 import KenyaContextPanel from "@/components/nctirs/compliance/KenyaContextPanel"
 import CrossSectorPanel from "@/components/nctirs/intelligence/CrossSectorPanel"
+// RBAC
+import { RBACGate } from "@/components/rbac/RBACGate"
 // Shared components
 import MultiplayerSession from "@/components/nctirs/shared/MultiplayerSession"
 import DemoModeController from "@/components/nctirs/shared/DemoModeController"
@@ -404,6 +406,7 @@ export default function Home() {
                                     networkTraffic: '45.2 TB/s'
                                 }} />
                             </div>
+                            <RBACGate minLevel="L3">
                             <button
                                 onClick={() => setEmergencyType('CYBER_PHYSICAL')}
                                 className="bg-red-950/50 text-red-400 text-xs border-2 border-red-800 px-5 hover:bg-red-900/60 uppercase font-bold transition-all flex items-center gap-2 shrink-0"
@@ -411,6 +414,7 @@ export default function Home() {
                                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
                                 SIMULATE BREACH
                             </button>
+                            </RBACGate>
                         </div>
 
                         {/* MAIN CONTENT: 3-Column Grid */}
@@ -667,7 +671,9 @@ export default function Home() {
                 onRefresh={() => window.location.reload()}
             />
 
-            <DemoModeController onTriggerEmergency={(type) => setEmergencyType(type || 'CYBER_PHYSICAL')} />
+            <RBACGate minLevel="L3" showBadge={false}>
+                <DemoModeController onTriggerEmergency={(type) => setEmergencyType(type || 'CYBER_PHYSICAL')} />
+            </RBACGate>
         </div>
     );
 }
