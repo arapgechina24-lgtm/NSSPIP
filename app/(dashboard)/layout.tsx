@@ -9,7 +9,7 @@ export default function DashboardLayout({
     return (
         <Providers>
             <AuthProvider>
-                <div className="flex h-screen w-full bg-black text-green-500 overflow-hidden relative font-mono">
+                <div className="flex flex-col h-screen w-full bg-black text-green-500 overflow-hidden relative font-mono">
                     {children}
                 </div>
             </AuthProvider>

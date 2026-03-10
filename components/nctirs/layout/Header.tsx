@@ -44,22 +44,22 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
       <header className="border-b border-green-900/40 bg-black/95 backdrop-blur-md relative z-10">
         {/* Classification Banner */}
         <div className="bg-green-950 border-b border-green-800">
-          <div className="flex items-center justify-between px-6 py-1">
-            <div className="flex items-center gap-4">
-              <span className="text-[10px] font-bold text-green-400 tracking-[0.3em]">
+          <div className="flex flex-wrap items-center justify-between px-3 sm:px-6 py-1 gap-2">
+            <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+              <span className="text-[8px] sm:text-[10px] font-bold text-green-400 tracking-[0.1em] sm:tracking-[0.3em] whitespace-nowrap">
                 TOP SECRET // SCI // NOFORN
               </span>
-              <div className="h-3 w-px bg-green-800" />
-              <span className="text-[10px] text-green-500 font-mono uppercase">
+              <div className="hidden sm:block h-3 w-px bg-green-800" />
+              <span className="text-[8px] sm:text-[10px] text-green-500 font-mono uppercase whitespace-nowrap hidden md:inline-block">
                 CLASSIFICATION: NATIONAL SECURITY LEVEL 5
               </span>
             </div>
-            <div className="flex items-center gap-3 text-[10px] text-green-500">
-              <div className="flex items-center gap-1">
+            <div className="flex items-center gap-3 text-[8px] sm:text-[10px] text-green-500 flex-wrap">
+              <div className="flex items-center gap-1 whitespace-nowrap">
                 <Lock className="h-3 w-3" />
                 <span className="font-mono">AES-256 ENCRYPTED</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 whitespace-nowrap">
                 <Radio className="h-3 w-3 animate-pulse" />
                 <span className="font-mono">SECURE LINK ACTIVE</span>
               </div>
@@ -67,17 +67,17 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
           </div>
         </div>
 
-        <div className="flex h-20 items-center px-6">
-          <div className="flex items-center gap-4">
-            <div className="relative">
+        <div className="flex flex-col md:flex-row h-auto md:h-20 items-center justify-between px-4 sm:px-6 py-3 md:py-0 gap-3">
+          <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto overflow-hidden">
+            <div className="relative shrink-0">
               <div className="absolute inset-0 bg-green-600 blur-xl opacity-20 rounded-full"></div>
-              <div className="relative rounded-none bg-black p-3 border border-green-500/50 shadow-[0_0_15px_rgba(0,255,65,0.2)]">
-                <Shield className="h-7 w-7 text-green-400" strokeWidth={1.5} />
+              <div className="relative rounded-none bg-black p-2 sm:p-3 border border-green-500/50 shadow-[0_0_15px_rgba(0,255,65,0.2)]">
+                <Shield className="h-6 w-6 sm:h-7 sm:w-7 text-green-400" strokeWidth={1.5} />
               </div>
             </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <h1 className="text-2xl font-bold text-green-400 tracking-tighter glow-text">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <h1 className="text-xl sm:text-2xl font-bold text-green-400 tracking-tighter glow-text truncate">
                   NSSPIP
                 </h1>
                 <div className="px-2 py-0.5 bg-green-950 border border-green-700/50 rounded-none text-[10px] font-mono text-green-300">
@@ -87,16 +87,16 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
                   DPA 2019
                 </div>
               </div>
-              <p className="text-[10px] text-green-800 tracking-[0.2em] mt-1 font-bold uppercase">
+              <p className="text-[8px] sm:text-[10px] text-green-800 tracking-[0.1em] sm:tracking-[0.2em] mt-1 font-bold uppercase truncate">
                 AI-POWERED NATIONAL SECURITY AND SMART POLICING INTELLIGENCE PLATFORM
               </p>
             </div>
           </div>
 
-          <div className="ml-auto flex items-center gap-6">
+          <div className="flex flex-wrap md:flex-nowrap items-center gap-3 w-full md:w-auto md:ml-auto">
             {/* System Status */}
-            <div className="flex flex-col items-end gap-1">
-              <div className="flex items-center gap-2 rounded-none bg-black border border-green-900/50 px-4 py-2 shadow-[inset_0_0_10px_rgba(0,255,65,0.05)]">
+            <div className="flex flex-col items-end gap-1 flex-1 md:flex-none">
+              <div className="w-full flex justify-center items-center gap-2 rounded-none bg-black border border-green-900/50 px-3 py-1.5 sm:px-4 sm:py-2 shadow-[inset_0_0_10px_rgba(0,255,65,0.05)]">
                 <div className="relative">
                   <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
                   <div className="absolute inset-0 h-1.5 w-1.5 rounded-full bg-green-500 animate-ping"></div>
@@ -109,34 +109,34 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
             </div>
 
             {/* Date/Time */}
-            <div className="flex flex-col items-end gap-1 px-4 py-2 bg-black border border-green-900/50 rounded-none">
+            <div className="hidden lg:flex flex-col items-end gap-1 px-4 py-2 bg-black border border-green-900/50 rounded-none shrink-0">
               <div className="text-[9px] font-mono text-green-800">EAST AFRICA TIME</div>
-              <div className="text-sm font-bold text-green-400 font-mono tracking-widest">
+              <div className="text-sm font-bold text-green-400 font-mono tracking-widest whitespace-nowrap">
                 {currentTime || "LOADING..."}
               </div>
             </div>
 
             {/* User Profile */}
             {isAuthenticated && user ? (
-              <div className="flex items-center gap-3 px-4 py-2 bg-black border border-green-900/50 rounded-none">
+              <div className="flex items-center justify-between md:justify-start gap-3 px-3 py-1.5 sm:px-4 sm:py-2 bg-black border border-green-900/50 rounded-none flex-1 md:flex-none">
                 <div className="flex items-center gap-2">
-                  <div className="p-1.5 bg-green-950 border border-green-800 rounded-full">
-                    <User className="h-4 w-4 text-green-400" />
+                  <div className="p-1 sm:p-1.5 bg-green-950 border border-green-800 rounded-full shrink-0">
+                    <User className="h-3 w-3 sm:h-4 sm:w-4 text-green-400" />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-green-400">{user.name || user.email?.split('@')[0] || 'USER'}</span>
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-green-400 truncate max-w-[80px] sm:max-w-[120px]">{user.name || user.email?.split('@')[0] || 'USER'}</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-[8px] text-green-700 font-mono">DCI/NSIS</span>
-                      <span className="text-[8px] px-1 py-0.5 font-bold rounded-none bg-green-950 text-green-400 border border-green-700/50">L1</span>
+                      <span className="text-[7px] sm:text-[8px] text-green-700 font-mono hidden sm:inline-block">DCI/NSIS</span>
+                      <span className="text-[7px] sm:text-[8px] px-1 py-0.5 font-bold rounded-none bg-green-950 text-green-400 border border-green-700/50 shrink-0">L1</span>
                     </div>
                   </div>
                 </div>
                 <button
                   onClick={logout}
-                  className="p-1.5 bg-red-950/50 border border-red-900/50 text-red-400 hover:bg-red-900/50 hover:border-red-700 transition-all"
+                  className="p-1 sm:p-1.5 bg-red-950/50 border border-red-900/50 text-red-400 hover:bg-red-900/50 hover:border-red-700 transition-all shrink-0"
                   title="Logout"
                 >
-                  <LogOut className="h-3.5 w-3.5" />
+                  <LogOut className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 </button>
               </div>
             ) : (
@@ -152,8 +152,8 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
         </div>
 
         {/* Navigation */}
-        <div className="border-t border-green-900/40 bg-gradient-to-b from-black/80 to-black/95">
-          <nav className="grid grid-cols-5 w-full">
+        <div className="border-t border-green-900/40 bg-gradient-to-b from-black/80 to-black/95 overflow-x-auto overflow-y-hidden custom-scrollbar">
+          <nav className="flex min-w-max md:w-full md:grid md:grid-cols-5">
             {[
               { icon: Activity, label: 'COMMAND_CENTER', display: 'COMMAND', shortDesc: 'Main Hub' },
               { icon: Users, label: 'FUSION_CENTER', display: 'FUSION', shortDesc: 'Intel Feed' },
@@ -164,17 +164,17 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
               <button
                 key={item.label}
                 onClick={() => onViewChange(item.label as ViewType)}
-                className={`group relative flex flex-col items-center justify-center gap-1 py-3 px-2 text-center transition-all duration-200 border-r border-green-900/30 last:border-r-0
+                className={`group relative flex-1 md:flex-none flex flex-col items-center justify-center gap-1 py-2 sm:py-3 px-3 sm:px-2 text-center transition-all duration-200 border-r border-green-900/30 md:last:border-r-0
                   ${currentView === item.label
                     ? 'bg-green-900/30 text-green-400 shadow-[inset_0_-3px_0_0_#22c55e,inset_0_0_20px_rgba(0,255,65,0.15)]'
                     : 'text-green-700 hover:bg-green-900/15 hover:text-green-400'}
                 `}
               >
-                <div className="flex items-center gap-1.5">
-                  <item.icon className={`h-4 w-4 ${currentView === item.label ? 'text-green-400' : 'text-green-700 group-hover:text-green-400'}`} strokeWidth={1.5} />
-                  <span className="text-[11px] font-bold tracking-wider">{item.display}</span>
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <item.icon className={`h-3 w-3 sm:h-4 sm:w-4 shrink-0 ${currentView === item.label ? 'text-green-400' : 'text-green-700 group-hover:text-green-400'}`} strokeWidth={1.5} />
+                  <span className="text-[10px] sm:text-[11px] font-bold tracking-wider whitespace-nowrap">{item.display}</span>
                 </div>
-                <span className={`text-[8px] uppercase tracking-widest ${currentView === item.label ? 'text-green-500' : 'text-green-800'}`}>
+                <span className={`hidden sm:block text-[7px] sm:text-[8px] uppercase tracking-widest whitespace-nowrap ${currentView === item.label ? 'text-green-500' : 'text-green-800'}`}>
                   {item.shortDesc}
                 </span>
                 {currentView === item.label && (

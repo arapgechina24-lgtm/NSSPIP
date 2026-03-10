@@ -378,21 +378,21 @@ export default function Home() {
 
     return (
 
-        <div className={`min-h-screen bg-black text-green-500 font-mono selection:bg-green-900 selection:text-white`}>
-            <div className="fixed inset-0 pointer-events-none z-50 bg-[url('/scanline.png')] opacity-10 mix-blend-overlay"></div>
-            <div className="fixed inset-0 pointer-events-none z-50 bg-gradient-to-b from-transparent via-green-900/5 to-green-900/10"></div>
+        <div className={`flex flex-col h-full w-full bg-black text-green-500 font-mono selection:bg-green-900 selection:text-white overflow-hidden relative`}>
+            <div className="absolute inset-0 pointer-events-none z-50 bg-[url('/scanline.png')] opacity-10 mix-blend-overlay"></div>
+            <div className="absolute inset-0 pointer-events-none z-50 bg-gradient-to-b from-transparent via-green-900/5 to-green-900/10"></div>
 
             <Header currentView={currentView} onViewChange={setCurrentView} />
 
-            <main className="p-6 relative z-0">
+            <main className="p-3 lg:p-4 relative z-0 flex flex-col flex-1 overflow-hidden w-full">
                 <MultiplayerSession />
 
                 {/* View Routing */}
                 {currentView === 'COMMAND_CENTER' && (
-                    <div className="flex flex-col gap-4 overflow-y-auto" style={{ height: 'calc(100vh - 9rem)' }}>
+                    <div className="flex flex-col gap-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0 w-full pr-1">
 
                         {/* TOP ROW: Metrics Bar with Emergency Button */}
-                        <div className="flex items-stretch gap-4 shrink-0">
+                        <div className="flex flex-wrap items-stretch gap-3 shrink-0">
                             <div className="flex-1">
                                 <KeyMetrics metrics={{
                                     threatLevel: activeCoordinated > 0 ? 'CRITICAL' : highThreatCount > 5 ? 'HIGH' : 'MEDIUM',
@@ -413,10 +413,10 @@ export default function Home() {
                         </div>
 
                         {/* MAIN CONTENT: 3-Column Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full shrink-0">
 
                             {/* COLUMN 1: Infrastructure Status */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-3 w-full">
                                 <div className="text-xs text-green-500 uppercase tracking-widest font-bold px-1 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-green-500 rounded-full" />
                                     Infrastructure Status
@@ -440,7 +440,7 @@ export default function Home() {
                             </div>
 
                             {/* COLUMN 2: Threat Visualization */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-3 w-full">
                                 <div className="text-xs text-green-500 uppercase tracking-widest font-bold px-1 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
                                     Threat Visualization
@@ -474,7 +474,7 @@ export default function Home() {
                             </div>
 
                             {/* COLUMN 3: Intelligence & Response */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-3 w-full">
                                 <div className="text-xs text-green-500 uppercase tracking-widest font-bold px-1 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-cyan-500 rounded-full" />
                                     Intelligence Feed
@@ -494,16 +494,16 @@ export default function Home() {
                         </div>
 
                         {/* FULL WIDTH: Surveillance Network */}
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3 shrink-0 w-full mb-4">
                             <SurveillanceMonitor feeds={data.surveillanceFeeds} maxItems={12} />
                         </div>
                     </div>
                 )}
 
                 {currentView === 'FUSION_CENTER' && (
-                    <div className="grid grid-cols-12 gap-4 h-[calc(100vh-10rem)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0 w-full pr-1">
                         {/* LEFT - Main Content */}
-                        <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
+                        <div className="lg:col-span-8 flex flex-col gap-3">
                             <div className="flex-1 min-h-[300px]">
                                 <ThreatMap
                                     incidents={data.incidents}
@@ -512,13 +512,13 @@ export default function Home() {
                                     verifiedEvents={data.verifiedEvents}
                                 />
                             </div>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <CNIHeatmap />
                                 <DataLakeMonitor sources={data.dataLakeSources} />
                             </div>
                         </div>
                         {/* RIGHT - Intel Sidebar */}
-                        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 overflow-y-auto">
+                        <div className="lg:col-span-4 flex flex-col gap-3">
                             <div className="bg-black border border-green-900/50 p-4">
                                 <h2 className="text-sm font-bold text-green-400 mb-3 border-b border-green-900/50 pb-2 uppercase tracking-wider">
                                     Inter-Agency Comms
@@ -536,9 +536,9 @@ export default function Home() {
                 )}
 
                 {currentView === 'THREAT_MATRIX' && (
-                    <div className="grid grid-cols-12 gap-4 h-[calc(100vh-10rem)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0 w-full pr-1">
                         {/* LEFT - Threat List */}
-                        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 overflow-y-auto pr-1">
+                        <div className="lg:col-span-4 flex flex-col gap-3">
                             <IncidentList incidents={data.incidents} maxItems={15} />
                             <ThreatAnalyticsEngine
                                 cyberThreats={data.cyberThreats}
@@ -546,7 +546,7 @@ export default function Home() {
                             />
                         </div>
                         {/* RIGHT - Map & Metrics */}
-                        <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
+                        <div className="lg:col-span-8 flex flex-col gap-3">
                             <KeyMetrics metrics={{
                                 threatLevel: 'CRITICAL',
                                 activeIncidents: 42,
@@ -571,9 +571,9 @@ export default function Home() {
                 )}
 
                 {currentView === 'ANALYTICS' && (
-                    <div className="grid grid-cols-12 gap-4 h-[calc(100vh-10rem)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0 w-full pr-1">
                         {/* LEFT - Charts */}
-                        <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
+                        <div className="lg:col-span-8 flex flex-col gap-3">
                             <div className="h-80">
                                 <ThreatAnalyticsChart analytics={data.threatAnalytics} />
                             </div>
@@ -582,7 +582,7 @@ export default function Home() {
                             </div>
                         </div>
                         {/* RIGHT - Sidebar */}
-                        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
+                        <div className="lg:col-span-4 flex flex-col gap-3">
                             <ThreatAnalyticsEngine
                                 cyberThreats={data.cyberThreats}
                                 coordinatedAttacks={data.coordinatedAttacks}
@@ -604,9 +604,9 @@ export default function Home() {
                 )}
 
                 {currentView === 'OPERATIONS' && (
-                    <div className="flex flex-col gap-4 overflow-y-auto" style={{ height: 'calc(100vh - 9rem)' }}>
+                    <div className="flex flex-col gap-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0 w-full pr-1">
                         {/* 4 PILLARS HEADER */}
-                        <div className="flex items-center justify-between px-1 shrink-0">
+                        <div className="flex flex-wrap items-center justify-between px-1 shrink-0">
                             <div className="text-xs text-green-500 uppercase tracking-widest font-bold flex items-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                                 MAJESTIC SHIELD: 4 Winning Pillars
@@ -617,7 +617,7 @@ export default function Home() {
                         </div>
 
                         {/* 2x2 Grid Layout for better visibility */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 shrink-0">
                             {/* Pillar 1: Adversarial Defense */}
                             <AdversarialDefensePanel metrics={data.adversarialMetrics} />
 
