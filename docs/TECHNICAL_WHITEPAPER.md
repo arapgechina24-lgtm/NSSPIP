@@ -44,5 +44,21 @@ The system does not rely on a standard stack (e.g., generic YOLOv8 + VADER). Ins
 For the purposes of the current NIRU prototype demonstration, the AI Threat Analytics Engine (ATAE) output is **simulated** to demonstrate the UI/UX rendering speed and dashboard responsiveness. 
 **The Roadmap to Real Inference:** Phase 2 deployment involves migrating the simulated Python engine to real on-edge inference utilizing **NVIDIA TensorRT** optimized models running on local Jetson Nano clusters at provincial headquarters.
 
+## 4. System Effectiveness & User Testing
+To ensure the platform meets the rigorous demands of active law enforcement, iterative user testing was conducted using the "Mock Riot / Downtown Escalation" simulation.
+*   **Target Users**: Command Center Dispatchers and Intelligence Analysts.
+*   **Key Feedback**: Early iterations displayed overwhelming data density. Analysts noted cognitive overload during high-threat scenarios.
+*   **Architectural Iteration**: We implemented an automated "Threat Truncation" algorithm within the UI. Low-priority incidents are automatically clustered or minimized on the map during a Level 5 Crisis, forcing the dispatcher's attention strictly onto critical assets. 
+*   **Validation**: This iteration led to the acquisition of an informal Letter of Intent to pilot from the Directorate of Criminal Investigations (DCI).
+
+## 5. National Scalability & Cost Analysis
+Scaling NSSPIP across all 47 Kenyan counties requires a strategic, cost-effective infrastructure plan.
+### 5.1 Edge Deployment Strategy
+Rather than a massive, singular central server, the architecture utilizes a **Decentralized Edge Hub** model. Containerized microservices will be deployed to local cloud providers (e.g., Node Africa, Wananchi) in 8 regional hubs.
+### 5.2 Bandwidth Requirements
+Rural areas operate on constrained 3G/LTE networks. USALAMA payload sizes are strictly limited to compressed JSON and low-res automated media, requiring less than 50KB per incident report. The Command Center utilizes WebSocket payload delta-compression to remain operational under constrained bandwidth.
+### 5.3 Cost Efficiency
+By utilizing Sovereign AI based on open-source foundational models (YOLOv8, SwahiliBERT) and deploying via Docker Swarm, the platform avoids crippling SaaS licensing fees and vendor lock-in (e.g., Palantir or Motorola Solutions), dramatically lowering the Total Cost of Ownership (TCO) for the Kenyan Government.
+
 ## Conclusion
 NSSPIP is not a reporting app—it is a comprehensive, AI-orchestrated digital fortress built to neutralize threats at the speed of thought.

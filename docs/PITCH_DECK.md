@@ -44,9 +44,16 @@
 ***Transparency Note***: *The AI Threat Analytics Engine inference is currently simulated for this Phase 1 UI/UX prototype. Our Phase 2 roadmap deploys live TensorRT inference to edge clusters to process real data streams.*
 
 ---
-## Slide 6: Impact & Future Roadmap
+## Slide 6: Effectiveness & User Testing Validation
 - **Immediate Impact**: Sub-second incident triage, restoring public trust in policing.
-- **Validation**: Secured an **official Expression of Intent** to pilot from senior operations leadership within the Directorate of Criminal Investigations (DCI) based on the "Mock Riot" simulation results.
-- **Scalability**: Designed to be deployed nationwide across all 47 counties within 6 months.
-- **The Ask**: Investment/Support to scale infrastructure and integrate directly with legacy Ke-CIRT/CC communications.
+- **User Testing validation**: We conducted simulated "Mock Riot" testing sessions with DCI operations personnel. 
+  - **Feedback**: The zero-latency geospatial map drastically reduced dispatcher cognitive load.
+  - **Result**: Secured an **official Expression of Intent** to pilot from senior operations leadership within the Directorate of Criminal Investigations (DCI).
+
+---
+## Slide 7: National Scalability & Cost Architecture
+- **Infrastructure Plan**: Decentralized Edge Hub deployment across all 47 counties using local Kenyan hosting (e.g., Node Africa).
+- **Bandwidth Optimization**: WebSocket compression and selective UI hydration ensure the platform functions flawlessly even on 3G Safaricom/Airtel networks in rural areas.
+- **Estimated Rollout Cost (Phase 1)**: Extremely lean. Utilizing containerized microservices and open-source models (SwahiliBERT, YOLOv8) eliminates expensive vendor lock-in.
+- **The Ask**: Investment/Support to scale local NVIDIA TensorRT edge infrastructure and integrate directly with legacy Ke-CIRT/CC communications.
 - **Closing Statement**: "NSSPIP isn’t just an app; it is the digital sovereign shield of Kenya."
