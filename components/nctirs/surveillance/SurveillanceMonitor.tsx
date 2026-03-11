@@ -60,6 +60,9 @@ export function SurveillanceMonitor({ feeds, maxItems = 12 }: SurveillanceMonito
           <CardTitle className="flex items-center gap-2">
             <Camera className="h-5 w-5 text-green-500" />
             Surveillance Network Monitor
+            <Badge variant="outline" className="ml-2 text-[10px] text-yellow-500 border-yellow-500/50 bg-yellow-950/20 px-2 py-0 animate-pulse">
+              SIMULATED / DEMO
+            </Badge>
           </CardTitle>
           <div className="flex items-center gap-4 text-xs font-mono uppercase">
             <div className="flex items-center gap-2">
@@ -139,7 +142,8 @@ export function SurveillanceMonitor({ feeds, maxItems = 12 }: SurveillanceMonito
                 <div className="mt-3 pt-2 border-t border-red-900/50 animate-in fade-in zoom-in duration-300">
                   <div className={`text-[10px] font-bold uppercase mb-1 flex items-center gap-1 ${scanResults[feed.id].alert_triggered ? 'text-red-500' : 'text-green-500'}`}>
                     <Target className="h-3 w-3" />
-                    AI Detection: {scanResults[feed.id].alert_triggered ? 'THREAT' : 'CLEAR'}
+                    AI Detection: {scanResults[feed.id].alert_triggered ? 'THREAT' : 'CLEAR'} 
+                    <span className="text-yellow-600/70 text-[8px] ml-1 tracking-tighter">(MOCK INFERENCE)</span>
                   </div>
                   <div className="space-y-1">
                     {scanResults[feed.id].detected_objects.map((obj, idx) => (

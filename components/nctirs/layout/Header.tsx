@@ -63,6 +63,11 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
                 <Radio className="h-3 w-3 animate-pulse" />
                 <span className="font-mono">SECURE LINK ACTIVE</span>
               </div>
+              <div className="flex items-center gap-1 whitespace-nowrap ml-2">
+                <span className="font-mono text-yellow-500 bg-yellow-950/80 px-2 border border-yellow-700/80 animate-pulse font-bold">
+                  PROTOTYPE: SIMULATED AI INFERENCE
+                </span>
+              </div>
             </div>
           </div>
         </div>
