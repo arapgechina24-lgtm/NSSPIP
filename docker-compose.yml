@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  nsspip-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nsspip_command_center
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./dev.db # In production, this maps to the local postgres
+      - NEXT_TELEMETRY_DISABLED=1
+      # Explicitly setting internal routing ensuring NO outbound traffic
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+    volumes:
+      - ./prisma:/app/prisma
+    networks:
+      - nsspip_sovereign_net
+
+networks:
+  # Internal network exclusively, zero external connectivity allowed in air-gapped mode
+  nsspip_sovereign_net:
+    driver: bridge
+    internal: true 

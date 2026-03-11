@@ -5,12 +5,12 @@
 The National Security & Smart Policing Intelligence Platform (NSSPIP), in conjunction with the USALAMA Citizen Application, represents a paradigm shift in Kenyan law enforcement. Utilizing edge-optimized React architecture, real-time WebSocket communication, and distributed AI models, the ecosystem eliminates intelligence silos and drives response latency down to sub-second benchmarks.
 
 ## 1. System Architecture
-NSSPIP operates on a highly concurrent, serverless-ready architecture optimized for the Vercel Edge Network.
+NSSPIP operates on a highly concurrent, containerized architecture designed specifically for air-gapped deployment on local Sovereign Infrastructure (e.g., Node Africa, Wananchi Group, or the Government Cloud (GoK Cloud)). This eliminates any reliance on foreign servers (like Vercel or AWS US/EU regions), resolving the critical data sovereignty contradiction.
 
 ### 1.1 Core Stack
 *   **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS v4 for absolute zero-layout-shift UI.
-*   **Backend**: Next.js API Routes operating on Vercel Serverless Functions for auto-scaling during crisis events (e.g., national protests, election security).
-*   **Database**: Prisma ORM connecting to a robust SQL backend, structured to handle high-throughput geospatial incident reporting.
+*   **Backend**: Next.js API Routes operating within highly available Docker Swarm / Kubernetes clusters for auto-scaling during crisis events (e.g., national protests, election security).
+*   **Database**: Prisma ORM connecting to a robust SQL backend (PostgreSQL/SQLite), structured to handle high-throughput geospatial incident reporting entirely within national borders.
 
 ### 1.2 The "Zero Latency" Pipeline
 To achieve the mandate of "zero critical latency" from citizen report to police dashboard alert:

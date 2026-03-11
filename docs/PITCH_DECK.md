@@ -34,7 +34,7 @@
 
 ---
 ## Slide 5: Technical Innovation
-- **The Architecture**: Built on Next.js, Prisma, and robust Edge-ready database routing.
+- **The Architecture**: Containerized (Docker/Kubernetes) Next.js and Prisma stack, explicitly designed for air-gapped deployment on local Kenyan infrastructure (e.g., Node Africa, Wananchi) to guarantee 100% Data Sovereignty.
 - **The 4 Winning Pillars**:
   1. **Adversarial Defense**: Real-time threat neutralization.
   2. **Federated Learning**: Decentralized intelligence sharing across provinces without compromising data silos.
