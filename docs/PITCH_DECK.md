@@ -38,8 +38,10 @@
 - **The 4 Winning Pillars**:
   1. **Adversarial Defense**: Real-time threat neutralization.
   2. **Federated Learning**: Decentralized intelligence sharing across provinces without compromising data silos.
-  3. **Explainable AI (XAI)**: We don't just predict; the AI explains *why* a riot is forming based on social sentiment and transport anomalies.
-  4. **Sovereign AI**: Engineered for national self-reliance utilizing local "Golden Data" (Traffic, M-Pesa, Border Logs).
+  3. **Explainable AI (XAI)**: We don't just predict; the AI explains *why* a riot is forming using a **Multi-Modal Fusion** of data.
+  4. **Sovereign AI (Custom NLP/CV)**: We moved beyond standard YOLO/VADER stacks. We use **Swahili & Sheng NLP (SwahiliBERT)** to process local dialect reports, combined with CV trained to recognize local criminal patterns (e.g., BodaBoda escape routes).
+  
+***Transparency Note***: *The AI Threat Analytics Engine inference is currently simulated for this Phase 1 UI/UX prototype. Our Phase 2 roadmap deploys live TensorRT inference to edge clusters to process real data streams.*
 
 ---
 ## Slide 6: Impact & Future Roadmap

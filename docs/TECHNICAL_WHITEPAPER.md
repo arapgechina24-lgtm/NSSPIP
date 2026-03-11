@@ -34,8 +34,15 @@ Provincial intelligence hubs (e.g., Nairobi vs. Mombasa) train threat-detection 
 ### 3.3 Pillar 3: Explainable AI (XAI)
 When NSSPIP recommends deploying a tactical unit to an escalating riot, it provides a cryptographic trail of *why* (e.g., "7 USALAMA reports + 400% spike in negative social sentiment + localized M-Pesa network congestion").
 
-### 3.4 Pillar 4: Sovereign AI
-The system's LLMs and models are tailored entirely to the Kenyan context. The AI does not rely on generic Western datasets; it analyzes localized "Golden Data", including Nairobi traffic nodes, Ke-CIRT logs, and M-Pesa transactions.
+### 3.4 Pillar 4: Sovereign AI (Multi-Modal Fusion)
+The system does not rely on a standard stack (e.g., generic YOLOv8 + VADER). Instead, NSSPIP employs a **Multi-Modal Fusion Methodology**:
+1.  **Computer Vision Contextualization**: YOLOv8 models fine-tuned to recognize localized criminal patterns (e.g., coordinated *BodaBoda* escape routes, unregulated roadblocks).
+2.  **Sheng & Swahili NLP**: Specialized Transformer models (e.g., SwahiliBERT) trained to process local dialects and *Sheng* slang from USALAMA text reports, rather than relying on generic English-only sentiment analysis.
+3.  **Geospatial Correlation**: Fusing CV and NLP data with localized "Golden Data" (Traffic nodes, Ke-CIRT logs, M-Pesa transaction velocity) to generate a holistic threat score.
+
+### 3.5 AI Engine Transparency & Inference Roadmap
+For the purposes of the current NIRU prototype demonstration, the AI Threat Analytics Engine (ATAE) output is **simulated** to demonstrate the UI/UX rendering speed and dashboard responsiveness. 
+**The Roadmap to Real Inference:** Phase 2 deployment involves migrating the simulated Python engine to real on-edge inference utilizing **NVIDIA TensorRT** optimized models running on local Jetson Nano clusters at provincial headquarters.
 
 ## Conclusion
 NSSPIP is not a reporting app—it is a comprehensive, AI-orchestrated digital fortress built to neutralize threats at the speed of thought.

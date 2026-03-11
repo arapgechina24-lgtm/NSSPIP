@@ -116,6 +116,19 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
               </div>
             </div>
 
+            {/* Benchmarks Link */}
+            <Link
+              href="/benchmarks"
+              className="hidden md:flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-purple-950/30 border border-purple-900/50 text-purple-400 hover:bg-purple-900/50 hover:border-purple-700 transition-all shrink-0"
+              title="View System Benchmarks"
+            >
+              <TrendingUp className="h-4 w-4" />
+              <div className="flex flex-col items-start">
+                <span className="text-[10px] font-bold tracking-widest leading-none">BENCHMARKS</span>
+                <span className="text-[8px] text-purple-700 font-mono mt-0.5 leading-none">PERFORMANCE</span>
+              </div>
+            </Link>
+
             {/* User Profile */}
             {isAuthenticated && user ? (
               <div className="flex items-center justify-between md:justify-start gap-3 px-3 py-1.5 sm:px-4 sm:py-2 bg-black border border-green-900/50 rounded-none flex-1 md:flex-none">
