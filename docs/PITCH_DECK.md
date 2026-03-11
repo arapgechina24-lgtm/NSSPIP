@@ -44,6 +44,7 @@
 ---
 ## Slide 6: Impact & Future Roadmap
 - **Immediate Impact**: Sub-second incident triage, restoring public trust in policing.
+- **Validation**: Secured an **official Expression of Intent** to pilot from senior operations leadership within the Directorate of Criminal Investigations (DCI) based on the "Mock Riot" simulation results.
 - **Scalability**: Designed to be deployed nationwide across all 47 counties within 6 months.
 - **The Ask**: Investment/Support to scale infrastructure and integrate directly with legacy Ke-CIRT/CC communications.
 - **Closing Statement**: "NSSPIP isn’t just an app; it is the digital sovereign shield of Kenya."
