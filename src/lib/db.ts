@@ -13,12 +13,10 @@ const createPrismaClient = () => {
         const authToken = process.env.TURSO_AUTH_TOKEN
 
         if (url && authToken) {
-            const libsql = createClient({
+            const adapter = new PrismaLibSql({
                 url,
                 authToken,
             })
-            // @ts-expect-error - mismatch between @libsql/client ^0.17 and Prisma 6/7 adapter typings
-            const adapter = new PrismaLibSql(libsql)
             return new PrismaClient({ adapter })
         }
     }

@@ -5,9 +5,11 @@ import { PrismaClient } from '@prisma/client'
 import { PrismaLibSql } from '@prisma/adapter-libsql'
 import bcrypt from 'bcryptjs'
 
-// Prisma 7 requires adapter pattern
+import { createClient } from '@libsql/client'
+
 const adapter = new PrismaLibSql({
     url: process.env.DATABASE_URL || 'file:./prisma/dev.db',
+    authToken: process.env.TURSO_AUTH_TOKEN,
 })
 const prisma = new PrismaClient({ adapter })
 
