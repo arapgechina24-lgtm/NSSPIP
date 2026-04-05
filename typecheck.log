@@ -1,0 +1,269 @@
+
+> app@1.3.0 type-check
+> tsc --noEmit
+
+app/(dashboard)/incidents/[id]/page.tsx(15,20): error TS2353: Object literal may only specify known properties, and 'reporter' does not exist in type 'IncidentInclude<DefaultArgs>'.
+app/(dashboard)/incidents/[id]/page.tsx(66,46): error TS2339: Property 'priority' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/[id]/page.tsx(67,50): error TS2339: Property 'priority' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/[id]/page.tsx(68,54): error TS2339: Property 'priority' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/[id]/page.tsx(69,45): error TS2339: Property 'priority' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/[id]/page.tsx(79,49): error TS2339: Property 'reporter' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/[id]/page.tsx(80,97): error TS2339: Property 'reporter' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/(dashboard)/incidents/page.tsx(17,5): error TS2322: Type '{ id: string; title: string; status: IncidentStatus; priority: any; location: string | null; createdAt: string; }[]' is not assignable to type 'Incident[]'.
+  Type '{ id: string; title: string; status: $Enums.IncidentStatus; priority: any; location: string | null; createdAt: string; }' is not assignable to type 'Incident'.
+    Types of property 'status' are incompatible.
+      Type 'IncidentStatus' is not assignable to type '"RESOLVED" | "OPEN" | "IN_PROGRESS" | "CLOSED"'.
+        Type '"ACTIVE"' is not assignable to type '"RESOLVED" | "OPEN" | "IN_PROGRESS" | "CLOSED"'.
+app/(dashboard)/incidents/page.tsx(21,28): error TS2339: Property 'priority' does not exist on type '{ id: string; encryptedDetails: string | null; createdAt: Date; updatedAt: Date; type: string; title: string; description: string; status: IncidentStatus; severity: Priority; ... 12 more ...; createdById: string | null; }'.
+app/api/incidents/route.ts(15,13): error TS2322: Type '{ status: string; } | {}' is not assignable to type 'IncidentWhereInput | undefined'.
+  Type '{ status: string; }' is not assignable to type 'IncidentWhereInput'.
+    Types of property 'status' are incompatible.
+      Type 'string' is not assignable to type 'IncidentStatus | EnumIncidentStatusFilter<"Incident"> | undefined'.
+app/api/incidents/route.ts(65,17): error TS2322: Type '"OPEN"' is not assignable to type 'IncidentStatus | undefined'.
+components/nctirs/surveillance/SurveillanceMonitor.tsx(63,20): error TS2322: Type '"outline"' is not assignable to type '"info" | "default" | "medium" | "critical" | "high" | "low" | "success" | "warning" | undefined'.
+components/nctirs/threat/ThreatMap.tsx(43,7): error TS2578: Unused '@ts-expect-error' directive.
+components/ui/form.tsx(14,8): error TS2307: Cannot find module 'react-hook-form' or its corresponding type declarations.
+lib/actions/incidents.ts(63,17): error TS2322: Type '"OPEN"' is not assignable to type 'IncidentStatus | undefined'.
+lib/actions/incidents.ts(82,21): error TS2322: Type '"RESOLVED" | "OPEN" | "IN_PROGRESS" | "CLOSED"' is not assignable to type 'IncidentStatus | EnumIncidentStatusFieldUpdateOperationsInput | undefined'.
+  Type '"OPEN"' is not assignable to type 'IncidentStatus | EnumIncidentStatusFieldUpdateOperationsInput | undefined'.
+next.config.ts(7,3): error TS2353: Object literal may only specify known properties, and 'eslint' does not exist in type 'NextConfig'.
+src/__tests__/anomalyDetection.test.ts(27,8): error TS2307: Cannot find module '@/lib/anomalyDetection' or its corresponding type declarations.
+src/__tests__/anomalyDetection.test.ts(74,30): error TS18046: 'info' is of type 'unknown'.
+src/__tests__/anomalyDetection.test.ts(74,46): error TS18046: 'info' is of type 'unknown'.
+src/__tests__/anomalyDetection.test.ts(192,85): error TS18046: 'a' is of type 'unknown'.
+src/__tests__/anomalyDetection.test.ts(192,89): error TS18046: 'b' is of type 'unknown'.
+src/__tests__/anomalyDetection.test.ts(267,29): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/__tests__/components/GlobalStatusBanner.test.tsx(3,32): error TS2307: Cannot find module '@/components/layout/GlobalStatusBanner' or its corresponding type declarations.
+src/__tests__/components/ThreatMonitor.test.tsx(3,31): error TS2307: Cannot find module '@/components/threat/ThreatMonitor' or its corresponding type declarations.
+src/__tests__/components/ThreatMonitor.test.tsx(4,47): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/__tests__/lib/ai.test.ts(10,8): error TS2307: Cannot find module '@/lib/ai' or its corresponding type declarations.
+src/__tests__/lib/analytics.test.ts(12,8): error TS2307: Cannot find module '@/lib/analytics' or its corresponding type declarations.
+src/__tests__/lib/cni-sim.test.ts(2,34): error TS2307: Cannot find module '@/lib/cni-sim' or its corresponding type declarations.
+src/__tests__/lib/cni-sim.test.ts(58,42): error TS7006: Parameter 'a' implicitly has an 'any' type.
+src/__tests__/lib/cni-sim.test.ts(63,42): error TS7006: Parameter 'a' implicitly has an 'any' type.
+src/__tests__/lib/cni-sim.test.ts(70,44): error TS7006: Parameter 'a' implicitly has an 'any' type.
+src/__tests__/lib/designSystem.test.ts(2,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/__tests__/lib/nc4Report.test.ts(2,35): error TS2307: Cannot find module '@/lib/nc4Report' or its corresponding type declarations.
+src/__tests__/lib/soar-logic.test.ts(2,33): error TS2307: Cannot find module '@/lib/soar-logic' or its corresponding type declarations.
+src/app/api/ai/analyze/route.ts(12,8): error TS2307: Cannot find module '@/lib/ai' or its corresponding type declarations.
+src/app/api/ai/mitre/route.ts(7,30): error TS2307: Cannot find module '@/lib/ai' or its corresponding type declarations.
+src/app/api/ai/mitre/route.ts(8,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/audit/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/audit/route.ts(5,42): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/audit/route.ts(6,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/auth/register/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/auth/register/route.ts(6,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/benchmarks/route.ts(2,80): error TS2307: Cannot find module '@/lib/benchmarks/security-metrics' or its corresponding type declarations.
+src/app/api/cross-sector/impact/route.ts(2,36): error TS2307: Cannot find module '@/lib/cross-sector/health-module' or its corresponding type declarations.
+src/app/api/cross-sector/impact/route.ts(3,41): error TS2307: Cannot find module '@/lib/cross-sector/agriculture-module' or its corresponding type declarations.
+src/app/api/incidents/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/incidents/route.ts(5,42): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/incidents/route.ts(8,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/incidents/route.ts(9,33): error TS2307: Cannot find module '@/lib/ai' or its corresponding type declarations.
+src/app/api/incidents/route.ts(142,24): error TS7006: Parameter 'aiResult' implicitly has an 'any' type.
+src/app/api/incidents/route.ts(151,18): error TS7006: Parameter 'err' implicitly has an 'any' type.
+src/app/api/nlp/sheng-analyze/route.ts(2,29): error TS2307: Cannot find module '@/lib/ai/sheng-nlp' or its corresponding type declarations.
+src/app/api/stats/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/streaming/ingest/route.ts(2,47): error TS2307: Cannot find module '@/lib/streaming/event-stream' or its corresponding type declarations.
+src/app/api/streaming/status/route.ts(2,29): error TS2307: Cannot find module '@/lib/streaming/event-stream' or its corresponding type declarations.
+src/app/api/surveillance/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/surveillance/route.ts(4,42): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/surveillance/route.ts(5,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/threats/ingest/route.ts(6,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/threats/ingest/route.ts(8,29): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/threats/ingest/route.ts(9,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/threats/ingest/route.ts(110,50): error TS7006: Parameter 'tx' implicitly has an 'any' type.
+src/app/api/threats/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/threats/route.ts(5,42): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/threats/route.ts(6,63): error TS2307: Cannot find module '@/lib/rateLimit' or its corresponding type declarations.
+src/app/api/users/route.ts(3,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/api/users/route.ts(4,29): error TS2307: Cannot find module '@/lib/rbac' or its corresponding type declarations.
+src/app/api/webhooks/github/route.ts(4,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/app/dashboard/compliance/page.tsx(2,50): error TS2307: Cannot find module '@/lib/actions/audit' or its corresponding type declarations.
+src/app/dashboard/compliance/page.tsx(39,38): error TS7006: Parameter 'log' implicitly has an 'any' type.
+src/app/dashboard/intelligence/page.tsx(12,8): error TS2307: Cannot find module '@/components/intelligence' or its corresponding type declarations.
+src/app/dashboard/intelligence/page.tsx(13,35): error TS2307: Cannot find module '@/components/intelligence/AnomalyDetectionPanel' or its corresponding type declarations.
+src/app/dashboard/intelligence/page.tsx(14,68): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/app/dashboard/security-operations/page.tsx(5,41): error TS2307: Cannot find module '@/components/SOAR/AutomatedResponseEngine' or its corresponding type declarations.
+src/app/dashboard/security-operations/page.tsx(6,32): error TS2307: Cannot find module '@/components/compliance/AuditLogViewer' or its corresponding type declarations.
+src/app/layout.tsx(4,32): error TS2307: Cannot find module '@/components/layout/GlobalStatusBanner' or its corresponding type declarations.
+src/app/layout.tsx(5,43): error TS2307: Cannot find module '@/components/shared/ServiceWorkerRegistration' or its corresponding type declarations.
+src/app/layout.tsx(6,31): error TS2307: Cannot find module '@/components/ui/ErrorBoundary' or its corresponding type declarations.
+src/app/layout.tsx(7,30): error TS2307: Cannot find module '@/contexts/AuthContext' or its corresponding type declarations.
+src/app/login/page.tsx(7,25): error TS2307: Cannot find module '@/contexts/AuthContext' or its corresponding type declarations.
+src/app/page.tsx(6,24): error TS2307: Cannot find module '@/components/layout/Header' or its corresponding type declarations.
+src/app/page.tsx(8,38): error TS2307: Cannot find module '@/components/threat/ThreatAnalyticsChart' or its corresponding type declarations.
+src/app/page.tsx(9,27): error TS2307: Cannot find module '@/components/threat/ThreatMap' or its corresponding type declarations.
+src/app/page.tsx(10,31): error TS2307: Cannot find module '@/components/threat/ThreatMonitor' or its corresponding type declarations.
+src/app/page.tsx(11,39): error TS2307: Cannot find module '@/components/threat/ThreatAnalyticsEngine' or its corresponding type declarations.
+src/app/page.tsx(12,37): error TS2307: Cannot find module '@/components/threat/AdversarialDefensePanel' or its corresponding type declarations.
+src/app/page.tsx(14,30): error TS2307: Cannot find module '@/components/incident/IncidentList' or its corresponding type declarations.
+src/app/page.tsx(15,37): error TS2307: Cannot find module '@/components/incident/IncidentTrendsChart' or its corresponding type declarations.
+src/app/page.tsx(16,30): error TS2307: Cannot find module '@/components/incident/EmergencyOverlay' or its corresponding type declarations.
+src/app/page.tsx(17,40): error TS2307: Cannot find module '@/components/incident/AutomatedResponsePanel' or its corresponding type declarations.
+src/app/page.tsx(19,37): error TS2307: Cannot find module '@/components/surveillance/SurveillanceMonitor' or its corresponding type declarations.
+src/app/page.tsx(20,34): error TS2307: Cannot find module '@/components/surveillance/CommunityReports' or its corresponding type declarations.
+src/app/page.tsx(22,33): error TS2307: Cannot find module '@/components/infrastructure/DataLakeMonitor' or its corresponding type declarations.
+src/app/page.tsx(23,36): error TS2307: Cannot find module '@/components/infrastructure/SystemArchitecture' or its corresponding type declarations.
+src/app/page.tsx(24,24): error TS2307: Cannot find module '@/components/infrastructure/CNIHeatmap' or its corresponding type declarations.
+src/app/page.tsx(26,30): error TS2307: Cannot find module '@/components/intelligence/AIAssistantPanel' or its corresponding type declarations.
+src/app/page.tsx(27,34): error TS2307: Cannot find module '@/components/intelligence/FederatedLearningHub' or its corresponding type declarations.
+src/app/page.tsx(28,26): error TS2307: Cannot find module '@/components/intelligence/XAIPanel' or its corresponding type declarations.
+src/app/page.tsx(29,36): error TS2307: Cannot find module '@/components/intelligence/SovereignAIStatusPanel' or its corresponding type declarations.
+src/app/page.tsx(31,31): error TS2307: Cannot find module '@/components/compliance/KenyaContextPanel' or its corresponding type declarations.
+src/app/page.tsx(33,32): error TS2307: Cannot find module '@/components/shared/MultiplayerSession' or its corresponding type declarations.
+src/app/page.tsx(34,32): error TS2307: Cannot find module '@/components/shared/DemoModeController' or its corresponding type declarations.
+src/app/page.tsx(35,35): error TS2307: Cannot find module '@/components/shared/VoiceCommandPanel' or its corresponding type declarations.
+src/app/page.tsx(37,62): error TS2307: Cannot find module '@/lib/analytics' or its corresponding type declarations.
+src/app/page.tsx(39,46): error TS2307: Cannot find module '@/lib/api' or its corresponding type declarations.
+src/app/page.tsx(61,3): error TS2305: Module '"@/types"' has no exported member 'DigitalPulse'.
+src/app/page.tsx(62,3): error TS2305: Module '"@/types"' has no exported member 'HateSpeechAlert'.
+src/app/page.tsx(85,8): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/app/page.tsx(93,8): error TS2307: Cannot find module '@/lib/kenyaContextData' or its corresponding type declarations.
+src/app/page.tsx(103,8): error TS2307: Cannot find module '@/lib/kenyaExtendedData' or its corresponding type declarations.
+src/app/page.tsx(104,33): error TS2307: Cannot find module '@/lib/soar-logic' or its corresponding type declarations.
+src/app/page.tsx(335,44): error TS2307: Cannot find module '@/lib/actions/audit' or its corresponding type declarations.
+src/app/page.tsx(797,29): error TS2339: Property 'mitreAttackId' does not exist on type 'SecurityIncident'.
+src/app/page.tsx(797,90): error TS2339: Property 'mitreAttackId' does not exist on type 'SecurityIncident'.
+src/app/page.tsx(815,89): error TS2339: Property 'dataProtectionImpact' does not exist on type 'SecurityIncident'.
+src/app/page.tsx(826,31): error TS2339: Property 'mitreAttackId' does not exist on type 'SecurityIncident'.
+src/app/page.tsx(829,100): error TS2339: Property 'mitreAttackId' does not exist on type 'SecurityIncident'.
+src/app/register/page.tsx(7,25): error TS2307: Cannot find module '@/contexts/AuthContext' or its corresponding type declarations.
+src/auth.ts(5,8): error TS2613: Module '"/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' has no default export. Did you mean to use 'import { prisma } from "/Users/mac/.gemini/antigravity/playground/phantom-galileo/lib/db"' instead?
+src/auth.ts(8,27): error TS2307: Cannot find module '@/lib/rate-limit' or its corresponding type declarations.
+src/components/compliance/AuditLogViewer.tsx(14,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/compliance/AuditLogViewer.tsx(15,42): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/components/compliance/KenyaContextPanel.tsx(1,59): error TS2307: Cannot find module '@/lib/kenyaContextData' or its corresponding type declarations.
+src/components/compliance/KenyaContextPanel.tsx(2,68): error TS2307: Cannot find module '@/lib/kenyaExtendedData' or its corresponding type declarations.
+src/components/compliance/NC4ReportPanel.tsx(5,50): error TS2307: Cannot find module '@/lib/nc4Report' or its corresponding type declarations.
+src/components/incident/AutomatedResponsePanel.tsx(26,5): error TS2353: Object literal may only specify known properties, and 'SHADOW_IP_ROUTING' does not exist in type 'Record<ResponseType, ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>>'.
+src/components/incident/AutomatedResponsePanel.tsx(38,5): error TS2353: Object literal may only specify known properties, and 'SHADOW_IP_ROUTING' does not exist in type 'Record<ResponseType, string>'.
+src/components/incident/CrimePredictionList.tsx(44,40): error TS2322: Type '"warning"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/incident/EmergencyOverlay.tsx(6,35): error TS2307: Cannot find module '@/lib/soar-logic' or its corresponding type declarations.
+src/components/incident/EmergencyResponseList.tsx(50,28): error TS2322: Type '"info" | "default" | "high" | "success" | "warning"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+  Type '"info"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/incident/IncidentList.tsx(4,10): error TS2305: Module '"@/components/ui/badge"' has no exported member 'ThreatBadge'.
+src/components/incident/IncidentList.tsx(4,23): error TS2305: Module '"@/components/ui/badge"' has no exported member 'StatusBadge'.
+src/components/incident/IncidentList.tsx(9,33): error TS2307: Cannot find module '@/components/intelligence/AIAnalysisPanel' or its corresponding type declarations.
+src/components/incident/IncidentList.tsx(43,28): error TS2322: Type '"info"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/incident/IncidentList.tsx(92,52): error TS2339: Property 'dataProtectionImpact' does not exist on type 'SecurityIncident'.
+src/components/incident/IncidentList.tsx(93,45): error TS2339: Property 'mitreAttackId' does not exist on type 'SecurityIncident'.
+src/components/infrastructure/CNIHeatmap.tsx(4,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/infrastructure/CNIHeatmap.tsx(7,34): error TS2307: Cannot find module '@/lib/cni-sim' or its corresponding type declarations.
+src/components/infrastructure/CNIHeatmap.tsx(46,42): error TS7006: Parameter 'asset' implicitly has an 'any' type.
+src/components/infrastructure/DigitalTwinMonitor.tsx(4,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/AIAssistantPanel.tsx(4,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/AIAssistantPanel.tsx(6,30): error TS2307: Cannot find module '@/contexts/SovereignContext' or its corresponding type declarations.
+src/components/intelligence/AnomalyDetectionPanel.tsx(10,8): error TS2307: Cannot find module '@/lib/anomalyDetection' or its corresponding type declarations.
+src/components/intelligence/AnomalyDetectionPanel.tsx(318,41): error TS18046: 'b' is of type 'unknown'.
+src/components/intelligence/AnomalyDetectionPanel.tsx(318,45): error TS18046: 'a' is of type 'unknown'.
+src/components/intelligence/AnomalyDetectionPanel.tsx(456,61): error TS18046: 'b' is of type 'unknown'.
+src/components/intelligence/AnomalyDetectionPanel.tsx(456,65): error TS18046: 'a' is of type 'unknown'.
+src/components/intelligence/AnomalyDetectionPanel.tsx(462,45): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/components/intelligence/RansomwareAnalytics.tsx(5,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/RansomwareNegotiator.tsx(6,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/RansomwareTracker.tsx(12,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/SovereignAIStatusPanel.tsx(5,30): error TS2307: Cannot find module '@/contexts/SovereignContext' or its corresponding type declarations.
+src/components/intelligence/ThreatPredictionPanel.tsx(13,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/ThreatPredictionPanel.tsx(14,38): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/components/intelligence/XAIPanel.tsx(12,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/intelligence/XAIPanel.tsx(13,41): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/components/layout/GlobalOverlayWrapper.tsx(3,33): error TS2307: Cannot find module '@/lib/soar-logic' or its corresponding type declarations.
+src/components/layout/GlobalOverlayWrapper.tsx(4,30): error TS2307: Cannot find module '@/components/incident/EmergencyOverlay' or its corresponding type declarations.
+src/components/layout/Header.tsx(5,25): error TS2307: Cannot find module '@/contexts/AuthContext' or its corresponding type declarations.
+src/components/layout/Header.tsx(6,30): error TS2307: Cannot find module '@/contexts/SovereignContext' or its corresponding type declarations.
+src/components/Providers.tsx(4,35): error TS2307: Cannot find module '@/contexts/SovereignContext' or its corresponding type declarations.
+src/components/shared/MultiplayerSession.tsx(5,31): error TS2307: Cannot find module '@/lib/ably' or its corresponding type declarations.
+src/components/shared/VoiceCommandPanel.tsx(5,90): error TS2307: Cannot find module '@/lib/voiceCommands' or its corresponding type declarations.
+src/components/shared/VoiceCommandPanel.tsx(6,26): error TS2307: Cannot find module '@/components/layout/Header' or its corresponding type declarations.
+src/components/shared/VoiceCommandPanel.tsx(169,50): error TS18046: 'action' is of type 'unknown'.
+src/components/SOAR/AutomatedResponseEngine.tsx(14,30): error TS2307: Cannot find module '@/lib/designSystem' or its corresponding type declarations.
+src/components/SOAR/AutomatedResponseEngine.tsx(15,44): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/components/SOAR/ContainmentPanel.tsx(4,60): error TS2307: Cannot find module '@/lib/actions/security' or its corresponding type declarations.
+src/components/surveillance/CommunityReports.tsx(41,21): error TS2322: Type '"medium" | "critical" | "high" | "low"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+  Type '"medium"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/surveillance/CommunityReports.tsx(54,26): error TS2322: Type '"info"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/surveillance/SurveillanceMonitor.tsx(73,19): error TS2322: Type '"default" | "critical"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+  Type '"critical"' is not assignable to type '"link" | "default" | "outline" | "secondary" | "destructive" | "ghost" | null | undefined'.
+src/components/threat/ThreatAnalyticsEngine.tsx(6,33): error TS2307: Cannot find module '@/components/intelligence/AIAnalysisPanel' or its corresponding type declarations.
+src/components/threat/ThreatMonitor.tsx(4,47): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/components/ui/badge.tsx(2,55): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/hooks/useData.ts(5,46): error TS2307: Cannot find module '@/lib/api' or its corresponding type declarations.
+src/hooks/useData.ts(6,52): error TS2307: Cannot find module '@/lib/mockData' or its corresponding type declarations.
+src/lib/api.ts(124,9): error TS2353: Object literal may only specify known properties, and 'dataProtectionImpact' does not exist in type 'SecurityIncident'.
+src/lib/kenyaCyberDataset.ts(11,29): error TS2305: Module '"@/types"' has no exported member 'DataProtectionImpact'.
+src/lib/kenyaCyberDataset.ts(44,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(64,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(84,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(103,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(123,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(144,9): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(163,9): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(182,9): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(204,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(224,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(244,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(264,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(285,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(304,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(323,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(343,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(364,9): error TS2322: Type '"DDOS"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(383,9): error TS2322: Type '"DDOS"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(402,9): error TS2322: Type '"DDOS"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(423,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(442,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(461,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(480,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(501,9): error TS2322: Type '"INSIDER_THREAT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(521,9): error TS2322: Type '"INSIDER_THREAT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(541,9): error TS2322: Type '"INSIDER_THREAT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(563,9): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(583,9): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(602,9): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(623,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(644,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(666,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(687,9): error TS2322: Type '"DDOS"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(708,9): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(729,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(750,9): error TS2322: Type '"INSIDER_THREAT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(772,9): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(793,9): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(814,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(833,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(852,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(871,9): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(891,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(910,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(929,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(948,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(968,9): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(987,9): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(1006,9): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/kenyaCyberDataset.ts(1025,9): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(28,3): error TS2305: Module '"@/types"' has no exported member 'DataProtectionImpact'.
+src/lib/mockData.ts(30,3): error TS2305: Module '"@/types"' has no exported member 'DigitalPulse'.
+src/lib/mockData.ts(31,3): error TS2305: Module '"@/types"' has no exported member 'HateSpeechAlert'.
+src/lib/mockData.ts(68,3): error TS2305: Module '"@/types"' has no exported member 'DataProtectionImpact'.
+src/lib/mockData.ts(70,3): error TS2305: Module '"@/types"' has no exported member 'DigitalPulse'.
+src/lib/mockData.ts(71,3): error TS2305: Module '"@/types"' has no exported member 'HateSpeechAlert'.
+src/lib/mockData.ts(100,5): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(119,5): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,34): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,46): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,60): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,75): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,86): error TS2322: Type '"DDOS"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,94): error TS2322: Type '"APT"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,101): error TS2322: Type '"INSIDER_THREAT"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(140,119): error TS2322: Type '"IDENTITY_THEFT"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(175,7): error TS2353: Object literal may only specify known properties, and 'dataProtectionImpact' does not exist in type 'SecurityIncident'.
+src/lib/mockData.ts(183,35): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(183,47): error TS2322: Type '"RANSOMWARE"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(183,61): error TS2322: Type '"DATA_BREACH"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(183,76): error TS2322: Type '"MALWARE"' is not assignable to type 'IncidentType'.
+src/lib/mockData.ts(209,7): error TS2322: Type '"PHISHING"' is not assignable to type 'IncidentType'.
+src/lib/responseEngine.ts(59,9): error TS2322: Type '"SHADOW_IP_ROUTING"' is not assignable to type 'ResponseType'.
+src/lib/responseEngine.ts(67,9): error TS2322: Type '"AUTONOMOUS_TAKEDOWN"' is not assignable to type 'ResponseType'.
+src/lib/responseEngine.ts(75,9): error TS2322: Type '"PROPAGANDA_NEUTRALIZATION"' is not assignable to type 'ResponseType'.
