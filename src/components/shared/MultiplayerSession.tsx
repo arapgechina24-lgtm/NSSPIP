@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { MousePointer2 } from 'lucide-react';
-import { getAblyClient } from '@/lib/ably';
+import { getAblyClient } from '@/src/lib/ably';
 import * as Ably from 'ably';
 
 // Fallback "Ghost" Users for Demo Simulation
