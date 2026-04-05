@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "NODE_ENV=development npm ci && npx prisma generate && NODE_ENV=production npm run build"
+buildCommand = "NODE_ENV=development npm ci && npx prisma generate && NODE_ENV=production npm run build && cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/"
 
 [deploy]
 startCommand = "npm start"
