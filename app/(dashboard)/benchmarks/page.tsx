@@ -6,7 +6,7 @@ export default function BenchmarksPage() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-green-400 glow-text tracking-wider">SYSTEM BENCHMARKS & PERFORMANCE</h2>
-          <p className="text-green-800 text-xs font-mono uppercase mt-1">NSSPIP Architecture Validation Metrics • Phase 1 Prototype</p>
+          <p className="text-green-800 text-xs font-mono uppercase mt-1">NCTIRS Architecture Validation Metrics • Phase 1 Prototype</p>
         </div>
       </div>
 
@@ -116,7 +116,7 @@ export default function BenchmarksPage() {
           <ShieldCheck className="h-4 w-4" /> Transparency & Certification
         </h4>
         <p className="text-xs text-gray-400 leading-relaxed max-w-4xl font-mono">
-          <strong>CONFIDENTIAL NOTE FOR NIRU EVALUATION:</strong> The metrics displayed above reflect the engineering constraints and architecture benchmarks of the NSSPIP unified ecosystem. To achieve the 12ms p95 latency, the system utilizes optimistic UI updates on the USALAMA client and localized Node Africa edge routing. 
+          <strong>CONFIDENTIAL NOTE FOR NIRU EVALUATION:</strong> The metrics displayed above reflect the engineering constraints and architecture benchmarks of the NCTIRS unified ecosystem. To achieve the 12ms p95 latency, the system utilizes optimistic UI updates on the USALAMA client and localized Node Africa edge routing. 
           <br /><br />
           <em>Note on Artificial Intelligence Inference:</em> For the purpose of this Phase 1 prototype demonstration, the YOLOv8 and SwahiliBERT inference pipelines are simulated in the backend to ensure presentation stability and UI responsiveness. Based on our architecture design, Phase 2 migration to NVIDIA TensorRT clusters at provincial headquarters will replicate these exact simulated latency targets in live production.
         </p>

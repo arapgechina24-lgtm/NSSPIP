@@ -1,4 +1,4 @@
-# NSSPIP Edge Node — YOLOv8 Computer Vision
+# NCTIRS Edge Node — YOLOv8 Computer Vision
 # Optimized for Raspberry Pi 4 / ARM64
 
 FROM python:3.11-slim
@@ -23,7 +23,7 @@ RUN python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')" || true
 COPY infrastructure/edge/edge_detector.py .
 
 # Environment configuration
-ENV NSSPIP_SERVER=http://nsspip-core:3000 \
+ENV NCTIRS_SERVER=http://nctirs-core:3000 \
     CAMERA_ID=0 \
     CONFIDENCE=0.5 \
     INTERVAL=2 \
@@ -33,7 +33,7 @@ HEALTHCHECK --interval=60s --timeout=10s --retries=3 \
     CMD python -c "import requests; requests.get('http://localhost:8081/health')" || exit 1
 
 CMD ["python", "edge_detector.py", \
-     "--server", "${NSSPIP_SERVER}", \
+     "--server", "${NCTIRS_SERVER}", \
      "--camera", "${CAMERA_ID}", \
      "--confidence", "${CONFIDENCE}", \
      "--interval", "${INTERVAL}"]

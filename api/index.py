@@ -6,15 +6,15 @@ from datetime import datetime
 import os
 
 # --- Config (env flags for production hardening) ---
-# Set NSSPIP_ENABLE_CV=0 to disable YOLO load and CV inference (mock-only).
-ENABLE_CV_INFERENCE = os.environ.get("NSSPIP_ENABLE_CV", "true").lower() in ("1", "true", "yes")
-# Set NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD=1 to allow downloading images from URLs; default off for production.
-ENABLE_CV_EXTERNAL_DOWNLOAD = os.environ.get("NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD", "false").lower() in ("1", "true", "yes")
-# Set NSSPIP_ENABLE_NLP_EXTERNAL_NEWS=1 to allow live RSS/news scrape in volatility/sentiment; default off.
-ENABLE_NLP_EXTERNAL_NEWS = os.environ.get("NSSPIP_ENABLE_NLP_EXTERNAL_NEWS", "false").lower() in ("1", "true", "yes")
+# Set NCTIRS_ENABLE_CV=0 to disable YOLO load and CV inference (mock-only).
+ENABLE_CV_INFERENCE = os.environ.get("NCTIRS_ENABLE_CV", "true").lower() in ("1", "true", "yes")
+# Set NCTIRS_ENABLE_CV_EXTERNAL_DOWNLOAD=1 to allow downloading images from URLs; default off for production.
+ENABLE_CV_EXTERNAL_DOWNLOAD = os.environ.get("NCTIRS_ENABLE_CV_EXTERNAL_DOWNLOAD", "false").lower() in ("1", "true", "yes")
+# Set NCTIRS_ENABLE_NLP_EXTERNAL_NEWS=1 to allow live RSS/news scrape in volatility/sentiment; default off.
+ENABLE_NLP_EXTERNAL_NEWS = os.environ.get("NCTIRS_ENABLE_NLP_EXTERNAL_NEWS", "false").lower() in ("1", "true", "yes")
 
 # Define root_path for Vercel integration
-app = FastAPI(title="NSSPIP AI Engine", version="1.0.0", root_path="/api/ai")
+app = FastAPI(title="NCTIRS AI Engine", version="1.0.0", root_path="/api/ai")
 
 # --- Models ---
 class RiskRequest(BaseModel):
@@ -100,7 +100,7 @@ MODEL_PATH = os.path.join(os.path.dirname(__file__), 'risk_model.pkl')
 try:
     with open(MODEL_PATH, 'rb') as f:
         risk_model = joblib.load(f)
-    print("✅ NSSPIP Random Forest Model (Verified Data) Loaded Successfully")
+    print("✅ NCTIRS Random Forest Model (Verified Data) Loaded Successfully")
 except Exception as e:
     print(f"⚠️ Failed to load verified model (Falling back to legacy path): {e}")
     # Legacy fallback
@@ -146,7 +146,7 @@ def calculate_risk(lat: float, lng: float, time_of_day: str = None) -> int:
 
 @app.get("/")
 def health_check():
-    return {"status": "operational", "service": "NSSPIP AI Engine (Serverless)"}
+    return {"status": "operational", "service": "NCTIRS AI Engine (Serverless)"}
 
 @app.post("/predict/risk-score", response_model=RiskResponse)
 def get_risk_score(request: RiskRequest):
@@ -192,16 +192,16 @@ if ENABLE_CV_INFERENCE:
         CV_MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'yolov8n.pt')
         if os.path.exists(CV_MODEL_PATH):
             cv_model = YOLO(CV_MODEL_PATH)
-            print("✅ NSSPIP YOLOv8 CV Model Loaded Successfully")
+            print("✅ NCTIRS YOLOv8 CV Model Loaded Successfully")
         else:
             cv_model = YOLO('yolov8n.pt')
-            print("✅ NSSPIP YOLOv8 CV Model Initialized")
+            print("✅ NCTIRS YOLOv8 CV Model Initialized")
     except ImportError:
         print("⚠️ Ultralytics not found. CV endpoint will run in mock Serverless degrade mode.")
     except Exception as e:
         print(f"⚠️ YOLOv8 load failed: {e}. CV endpoint will use mock mode.")
 else:
-    print("ℹ️ NSSPIP_ENABLE_CV is disabled. CV endpoint will use mock mode only.")
+    print("ℹ️ NCTIRS_ENABLE_CV is disabled. CV endpoint will use mock mode only.")
 
 def _run_cv_inference(image_path: str) -> tuple:
     """Run YOLO inference; returns (detections list, alert_triggered). Hardened with try/except."""
@@ -502,4 +502,4 @@ async def get_heatmap_data():
 # Health check endpoint
 @app.get("/api/health")
 async def health_check():
-    return {"status": "ok", "engine": "NSSPIP-AI-Kernel", "version": "2.1.0"}
+    return {"status": "ok", "engine": "NCTIRS-AI-Kernel", "version": "2.1.0"}

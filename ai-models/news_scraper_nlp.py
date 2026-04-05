@@ -5,7 +5,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import datetime
 import os
 
-print("NSSPIP AI: Initializing LIVE News Scraping & NLP Sentiment Engine...")
+print("NCTIRS AI: Initializing LIVE News Scraping & NLP Sentiment Engine...")
 
 # Ensure NLTK Lexicon is available locally
 NLTK_DATA_DIR = "/tmp/nltk_data"
@@ -82,7 +82,7 @@ average_sentiment = total_compound / len(filtered_headlines)
 final_threat_level = "ELEVATED" if average_sentiment < -0.2 else ("CRITICAL" if average_sentiment < -0.5 else "MAINTAINING OBSERVATION")
 
 print("\n================================================")
-print(f"NSSPIP LIVE NLP AGGREGATE VOLATILITY REPORT")
+print(f"NCTIRS LIVE NLP AGGREGATE VOLATILITY REPORT")
 print(f"TIMESTAMP: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print(f"OVERALL COMPOUND SCORE: {average_sentiment:.3f}")
 print(f"SYSTEM RECOMMENDATION: {final_threat_level}")

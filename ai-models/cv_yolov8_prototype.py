@@ -13,7 +13,7 @@ except ImportError as e:
     print("❌ ERROR: Ultralytics YOLOv8 not installed. Please run: pip install -r requirements-local.txt")
     exit(1)
 
-print("NSSPIP AI: Initializing Computer Vision Prototype...")
+print("NCTIRS AI: Initializing Computer Vision Prototype...")
 
 # 1. Download a "Surveillance" sample image
 # A picture of a busy street or people with bags

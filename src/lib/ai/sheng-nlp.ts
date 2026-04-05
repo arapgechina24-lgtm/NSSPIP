@@ -1,5 +1,5 @@
 /**
- * NSSPIP Sheng NLP Engine
+ * NCTIRS Sheng NLP Engine
  * Kenyan urban vernacular threat detection & sentiment analysis
  * 
  * Integrates with sovereign Ollama for deep contextual analysis
@@ -279,7 +279,7 @@ export class ShengNLPEngine {
       categories,
       threatLevels,
       lastUpdated: '2026-03-10',
-      source: 'NSSPIP-Linguistics-Team + UoN Partnership',
+      source: 'NCTIRS-Linguistics-Team + UoN Partnership',
     };
   }
 }

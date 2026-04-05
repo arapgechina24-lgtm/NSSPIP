@@ -1,5 +1,5 @@
 /**
- * NSSPIP Sheng/Swahili Threat Lexicon
+ * NCTIRS Sheng/Swahili Threat Lexicon
  * Curated dataset of Kenyan urban slang mapped to threat categories
  * 
  * Built in partnership concept with University of Nairobi Linguistics Dept.

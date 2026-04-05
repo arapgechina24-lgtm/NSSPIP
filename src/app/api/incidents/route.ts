@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
     try {
         const syncToken = request.headers.get('X-Sync-Token');
-        const expectedToken = process.env.NSSPIP_SYNC_TOKEN;
+        const expectedToken = process.env.NCTIRS_SYNC_TOKEN;
         const isSyncRequest = !!(syncToken && expectedToken && syncToken === expectedToken);
 
         let session = null;

@@ -5,7 +5,7 @@ export async function GET() {
   const status = eventStream.getStatus();
 
   return NextResponse.json({
-    system: 'NSSPIP Event Stream',
+    system: 'NCTIRS Event Stream',
     ...status,
     kafka: {
       configured: !!process.env.KAFKA_BROKERS,

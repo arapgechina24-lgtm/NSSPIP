@@ -1,4 +1,4 @@
-# NSSPIP & USALAMA User Manual
+# NCTIRS & USALAMA User Manual
 
 ## Part 1: USALAMA App (Citizen Portal)
 
@@ -19,7 +19,7 @@ For immediate life-threatening situations, use the red **Emergency 999** button 
 
 ---
 
-## Part 2: NSSPIP Command Center (Analyst Portal)
+## Part 2: NCTIRS Command Center (Analyst Portal)
 
 ### 1. Accessing the Platform
 **Clearance Required:** National Security Level 5

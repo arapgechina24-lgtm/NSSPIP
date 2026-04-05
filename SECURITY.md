@@ -9,7 +9,7 @@
 
 ## Reporting a Vulnerability
 
-The **NSSPIP platform** is modeled as a critical national security and smart policing application.  
+The **NCTIRS platform** is modeled as a critical national security and smart policing application.  
 We take security vulnerabilities extremely seriously.
 
 ### How to Report
@@ -45,7 +45,7 @@ Instead, please report them privately:
 
 ## Security Best Practices for Contributors
 
-When contributing to NSSPIP:
+When contributing to NCTIRS:
 
 - **Never commit credentials or secrets** (API keys, database URLs with passwords, tokens).
 - **Never include real operational data** – use mock or synthetic datasets only.
@@ -57,7 +57,7 @@ When contributing to NSSPIP:
 
 This security policy covers:
 
-- The NSSPIP codebase.
+- The NCTIRS codebase.
 - Associated documentation and configuration files.
 - Build and deployment automation (e.g., GitHub Actions workflows).
 
@@ -68,5 +68,5 @@ With your permission, we may acknowledge valid vulnerability reporters in future
 
 ---
 
-*NSSPIP is currently a demonstration and research platform. A production deployment should be accompanied by formal security reviews, monitoring, and incident response processes managed by the operating agency.*
+*NCTIRS is currently a demonstration and research platform. A production deployment should be accompanied by formal security reviews, monitoring, and incident response processes managed by the operating agency.*
 

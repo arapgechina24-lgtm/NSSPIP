@@ -1,13 +1,13 @@
 #!/bin/bash
-# Apply all NSSPIP fixes for NIRU Hackathon
+# Apply all NCTIRS fixes for NIRU Hackathon
 set -e
 
-echo "🔧 NSSPIP Critical Fixes Installer"
+echo "🔧 NCTIRS Critical Fixes Installer"
 echo "=================================="
 
 # Check we're in the right directory
 if [[ ! -f "package.json" ]]; then
-    echo "❌ Error: Run from NSSPIP root directory"
+    echo "❌ Error: Run from NCTIRS root directory"
     exit 1
 fi
 

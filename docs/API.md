@@ -108,7 +108,7 @@ The backend consists of two integrated layers:
 }
 ```
 
-All fields except `latitude` and `longitude` are optional. Set `use_live_news: true` only when `NSSPIP_ENABLE_NLP_EXTERNAL_NEWS` is enabled.
+All fields except `latitude` and `longitude` are optional. Set `use_live_news: true` only when `NCTIRS_ENABLE_NLP_EXTERNAL_NEWS` is enabled.
 
 **Response (`200 OK`)**
 
@@ -136,6 +136,6 @@ All fields except `latitude` and `longitude` are optional. Set `use_live_news: t
 
 | Variable | Default | Description |
 | -------- | ------- | ----------- |
-| `NSSPIP_ENABLE_CV` | `true` | Set to `0` to disable YOLO load and CV inference (mock-only). |
-| `NSSPIP_ENABLE_CV_EXTERNAL_DOWNLOAD` | `false` | Set to `1` to allow downloading images from URLs for surveillance. |
-| `NSSPIP_ENABLE_NLP_EXTERNAL_NEWS` | `false` | Set to `1` to allow live RSS/news scrape in volatility and sentiment. |
+| `NCTIRS_ENABLE_CV` | `true` | Set to `0` to disable YOLO load and CV inference (mock-only). |
+| `NCTIRS_ENABLE_CV_EXTERNAL_DOWNLOAD` | `false` | Set to `1` to allow downloading images from URLs for surveillance. |
+| `NCTIRS_ENABLE_NLP_EXTERNAL_NEWS` | `false` | Set to `1` to allow live RSS/news scrape in volatility and sentiment. |

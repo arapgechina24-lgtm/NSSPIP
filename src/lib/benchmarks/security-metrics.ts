@@ -1,5 +1,5 @@
 /**
- * NSSPIP Performance Benchmarks
+ * NCTIRS Performance Benchmarks
  * Validated against Kenyan security operations baseline
  */
 
@@ -7,7 +7,7 @@ export interface BenchmarkMetric {
   id: string;
   name: string;
   description: string;
-  nsspipValue: number;
+  nctirsValue: number;
   baselineValue: number;
   unit: string;
   improvement: string;
@@ -22,44 +22,44 @@ export const SECURITY_BENCHMARKS: BenchmarkMetric[] = [
     id: 'DET-001',
     name: 'Threat Detection Accuracy',
     description: 'Percentage of security incidents correctly identified vs missed',
-    nsspipValue: 87.3,
+    nctirsValue: 87.3,
     baselineValue: 68.0,
     unit: '%',
     improvement: '+28.4%',
     testConditions: '10,000 synthetic incidents (Nairobi CBD crime patterns)',
     validatedDate: '2026-03-05',
-    validator: 'NSSPIP-QA-Team',
+    validator: 'NCTIRS-QA-Team',
     confidenceInterval: [85.1, 89.5],
   },
   {
     id: 'LAT-001',
     name: 'Alert Latency (p95)',
     description: 'Time from incident detection to operator alert',
-    nsspipValue: 145,
+    nctirsValue: 145,
     baselineValue: 2700,
     unit: 'ms',
     improvement: '-94.6%',
     testConditions: 'Concurrent load: 500 incidents/minute',
     validatedDate: '2026-03-05',
-    validator: 'NSSPIP-Perf-Team',
+    validator: 'NCTIRS-Perf-Team',
   },
   {
     id: 'FPR-001',
     name: 'False Positive Rate',
     description: 'Percentage of alerts that are not actual threats',
-    nsspipValue: 4.2,
+    nctirsValue: 4.2,
     baselineValue: 23.0,
     unit: '%',
     improvement: '-81.7%',
     testConditions: '24-hour monitoring of mixed traffic (normal + attack)',
     validatedDate: '2026-03-05',
-    validator: 'NSSPIP-QA-Team',
+    validator: 'NCTIRS-QA-Team',
   },
   {
     id: 'SOV-001',
     name: 'Data Sovereignty Compliance',
     description: 'Percentage of data processed without foreign infrastructure',
-    nsspipValue: 100.0,
+    nctirsValue: 100.0,
     baselineValue: 0.0,
     unit: '%',
     improvement: 'Full Compliance',
@@ -71,31 +71,31 @@ export const SECURITY_BENCHMARKS: BenchmarkMetric[] = [
     id: 'OFF-001',
     name: 'Offline Capability',
     description: 'System functionality without internet connectivity',
-    nsspipValue: 95.0,
+    nctirsValue: 95.0,
     baselineValue: 15.0,
     unit: '%',
     improvement: '+533%',
     testConditions: '72-hour air-gapped operation test',
     validatedDate: '2026-03-05',
-    validator: 'NSSPIP-Ops-Team',
+    validator: 'NCTIRS-Ops-Team',
   },
   {
     id: 'CV-001',
     name: 'Computer Vision Inference',
     description: 'Object detection latency on edge device (Raspberry Pi 4)',
-    nsspipValue: 280,
+    nctirsValue: 280,
     baselineValue: 1200,
     unit: 'ms',
     improvement: '-76.7%',
     testConditions: 'YOLOv8n on 1080p video stream',
     validatedDate: '2026-03-05',
-    validator: 'NSSPIP-Edge-Team',
+    validator: 'NCTIRS-Edge-Team',
   },
   {
     id: 'NLP-001',
     name: 'Swahili NLP Accuracy',
     description: 'Sentiment analysis on Kenyan social media (Sheng/Swahili)',
-    nsspipValue: 82.1,
+    nctirsValue: 82.1,
     baselineValue: 45.0,
     unit: '%',
     improvement: '+82.4%',
@@ -131,13 +131,13 @@ export const OPERATIONAL_KPIS = [
 
 export function generateBenchmarkReport(): string {
   return `
-# NSSPIP Performance Validation Report
+# NCTIRS Performance Validation Report
 **Classification:** UNCLASSIFIED - NIRU Hackathon Submission  
 **Date:** ${new Date().toISOString()}  
-**Validator:** NSSPIP QA Team + External Auditors
+**Validator:** NCTIRS QA Team + External Auditors
 
 ## Executive Summary
-NSSPIP demonstrates significant operational improvements over manual security 
+NCTIRS demonstrates significant operational improvements over manual security 
 operations and foreign-dependent systems across all key metrics.
 
 ## Methodology
@@ -150,7 +150,7 @@ operations and foreign-dependent systems across all key metrics.
 
 ### 1. Detection Performance
 ${SECURITY_BENCHMARKS.filter(m => m.id.startsWith('DET'))
-  .map(m => `- **${m.name}**: ${m.nsspipValue}${m.unit} vs ${m.baselineValue}${m.unit} baseline (${m.improvement})`)
+  .map(m => `- **${m.name}**: ${m.nctirsValue}${m.unit} vs ${m.baselineValue}${m.unit} baseline (${m.improvement})`)
   .join('\n')}
 
 ### 2. Operational Efficiency
@@ -168,7 +168,7 @@ ${OPERATIONAL_KPIS.map(k => `- **${k.metric}**: ${k.before} → ${k.after} (${k.
 3. **CV Accuracy**: 87% on clear footage; degrades to 72% in heavy rain/night (acceptable for MVP)
 
 ## Conclusion
-NSSPIP meets operational requirements for Nairobi CBD pilot deployment.
+NCTIRS meets operational requirements for Nairobi CBD pilot deployment.
 Architecture supports national scaling with documented performance characteristics.
 `;
 }

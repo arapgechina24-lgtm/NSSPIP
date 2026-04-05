@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 import os
 
-print("NSSPIP AI: Generating Synthetic Geospatial Training Data...")
+print("NCTIRS AI: Generating Synthetic Geospatial Training Data...")
 
 # Seed for reproducibility
 np.random.seed(42)

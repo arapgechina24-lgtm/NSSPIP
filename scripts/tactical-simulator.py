@@ -19,7 +19,7 @@ def generate_telemetry():
     }
 
 def start_simulation():
-    print("🚀 [NSSPIP] TACTICAL SIGNAL SIMULATOR V1.0")
+    print("🚀 [NCTIRS] TACTICAL SIGNAL SIMULATOR V1.0")
     print(">> INITIALIZING SECURE STREAM VIA Ke-CIRT MESH...")
     print(">> SOVEREIGN AI INFERENCE ENGINE LOADED.\n")
     

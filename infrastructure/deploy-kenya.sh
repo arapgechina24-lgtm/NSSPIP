@@ -1,5 +1,5 @@
 #!/bin/bash
-# NSSPIP Kenya Sovereign Deployment Script
+# NCTIRS Kenya Sovereign Deployment Script
 # For Node Africa, Wananchi, or on-premise data centers
 
 set -euo pipefail
@@ -9,7 +9,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${GREEN}🇰🇪 NSSPIP Sovereign Deployment${NC}"
+echo -e "${GREEN}🇰🇪 NCTIRS Sovereign Deployment${NC}"
 echo "================================"
 
 # Check if running in Kenya (timezone check)
@@ -43,26 +43,26 @@ fi
 
 # Verify Kenyan models loaded
 MODELS=$(curl -s http://localhost:11434/api/tags | grep -o '"name":"[^"]*"' | cut -d'"' -f4)
-if ! echo "$MODELS" | grep -q "nsspip"; then
+if ! echo "$MODELS" | grep -q "nctirs"; then
     echo -e "${YELLOW}⚠️  Kenyan security model not found. Loading...${NC}"
-    ollama create nsspip-security -f ./models/Modelfile || true
+    ollama create nctirs-security -f ./models/Modelfile || true
 fi
 
 echo -e "${GREEN}✅ Local AI ready: $MODELS${NC}"
 
 # Database encryption setup
 echo -e "${YELLOW}🔐 Setting up encrypted storage...${NC}"
-mkdir -p /data/nsspip/keys
-chmod 700 /data/nsspip/keys
+mkdir -p /data/nctirs/keys
+chmod 700 /data/nctirs/keys
 
-if [[ ! -f /data/nsspip/keys/master.key ]]; then
-    openssl rand -base64 32 > /data/nsspip/keys/master.key
-    chmod 600 /data/nsspip/keys/master.key
+if [[ ! -f /data/nctirs/keys/master.key ]]; then
+    openssl rand -base64 32 > /data/nctirs/keys/master.key
+    chmod 600 /data/nctirs/keys/master.key
     echo -e "${GREEN}✅ Generated master encryption key${NC}"
 fi
 
 # Deploy
-echo -e "${YELLOW}🚀 Deploying NSSPIP...${NC}"
+echo -e "${YELLOW}🚀 Deploying NCTIRS...${NC}"
 docker-compose -f docker-compose.sovereign.yml down || true
 docker-compose -f docker-compose.sovereign.yml up -d --build
 
@@ -71,7 +71,7 @@ echo -e "${YELLOW}⏳ Waiting for services...${NC}"
 sleep 10
 
 if curl -sf http://localhost:3000/api/health/sovereign | grep -q "sovereign.*true"; then
-    echo -e "${GREEN}✅ NSSPIP Sovereign Mode ACTIVE${NC}"
+    echo -e "${GREEN}✅ NCTIRS Sovereign Mode ACTIVE${NC}"
     echo ""
     echo "Deployment Summary:"
     echo "  🏠 Data Residency: Kenya Only"

@@ -1,5 +1,5 @@
 /**
- * NSSPIP Event Stream Manager
+ * NCTIRS Event Stream Manager
  * Real-time event ingestion pipeline
  * 
  * In production: connects to Apache Kafka

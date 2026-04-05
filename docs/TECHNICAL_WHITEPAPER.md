@@ -1,11 +1,11 @@
-# NSSPIP: Technical Whitepaper
+# NCTIRS: Technical Whitepaper
 > The AI-Powered National Security & Smart Policing Intelligence Platform
 
 ## Abstract
-The National Security & Smart Policing Intelligence Platform (NSSPIP), in conjunction with the USALAMA Citizen Application, represents a paradigm shift in Kenyan law enforcement. Utilizing edge-optimized React architecture, real-time WebSocket communication, and distributed AI models, the ecosystem eliminates intelligence silos and drives response latency down to sub-second benchmarks.
+The National Security & Smart Policing Intelligence Platform (NCTIRS), in conjunction with the USALAMA Citizen Application, represents a paradigm shift in Kenyan law enforcement. Utilizing edge-optimized React architecture, real-time WebSocket communication, and distributed AI models, the ecosystem eliminates intelligence silos and drives response latency down to sub-second benchmarks.
 
 ## 1. System Architecture
-NSSPIP operates on a highly concurrent, containerized architecture designed specifically for air-gapped deployment on local Sovereign Infrastructure (e.g., Node Africa, Wananchi Group, or the Government Cloud (GoK Cloud)). This eliminates any reliance on foreign servers (like Vercel or AWS US/EU regions), resolving the critical data sovereignty contradiction.
+NCTIRS operates on a highly concurrent, containerized architecture designed specifically for air-gapped deployment on local Sovereign Infrastructure (e.g., Node Africa, Wananchi Group, or the Government Cloud (GoK Cloud)). This eliminates any reliance on foreign servers (like Vercel or AWS US/EU regions), resolving the critical data sovereignty contradiction.
 
 ### 1.1 Core Stack
 *   **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS v4 for absolute zero-layout-shift UI.
@@ -16,14 +16,14 @@ NSSPIP operates on a highly concurrent, containerized architecture designed spec
 To achieve the mandate of "zero critical latency" from citizen report to police dashboard alert:
 1.  **Optimistic UI (USALAMA)**: When a citizen submits an incident, the UI immediately acknowledges receipt, operating with perceived zero-latency.
 2.  **Stateless API Verification**: The payload is validated instantly by Zod schemas before hitting the database, rejecting malformed noise.
-3.  **Real-Time Subscriptions**: The NSSPIP Command Center utilizes aggressive polling or WebSockets (via Ably/Socket.io integration) to hydrate the dashboard instantly when the DB mutates.
+3.  **Real-Time Subscriptions**: The NCTIRS Command Center utilizes aggressive polling or WebSockets (via Ably/Socket.io integration) to hydrate the dashboard instantly when the DB mutates.
 
 ## 2. Security & Compliance
 *   **Data Protection Act (2019) Compliance**: All citizen PII is hashed (bcrypt) and stored in jurisdictionally compliant availability zones.
 *   **AES-256 Mock Encryption**: The transport layer simulates military-grade TLS 1.3 encrypted handshakes, ensuring no interceptable payloads exist on the wire.
 
 ## 3. The 4 Winning Pillars
-These pillars form the "Majestic Shield", differentiating NSSPIP from legacy policing systems.
+These pillars form the "Majestic Shield", differentiating NCTIRS from legacy policing systems.
 
 ### 3.1 Pillar 1: Adversarial Defense
 A preemptive AI layer that identifies and blackholes coordinated DDoS attacks or spoofed citizen reports, ensuring the platform remains active during state-level cyber emergencies.
@@ -32,10 +32,10 @@ A preemptive AI layer that identifies and blackholes coordinated DDoS attacks or
 Provincial intelligence hubs (e.g., Nairobi vs. Mombasa) train threat-detection models locally. They share *model weights* rather than raw citizen data with the central node, improving national AI accuracy while maintaining strict data privacy.
 
 ### 3.3 Pillar 3: Explainable AI (XAI)
-When NSSPIP recommends deploying a tactical unit to an escalating riot, it provides a cryptographic trail of *why* (e.g., "7 USALAMA reports + 400% spike in negative social sentiment + localized M-Pesa network congestion").
+When NCTIRS recommends deploying a tactical unit to an escalating riot, it provides a cryptographic trail of *why* (e.g., "7 USALAMA reports + 400% spike in negative social sentiment + localized M-Pesa network congestion").
 
 ### 3.4 Pillar 4: Sovereign AI (Multi-Modal Fusion)
-The system does not rely on a standard stack (e.g., generic YOLOv8 + VADER). Instead, NSSPIP employs a **Multi-Modal Fusion Methodology**:
+The system does not rely on a standard stack (e.g., generic YOLOv8 + VADER). Instead, NCTIRS employs a **Multi-Modal Fusion Methodology**:
 1.  **Computer Vision Contextualization**: YOLOv8 models fine-tuned to recognize localized criminal patterns (e.g., coordinated *BodaBoda* escape routes, unregulated roadblocks).
 2.  **Sheng & Swahili NLP**: Specialized Transformer models (e.g., SwahiliBERT) trained to process local dialects and *Sheng* slang from USALAMA text reports, rather than relying on generic English-only sentiment analysis.
 3.  **Geospatial Correlation**: Fusing CV and NLP data with localized "Golden Data" (Traffic nodes, Ke-CIRT logs, M-Pesa transaction velocity) to generate a holistic threat score.
@@ -52,7 +52,7 @@ To ensure the platform meets the rigorous demands of active law enforcement, ite
 *   **Validation**: This iteration led to the acquisition of an informal Letter of Intent to pilot from the Directorate of Criminal Investigations (DCI).
 
 ## 5. National Scalability & Cost Analysis
-Scaling NSSPIP across all 47 Kenyan counties requires a strategic, cost-effective infrastructure plan.
+Scaling NCTIRS across all 47 Kenyan counties requires a strategic, cost-effective infrastructure plan.
 ### 5.1 Edge Deployment Strategy
 Rather than a massive, singular central server, the architecture utilizes a **Decentralized Edge Hub** model. Containerized microservices will be deployed to local cloud providers (e.g., Node Africa, Wananchi) in 8 regional hubs.
 ### 5.2 Bandwidth Requirements
@@ -61,4 +61,4 @@ Rural areas operate on constrained 3G/LTE networks. USALAMA payload sizes are st
 By utilizing Sovereign AI based on open-source foundational models (YOLOv8, SwahiliBERT) and deploying via Docker Swarm, the platform avoids crippling SaaS licensing fees and vendor lock-in (e.g., Palantir or Motorola Solutions), dramatically lowering the Total Cost of Ownership (TCO) for the Kenyan Government.
 
 ## Conclusion
-NSSPIP is not a reporting app—it is a comprehensive, AI-orchestrated digital fortress built to neutralize threats at the speed of thought.
+NCTIRS is not a reporting app—it is a comprehensive, AI-orchestrated digital fortress built to neutralize threats at the speed of thought.

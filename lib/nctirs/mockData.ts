@@ -362,7 +362,7 @@ export function generateTimeSeriesData(days: number = 30) {
   return data;
 }
 
-// === NSSPIP UNIFIED PLATFORM GENERATORS ===
+// === NCTIRS UNIFIED PLATFORM GENERATORS ===
 
 const cyberThreatNames: Record<CyberThreatType, string[]> = {
   APT: ['APT-KE-001 SANDSTORM', 'APT-KE-002 BUSHFIRE', 'APT-KE-003 MONSOON', 'APT-KE-004 SAVANNA'],

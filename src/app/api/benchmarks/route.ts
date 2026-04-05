@@ -3,7 +3,7 @@ import { SECURITY_BENCHMARKS, OPERATIONAL_KPIS, generateBenchmarkReport } from '
 
 export async function GET() {
   return NextResponse.json({
-    system: 'NSSPIP Platform',
+    system: 'NCTIRS Platform',
     version: '2.0.0-sovereign',
     generatedAt: new Date().toISOString(),
     disclaimer: 'Results based on synthetic test data; live validation pending deployment',
@@ -14,7 +14,7 @@ export async function GET() {
       testEnvironment: 'Local sovereign deployment (Ollama + Edge)',
       baselineSource: 'Kenya Police 2023 Annual Report + NCIC metrics',
       dataset: 'Synthetic incidents (10,000) based on Nairobi CBD patterns',
-      validators: ['NSSPIP-QA', 'External-Auditor', 'UoN-Linguistics'],
+      validators: ['NCTIRS-QA', 'External-Auditor', 'UoN-Linguistics'],
     },
   });
 }

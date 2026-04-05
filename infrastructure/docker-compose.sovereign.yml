@@ -1,25 +1,25 @@
 version: '3.8'
 
 services:
-  nsspip-core:
+  nctirs-core:
     build:
       context: ..
       dockerfile: infrastructure/Dockerfile.sovereign
-    container_name: nsspip-sovereign
+    container_name: nctirs-sovereign
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
       - SOVEREIGN_MODE=true
       - AI_ENGINE=local
-      - DATABASE_URL=file:/data/nsspip.db
+      - DATABASE_URL=file:/data/nctirs.db
       - REDIS_URL=redis://localhost:6379
       - KAFKA_BROKERS=kafka:9092
     volumes:
-      - nsspip-data:/data
+      - nctirs-data:/data
       - ./models:/app/models:ro
     networks:
-      - nsspip-net
+      - nctirs-net
     restart: unless-stopped
     depends_on:
       - ai-engine
@@ -29,7 +29,7 @@ services:
 
   ai-engine:
     image: ollama/ollama:latest
-    container_name: nsspip-ai
+    container_name: nctirs-ai
     volumes:
       - ollama-models:/root/.ollama
       - ./models:/models:ro
@@ -38,26 +38,26 @@ services:
     command: >
       sh -c "ollama pull mistral:7b && 
              ollama pull nomic-embed-text &&
-             ollama create nsspip-security -f /models/Modelfile &&
+             ollama create nctirs-security -f /models/Modelfile &&
              ollama serve"
     networks:
-      - nsspip-net
+      - nctirs-net
 
   # ===== Real-Time Streaming Layer =====
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
-    container_name: nsspip-zookeeper
+    container_name: nctirs-zookeeper
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     volumes:
       - zookeeper-data:/var/lib/zookeeper/data
     networks:
-      - nsspip-net
+      - nctirs-net
 
   kafka:
     image: confluentinc/cp-kafka:7.5.0
-    container_name: nsspip-kafka
+    container_name: nctirs-kafka
     ports:
       - "9092:9092"
     environment:
@@ -74,35 +74,35 @@ services:
     depends_on:
       - zookeeper
     networks:
-      - nsspip-net
+      - nctirs-net
 
   # ===== Edge Computer Vision Node =====
   edge-node:
     build:
       context: ..
       dockerfile: infrastructure/Dockerfile.edge
-    container_name: nsspip-edge
+    container_name: nctirs-edge
     environment:
       - EDGE_MODE=true
       - SYNC_INTERVAL=300
-      - NSSPIP_SERVER=http://nsspip-core:3000
+      - NCTIRS_SERVER=http://nctirs-core:3000
       - CAMERA_ID=0
       - CONFIDENCE=0.5
     volumes:
       - edge-data:/data
     networks:
-      - nsspip-net
+      - nctirs-net
     depends_on:
-      - nsspip-core
+      - nctirs-core
 
 volumes:
-  nsspip-data:
+  nctirs-data:
   ollama-models:
   edge-data:
   zookeeper-data:
   kafka-data:
 
 networks:
-  nsspip-net:
+  nctirs-net:
     driver: bridge
     internal: true  # No external access — sovereign mode

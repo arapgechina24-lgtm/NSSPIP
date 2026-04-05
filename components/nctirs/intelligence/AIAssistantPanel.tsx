@@ -14,7 +14,7 @@ const AIAssistantPanel: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>([
         {
             role: 'ai',
-            content: '>> NSSPIP SOVEREIGN CORE V4.2.0 ONLINE.\n>> LOCAL INFERENCE ACTIVE (Latency: 12ms)\n>> SECURITY CONTEXT: 1,004 VERIFIED RECORDS LOADED.\n\nReady for tactical strategic advisory.',
+            content: '>> NCTIRS SOVEREIGN CORE V4.2.0 ONLINE.\n>> LOCAL INFERENCE ACTIVE (Latency: 12ms)\n>> SECURITY CONTEXT: 1,004 VERIFIED RECORDS LOADED.\n\nReady for tactical strategic advisory.',
             type: 'INFO'
         }
     ]);

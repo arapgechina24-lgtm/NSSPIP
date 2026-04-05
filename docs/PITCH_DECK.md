@@ -1,9 +1,9 @@
-# NSSPIP Pitch Deck Outline
+# NCTIRS Pitch Deck Outline
 > Majestic Shield: Securing the Nation at the Speed of Thought
 
 ---
 ## Slide 1: Title Screen
-- **Title**: NSSPIP: Majestic Shield
+- **Title**: NCTIRS: Majestic Shield
 - **Subtitle**: AI-Powered National Security & Smart Policing Intelligence Platform
 - **Visual**: Dark, elite dashboard background showing a glowing East Africa Threat Map. Highlighting “Top Secret // SCI” to establish a serious, professional tone.
 - **Presenter Note**: Introduce the platform as a paradigm shift from reactive policing to proactive, AI-driven national security.
@@ -20,7 +20,7 @@
 ## Slide 3: The Solution
 - **The Ecosystem**: Two seamlessly integrated platforms running on a unified architecture.
   - **USALAMA App (Citizen Layer)**: Instant, location-aware incident reporting tool for the public. Tracks cases in real-time.
-  - **NSSPIP Command Center (State Layer)**: Elite, zero-latency dashboard where AI analyzes reports, correlates data, and deploys rapid responses.
+  - **NCTIRS Command Center (State Layer)**: Elite, zero-latency dashboard where AI analyzes reports, correlates data, and deploys rapid responses.
 - **Value Proposition**: "From a citizen's tap to a squad car's dispatch in under 2 seconds."
 
 ---
@@ -28,7 +28,7 @@
 - **Scenario**: A downtown riot escalation.
 - **Step 1 (The Trigger)**: A citizen witnesses a gathering mob and reports it via the USALAMA App.
 - **Step 2 (The Ingestion)**: The platform’s real-time API processes the payload (Zero Critical Latency).
-- **Step 3 (The Triage)**: The NSSPIP dashboard instantly turns red; the "Threat Analytics Engine" identifies it as a "High-Risk Disturbance."
+- **Step 3 (The Triage)**: The NCTIRS dashboard instantly turns red; the "Threat Analytics Engine" identifies it as a "High-Risk Disturbance."
 - **Step 4 (The Response)**: Automated SOAR (Security Orchestration) protocols are triggered, dispatching localized units visually on the CNI Heatmap.
 - **Goal for Judges**: Prove that latency is zero, UI is flawless, and the technology actually works end-to-end.
 
@@ -56,4 +56,4 @@
 - **Bandwidth Optimization**: WebSocket compression and selective UI hydration ensure the platform functions flawlessly even on 3G Safaricom/Airtel networks in rural areas.
 - **Estimated Rollout Cost (Phase 1)**: Extremely lean. Utilizing containerized microservices and open-source models (SwahiliBERT, YOLOv8) eliminates expensive vendor lock-in.
 - **The Ask**: Investment/Support to scale local NVIDIA TensorRT edge infrastructure and integrate directly with legacy Ke-CIRT/CC communications.
-- **Closing Statement**: "NSSPIP isn’t just an app; it is the digital sovereign shield of Kenya."
+- **Closing Statement**: "NCTIRS isn’t just an app; it is the digital sovereign shield of Kenya."

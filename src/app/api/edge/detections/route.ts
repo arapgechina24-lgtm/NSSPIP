@@ -86,7 +86,7 @@ export async function GET(req: NextRequest) {
   );
 
   return NextResponse.json({
-    system: 'NSSPIP Edge Detection Network',
+    system: 'NCTIRS Edge Detection Network',
     activeDevices: devices.size,
     deviceIds: Array.from(devices),
     totalFrames: recentDetections.length,

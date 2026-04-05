@@ -1,5 +1,5 @@
 
-// API Client for NSSPIP Dashboard
+// API Client for NCTIRS Dashboard
 // Fetches data from backend API routes with fallback to mock data
 import {
     generateMockIncidents,

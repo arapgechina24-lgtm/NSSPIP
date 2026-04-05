@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   // Return lexicon stats
   return NextResponse.json({
-    engine: 'NSSPIP Sheng NLP',
+    engine: 'NCTIRS Sheng NLP',
     version: '1.0.0',
     ...shengEngine.getStats(),
   });

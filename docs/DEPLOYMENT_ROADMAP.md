@@ -1,4 +1,4 @@
-# NSSPIP Deployment Roadmap: From MVP to National Scale
+# NCTIRS Deployment Roadmap: From MVP to National Scale
 
 ## Honest Current State (Hackathon MVP)
 - **Status**: Functional prototype with synthetic data
@@ -63,7 +63,7 @@
 | KE-CIRT data sharing delay | Synthetic data pipeline ready, can operate independently |
 | Local talent shortage | Partnership with UoN, KU, Strathmore for training |
 | Hardware supply chain | Dual-vendor strategy (Dell + HP), local assembly |
-| Cyber attack on NSSPIP itself | Air-gapped backup, zero-trust internal architecture |
+| Cyber attack on NCTIRS itself | Air-gapped backup, zero-trust internal architecture |
 
 ## Success Metrics (KPIs)
 

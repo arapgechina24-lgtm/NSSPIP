@@ -83,7 +83,7 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <h1 className="text-xl sm:text-2xl font-bold text-green-400 tracking-tighter glow-text truncate">
-                  NSSPIP
+                  NCTIRS
                 </h1>
                 <div className="px-2 py-0.5 bg-green-950 border border-green-700/50 rounded-none text-[10px] font-mono text-green-300">
                   SMART POLICING

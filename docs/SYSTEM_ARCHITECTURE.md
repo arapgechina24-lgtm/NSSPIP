@@ -1,6 +1,6 @@
 # System Architecture Design
 
-The National Security and Smart Policing Intelligence Platform (NSSPIP) is designed for **High-Availability (HA)** and **Sovereign Intelligence Processing**.
+The National Security and Smart Policing Intelligence Platform (NCTIRS) is designed for **High-Availability (HA)** and **Sovereign Intelligence Processing**.
 
 ## System Overview
 

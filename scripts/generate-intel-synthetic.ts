@@ -1,5 +1,5 @@
 /**
- * NSSPIP Intelligence Synthesizer
+ * NCTIRS Intelligence Synthesizer
  * Generates "Confidential" grade intelligence reports mimicking NIS and National Police sources.
  * This satisfies the Phase 1 deliverable for "Synthesized dummy data mimicking confidential sources".
  */

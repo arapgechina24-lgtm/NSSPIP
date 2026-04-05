@@ -1,6 +1,6 @@
-# Contributing to NSSPIP
+# Contributing to NCTIRS
 
-Thank you for your interest in contributing to the **AI-Powered National Security and Smart Policing Intelligence Platform (NSSPIP)**. This document provides guidelines and instructions for contributing in a way that preserves security, reliability, and clarity.
+Thank you for your interest in contributing to the **AI-Powered National Security and Smart Policing Intelligence Platform (NCTIRS)**. This document provides guidelines and instructions for contributing in a way that preserves security, reliability, and clarity.
 
 ## Table of Contents
 
@@ -32,8 +32,8 @@ If a `CODE_OF_CONDUCT.md` file is present in the repository, please read it befo
 
    ```bash
    # Clone your fork
-   git clone https://github.com/YOUR_USERNAME/NSSPIP.git
-   cd NSSPIP
+   git clone https://github.com/YOUR_USERNAME/NCTIRS.git
+   cd NCTIRS
    ```
 
 2. **Install dependencies**
@@ -166,7 +166,7 @@ This helps catch TypeScript and ESLint issues early.
 
 ## Security Considerations
 
-NSSPIP models **real national security and policing workflows**. Treat it accordingly:
+NCTIRS models **real national security and policing workflows**. Treat it accordingly:
 
 - **Never commit secrets**: API keys, credentials, database URLs with passwords, or real PII.
 - **Use mock/synthetic data only**: The repository must not contain real operational data.

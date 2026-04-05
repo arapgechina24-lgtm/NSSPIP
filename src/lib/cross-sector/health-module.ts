@@ -1,5 +1,5 @@
 /**
- * NSSPIP Health Sector Integration
+ * NCTIRS Health Sector Integration
  * Disease outbreak detection via social sentiment + mobility patterns
  */
 

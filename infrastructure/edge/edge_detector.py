@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-NSSPIP Edge Detector — YOLOv8 Computer Vision for Raspberry Pi / Edge Devices
-Detects objects of interest and reports to the NSSPIP sovereign dashboard.
+NCTIRS Edge Detector — YOLOv8 Computer Vision for Raspberry Pi / Edge Devices
+Detects objects of interest and reports to the NCTIRS sovereign dashboard.
 
 Usage:
     python edge_detector.py --server http://localhost:3000 --confidence 0.5
-    python edge_detector.py --camera 0 --interval 2 --server http://nsspip-core:3000
+    python edge_detector.py --camera 0 --interval 2 --server http://nctirs-core:3000
 """
 
 import argparse
@@ -60,11 +60,11 @@ class EdgeDetector:
         self.start_time = time.time()
 
         if HAS_DEPS:
-            print(f"[NSSPIP Edge] Loading YOLOv8 model: {model_path}")
+            print(f"[NCTIRS Edge] Loading YOLOv8 model: {model_path}")
             self.model = YOLO(model_path)
-            print(f"[NSSPIP Edge] Model loaded. Device ID: {self.device_id}")
+            print(f"[NCTIRS Edge] Model loaded. Device ID: {self.device_id}")
         else:
-            print("[NSSPIP Edge] Running in DEMO mode (no ultralytics/cv2)")
+            print("[NCTIRS Edge] Running in DEMO mode (no ultralytics/cv2)")
             self.model = None
 
     def detect_frame(self, frame):
@@ -115,7 +115,7 @@ class EdgeDetector:
         return detections
 
     def report_to_server(self, detections):
-        """Send detection payload to NSSPIP dashboard."""
+        """Send detection payload to NCTIRS dashboard."""
         payload = {
             'topic': 'edge-telemetry',
             'source': self.device_id,
@@ -139,11 +139,11 @@ class EdgeDetector:
             )
             if resp.status_code == 200:
                 data = resp.json()
-                print(f"  ✅ Reported to NSSPIP: {data.get('eventId', 'ok')}")
+                print(f"  ✅ Reported to NCTIRS: {data.get('eventId', 'ok')}")
             else:
                 print(f"  ⚠️  Server responded: {resp.status_code}")
         except requests.ConnectionError:
-            print(f"  ❌ Cannot reach NSSPIP at {self.server_url} (offline mode)")
+            print(f"  ❌ Cannot reach NCTIRS at {self.server_url} (offline mode)")
         except Exception as e:
             print(f"  ❌ Report failed: {e}")
 
@@ -161,7 +161,7 @@ class EdgeDetector:
 
     def run(self, camera_id=0, interval=2):
         """Main detection loop."""
-        print(f"\n🇰🇪 NSSPIP Edge Detector v1.0")
+        print(f"\n🇰🇪 NCTIRS Edge Detector v1.0")
         print(f"   Device: {self.device_id}")
         print(f"   Server: {self.server_url}")
         print(f"   Model:  {self.model_path}")
@@ -219,12 +219,12 @@ class EdgeDetector:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='NSSPIP Edge Detector — YOLOv8')
+    parser = argparse.ArgumentParser(description='NCTIRS Edge Detector — YOLOv8')
     parser.add_argument('--camera', type=int, default=0, help='Camera device ID')
     parser.add_argument('--model', type=str, default='yolov8n.pt', help='YOLOv8 model path')
     parser.add_argument('--confidence', type=float, default=0.5, help='Detection confidence threshold')
     parser.add_argument('--interval', type=float, default=2, help='Seconds between frames')
-    parser.add_argument('--server', type=str, default='http://localhost:3000', help='NSSPIP server URL')
+    parser.add_argument('--server', type=str, default='http://localhost:3000', help='NCTIRS server URL')
     args = parser.parse_args()
 
     detector = EdgeDetector(

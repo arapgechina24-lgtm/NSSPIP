@@ -1,4 +1,4 @@
-# NSSPIP Edge Device Dependencies
+# NCTIRS Edge Device Dependencies
 # For Raspberry Pi 4 / ARM64 edge nodes
 
 ultralytics>=8.0.0

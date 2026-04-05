@@ -1,5 +1,5 @@
 /**
- * Bias Mitigation & Fairness Engine for NSSPIP
+ * Bias Mitigation & Fairness Engine for NCTIRS
  * Ensures equitable AI across Kenyan demographics
  */
 

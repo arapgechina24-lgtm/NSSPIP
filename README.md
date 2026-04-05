@@ -1,7 +1,7 @@
-# 🛡️ NSSPIP – National Security & Smart Policing Intelligence Platform
+# 🛡️ NCTIRS – National Security & Smart Policing Intelligence Platform
 
-[![NSSPIP Banner](https://img.shields.io/badge/NSSPIP-National%20Security-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/arapgechina24-lgtm/NSSPIP)
-[![CI](https://github.com/arapgechina24-lgtm/NSSPIP/actions/workflows/ci.yml/badge.svg)](https://github.com/arapgechina24-lgtm/NSSPIP/actions/workflows/ci.yml)
+[![NCTIRS Banner](https://img.shields.io/badge/NCTIRS-National%20Security-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/arapgechina24-lgtm/NCTIRS)
+[![CI](https://github.com/arapgechina24-lgtm/NCTIRS/actions/workflows/ci.yml/badge.svg)](https://github.com/arapgechina24-lgtm/NCTIRS/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **AI-Powered National Security & Smart Policing Intelligence Platform**
@@ -12,9 +12,9 @@
 
 ## 🏛️ Executive Summary
 
-The **AI-Powered National Security and Smart Policing Intelligence Platform (NSSPIP)** is a sovereign intelligence and incident management platform that moves security agencies from reactive response to **proactive threat prevention**.
+The **AI-Powered National Security and Smart Policing Intelligence Platform (NCTIRS)** is a sovereign intelligence and incident management platform that moves security agencies from reactive response to **proactive threat prevention**.
 
-NSSPIP fuses:
+NCTIRS fuses:
 
 - Live incident reports
 - Smart surveillance and computer vision signals
@@ -31,8 +31,8 @@ Run a full demo locally as a Command Center dashboard:
 
 ```bash
 # Clone the repository
-git clone https://github.com/arapgechina24-lgtm/NSSPIP.git
-cd NSSPIP
+git clone https://github.com/arapgechina24-lgtm/NCTIRS.git
+cd NCTIRS
 
 # Install dashboard dependencies
 npm install
@@ -46,7 +46,7 @@ pip install -r requirements-local.txt
 npm run dev
 ```
 
-Visit `http://localhost:3000` to open the NSSPIP Command Center.
+Visit `http://localhost:3000` to open the NCTIRS Command Center.
 Visit `http://localhost:3000/usalama` to open the USALAMA APP citizen reporting portal.
 
 For cloud deployment (Render) and database provisioning, see `DEPLOY_GUIDE.md` and `DEPLOY_VARS.md`.
@@ -88,7 +88,7 @@ For cloud deployment (Render) and database provisioning, see `DEPLOY_GUIDE.md` a
 
 ## 📊 Compliance & Audit
 
-NSSPIP is designed with **legal compliance and auditability** from day one:
+NCTIRS is designed with **legal compliance and auditability** from day one:
 
 - Aligned with the **Kenya Data Protection Act (2019)** for handling sensitive, person-linked data.
 - Supports audit trails suited for **internal affairs, judicial oversight, and external regulators**.
@@ -121,7 +121,7 @@ Detailed diagrams and contracts:
 
 ## 🧱 Architecture
 
-At a high level, NSSPIP is composed of:
+At a high level, NCTIRS is composed of:
 
 1. **Perception Layer** – incident reports, CCTV feeds, OSINT, and telemetry.
 2. **Cognition Layer** – risk scoring, XAI rationale, and alert prioritization.
@@ -147,7 +147,7 @@ flowchart TB
   end
 
   subgraph Response["🚨 Command & Response"]
-    Dashboard["NSSPIP Command Center"]
+    Dashboard["NCTIRS Command Center"]
     Dispatch["Dispatch / Tasking"]
   end
 
@@ -168,24 +168,24 @@ See `docs/SYSTEM_ARCHITECTURE.md` for full sequence diagrams and data flows.
 
 ## 🔌 Inter-Agency Integration (USALAMA APP Sync)
 
-NSSPIP acts as the central fusion hub for citizen reports originating from the **USALAMA APP** portal.
+NCTIRS acts as the central fusion hub for citizen reports originating from the **USALAMA APP** portal.
 
 ### Sync Flow
 1. **Citizen Report**: A citizen submits a report on the USALAMA APP portal (ai-policing-platform).
-2. **Secure Forwarding**: USALAMA APP forwards the incident to NSSPIP's `/api/incidents` endpoint using a secure `X-Sync-Token`.
-3. **Automated Cognition**: NSSPIP's AI Engine immediately triggers an analysis:
+2. **Secure Forwarding**: USALAMA APP forwards the incident to NCTIRS's `/api/incidents` endpoint using a secure `X-Sync-Token`.
+3. **Automated Cognition**: NCTIRS's AI Engine immediately triggers an analysis:
    - **Risk Scoring**: Calculates a confidence-weighted risk level.
    - **XAI Rationale**: Generates human-readable justification for the score.
    - **Forensic Fingerprinting**: Hashes the result for immutable audit trails.
-4. **Command View**: The incident appears in the NSSPIP dashboard for commander review.
+4. **Command View**: The incident appears in the NCTIRS dashboard for commander review.
 
 ### Configuration
-To enable sync, ensure both platforms share the same `NSSPIP_SYNC_TOKEN` in their respective environment variables.
+To enable sync, ensure both platforms share the same `NCTIRS_SYNC_TOKEN` in their respective environment variables.
 
 
 ## 📜 Legal Compliance
 
-> **Disclaimer:** NSSPIP is a **demonstration and research platform**. Any production roll-out requires formal legal, security, and privacy review.
+> **Disclaimer:** NCTIRS is a **demonstration and research platform**. Any production roll-out requires formal legal, security, and privacy review.
 
 The design is informed by:
 
@@ -244,5 +244,5 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ---
 
-> “In national security, time is the only currency. NSSPIP buys time.”
+> “In national security, time is the only currency. NCTIRS buys time.”
 

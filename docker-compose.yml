@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  nsspip-frontend:
+  nctirs-frontend:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: nsspip_command_center
+    container_name: nctirs_command_center
     restart: always
     ports:
       - "3000:3000"
@@ -18,10 +18,10 @@ services:
     volumes:
       - ./prisma:/app/prisma
     networks:
-      - nsspip_sovereign_net
+      - nctirs_sovereign_net
 
 networks:
   # Internal network exclusively, zero external connectivity allowed in air-gapped mode
-  nsspip_sovereign_net:
+  nctirs_sovereign_net:
     driver: bridge
     internal: true 

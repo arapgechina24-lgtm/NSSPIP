@@ -5,7 +5,7 @@
 ### Option A: One-Click Blueprint Deploy
 
 1. Go to [render.com/deploy](https://render.com/deploy)
-2. Paste your repo URL: `https://github.com/arapgechina24-lgtm/NSSPIP.git`
+2. Paste your repo URL: `https://github.com/arapgechina24-lgtm/NCTIRS.git`
 3. Render will auto-detect the `render.yaml` Blueprint and configure everything
 4. Set your `DATABASE_URL` in the environment variables prompt
 5. Click **Deploy**
@@ -16,7 +16,7 @@
 2. **New Web Service**: Click **New +** → **Web Service**
 3. **Connect Repository**:
     * Connect your GitHub account if not already connected
-    * Select the `NSSPIP` repository
+    * Select the `NCTIRS` repository
 4. **Configure Service**:
     * **Name**: `nctirs`
     * **Region**: Choose closest to your users (e.g., `Frankfurt` for East Africa)

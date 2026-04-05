@@ -1,4 +1,4 @@
-# NSSPIP Sovereign Deployment
+# NCTIRS Sovereign Deployment
 # Zero foreign dependencies, air-gap capable
 
 FROM node:20-alpine AS builder
@@ -19,21 +19,21 @@ RUN apk update && apk upgrade && \
     rm -rf /var/cache/apk/*
 
 # Create non-root user
-RUN addgroup -g 1001 -S nsspip && \
-    adduser -S nsspip -u 1001
+RUN addgroup -g 1001 -S nctirs && \
+    adduser -S nctirs -u 1001
 
 WORKDIR /app
 
 # Copy only necessary files
-COPY --from=builder --chown=nsspip:nsspip /app/dist ./dist
-COPY --from=builder --chown=nsspip:nsspip /app/node_modules ./node_modules
-COPY --from=builder --chown=nsspip:nsspip /app/package.json ./
+COPY --from=builder --chown=nctirs:nctirs /app/dist ./dist
+COPY --from=builder --chown=nctirs:nctirs /app/node_modules ./node_modules
+COPY --from=builder --chown=nctirs:nctirs /app/package.json ./
 
 # Sovereign mode configuration
 ENV NODE_ENV=production \
     SOVEREIGN_MODE=true \
     AI_ENGINE=ollama \
-    OLLAMA_ENDPOINT=http://nsspip-ai:11434 \
+    OLLAMA_ENDPOINT=http://nctirs-ai:11434 \
     DISABLE_EXTERNAL_APIS=true \
     ENCRYPTION_KEY_PATH=/data/keys
 
@@ -41,7 +41,7 @@ ENV NODE_ENV=production \
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:3000/api/health/sovereign || exit 1
 
-USER nsspip
+USER nctirs
 
 EXPOSE 3000
 

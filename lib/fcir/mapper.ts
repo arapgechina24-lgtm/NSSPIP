@@ -1,10 +1,10 @@
-// Maps USALAMA APP citizen-reported incidents to NSSPIP's SecurityIncident type
+// Maps USALAMA APP citizen-reported incidents to NCTIRS's SecurityIncident type
 
 import type { FCIRIncident } from './types';
 import type { SecurityIncident } from '@/types';
 
 /**
- * Map FCIR priority → NSSPIP threatLevel.
+ * Map FCIR priority → NCTIRS threatLevel.
  */
 function mapPriorityToThreatLevel(priority: string): SecurityIncident['threatLevel'] {
     const map: Record<string, SecurityIncident['threatLevel']> = {
@@ -17,7 +17,7 @@ function mapPriorityToThreatLevel(priority: string): SecurityIncident['threatLev
 }
 
 /**
- * Map FCIR incident type → NSSPIP incident type.
+ * Map FCIR incident type → NCTIRS incident type.
  * Falls back to VIOLENT_CRIME for unrecognized types.
  */
 function mapIncidentType(type: string): SecurityIncident['type'] {
@@ -33,7 +33,7 @@ function mapIncidentType(type: string): SecurityIncident['type'] {
 }
 
 /**
- * Determine the NSSPIP region from coordinates (simple bounding-box approach).
+ * Determine the NCTIRS region from coordinates (simple bounding-box approach).
  * Defaults to NAIROBI if coordinates are unavailable.
  */
 function inferRegionFromCoords(
@@ -56,7 +56,7 @@ function inferRegionFromCoords(
 }
 
 /**
- * Map a single FCIR incident to the NSSPIP SecurityIncident format.
+ * Map a single FCIR incident to the NCTIRS SecurityIncident format.
  */
 export function mapFCIRToSecurityIncident(incident: FCIRIncident): SecurityIncident {
     const region = inferRegionFromCoords(incident.latitude, incident.longitude);
