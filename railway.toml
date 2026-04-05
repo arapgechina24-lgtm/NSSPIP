@@ -1,11 +1,13 @@
+# Railway Configuration for NCTIRS
+# https://docs.railway.com/reference/config-as-code
+
 [build]
-builder = "NIXPACKS"
 buildCommand = "NODE_ENV=development npm ci && npx prisma generate && NODE_ENV=production npm run build && cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/"
 
 [deploy]
-startCommand = "npm start"
+startCommand = "node .next/standalone/server.js"
+healthcheckPath = "/"
+healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
-
-[env]
-NODE_ENV = "production"
-PORT = "3000"
+restartPolicyMaxRetries = 3
+numReplicas = 1
