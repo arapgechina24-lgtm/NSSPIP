@@ -28,7 +28,6 @@
       "hft_system/",
       "node_modules/",
       ".next/",
-      ".vercel/",
       "scripts/",
       "prisma/"
     ]

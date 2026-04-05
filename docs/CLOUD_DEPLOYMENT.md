@@ -1,21 +1,21 @@
 # Cloud Environments & CI/CD Configuration
 
-The NSSPIP platform is structured to be flexibly deployed either via Managed Serverless Services or Traditional IaaS configurations.
+The NCTIRS platform is structured to be flexibly deployed either via Managed Cloud Services or Traditional IaaS configurations.
 
-## 1. Managed Deployment Route (Vercel & NeonDB)
+## 1. Managed Deployment Route (Render)
 
 This is the recommended path for rapid prototyping and GitHub synchronization.
 
-### Vercel Deployment configuration
+### Render Deployment Configuration
 
-* **Next.js Frontend**: Hosted natively via Vercel's zero-config Next.js Edge Network framework.
-* **AI Backend**: Handled via Vercel Serverless Functions (`api/index.py`).
-  * **Requires**: `requirements.txt` residing in project root.
-  * **Routing**: The `vercel.json` rewrite (`/api/ai/*` -> `/api/index.py`) translates internal framework routing seamlessly.
+* **Next.js Frontend**: Hosted via Render's Docker-based Web Services using the standalone Next.js output.
+* **Dockerfile**: Multi-stage build in the project root (`./Dockerfile`) handles dependency installation, Prisma generation, Next.js build, and production server.
+* **Blueprint**: The `render.yaml` file provides Infrastructure-as-Code deployment — connect the repo and Render auto-configures the service.
 
-### Neon PostgreSQL Backend
+### PostgreSQL Backend
 
-* Uses a split-connection pool string `DATABASE_URL="postgresql://...&pgbouncer=true"` configured in the `.env` vars in the Vercel Dashboard for scaled serverless database handling.
+* Uses an external PostgreSQL provider (e.g., Neon, Supabase, or Render Postgres).
+* Connection string configured via the `DATABASE_URL` environment variable in the Render Dashboard.
 
 ---
 
@@ -23,7 +23,7 @@ This is the recommended path for rapid prototyping and GitHub synchronization.
 
 For deployments requiring explicit data residency controls.
 
-### AWS Free Tier Architecure
+### AWS Free Tier Architecture
 
 * **Compute (Frontend/Backend)**: EC2 `t2.micro` instance running Docker.
 * **Database**: Amazon RDS for PostgreSQL `db.t3.micro`.
@@ -38,8 +38,8 @@ For deployments requiring explicit data residency controls.
 
 ## 3. GitHub CI/CD Pipeline
 
-The NSSPIP CI/CD pipeline (`.github/workflows/ci.yml`) is strict but ensures clean environments.
+The NCTIRS CI/CD pipeline (`.github/workflows/ci.yml`) ensures clean environments.
 
-1. **Dependency Generation**: `npm ci` is strictly handled, followed essentially by the `npx prisma generate` command to construct the required Prisma Client binaries for the Ubuntu workflow container.
+1. **Dependency Generation**: `npm ci` is strictly handled, followed by `npx prisma generate` to construct the required Prisma Client binaries for the Ubuntu workflow container.
 2. **Linting**: Tests are passed utilizing the custom rules established in `eslint.config.mjs` ensuring high compliance code structures.
-3. **Deployments**: Direct pushes are checked. Upon success, branch changes are synchronized across deployment branches allowing auto-build hooks established via Vercel integration.
+3. **Deployments**: Direct pushes trigger CI checks. Render auto-deploys from `main` on successful push via GitHub integration.

@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 
 const nextConfig: NextConfig = {
+  output: 'standalone', // Required for Docker/Render deployment
   poweredByHeader: false, // Suppress X-Powered-By: Next.js header
   eslint: {
     ignoreDuringBuilds: true,
@@ -43,7 +44,7 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             // Updated CSP to be stricter: Removing 'unsafe-inline' from script-src where possible (Next.js dev might need it, but production should avoid it).
             // Limiting font and img sources specifically.
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googleapis.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: blob: *.googleapis.com a.tile.openstreetmap.org b.tile.openstreetmap.org c.tile.openstreetmap.org *.cartocdn.com; font-src 'self' data:; connect-src 'self' *.googleapis.com *.ably.io wss://*.ably.io fcir-interface.vercel.app;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googleapis.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: blob: *.googleapis.com a.tile.openstreetmap.org b.tile.openstreetmap.org c.tile.openstreetmap.org *.cartocdn.com; font-src 'self' data:; connect-src 'self' *.googleapis.com *.ably.io wss://*.ably.io *.onrender.com;"
           },
           {
             key: 'Permissions-Policy',

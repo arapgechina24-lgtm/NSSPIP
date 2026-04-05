@@ -49,7 +49,7 @@ npm run dev
 Visit `http://localhost:3000` to open the NSSPIP Command Center.
 Visit `http://localhost:3000/usalama` to open the USALAMA APP citizen reporting portal.
 
-For cloud deployment (Vercel) and database provisioning, see `DEPLOY_GUIDE.md` and `DEPLOY_VARS.md`.
+For cloud deployment (Render) and database provisioning, see `DEPLOY_GUIDE.md` and `DEPLOY_VARS.md`.
 
 ---
 
@@ -203,9 +203,9 @@ Core environment configuration (see `DEPLOY_VARS.md` for details and examples):
 |---------------|----------|------------------------------------------------------------------|
 | `DATABASE_URL`| Yes      | PostgreSQL connection string used by Prisma.                    |
 | `AUTH_SECRET` | Yes      | 32-byte secret for NextAuth session encryption.                 |
-| `NEXTAUTH_URL`| Yes      | Public URL of the deployment (e.g. `https://nsspip.vercel.app`).|
+| `NEXTAUTH_URL`| Yes      | Public URL of the deployment (e.g. `https://nctirs.onrender.com`).|
 
-To configure these on Vercel, follow the checklist in `DEPLOY_VARS.md`.
+To configure these on Render, follow the checklist in `DEPLOY_VARS.md`.
 
 ---
 

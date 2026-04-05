@@ -3,7 +3,7 @@
 The backend consists of two integrated layers:
 
 1. **Next.js Server API (`/api/nctirs/*`)**: Manages business logic, database mutations (via Prisma), and authentications.
-2. **Serverless Python AI Engine (`/api/ai/*`)**: Written in FastAPI, these endpoints manage AI inferences mapped seamlessly by Vercel Rewrites.
+2. **Python AI Engine (`/api/ai/*`)**: Written in FastAPI, these endpoints manage AI inferences.
 
 ## AI Engine Endpoints
 

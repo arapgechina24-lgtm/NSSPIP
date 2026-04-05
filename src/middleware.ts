@@ -7,7 +7,7 @@ const { auth } = NextAuth(authConfig);
 export default async function middleware(req: NextRequest) {
     // 1. Deployment Lockdown (Basic Auth)
     // If DEPLOYMENT_PASSWORD is set, require it before anything else.
-    // This allows you to "lock" the Vercel deployment from public view.
+    // This allows you to "lock" the deployment from public view.
     const lockPassword = process.env.DEPLOYMENT_PASSWORD;
 
     if (lockPassword) {

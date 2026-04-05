@@ -1,0 +1,23 @@
+# =============================================================================
+# Render Blueprint — Infrastructure as Code
+# https://render.com/docs/blueprint-spec
+# =============================================================================
+
+services:
+  - type: web
+    name: nctirs
+    runtime: docker
+    repo: https://github.com/arapgechina24-lgtm/NSSPIP.git
+    branch: main
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        sync: false  # Set manually in Render Dashboard
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        value: https://nctirs.onrender.com
+      - key: NODE_ENV
+        value: production

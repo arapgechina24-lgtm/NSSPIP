@@ -1,25 +1,36 @@
 # Deployment Guide
 
-## 🚀 The Easiest Way: Admin Dashboard Import
+## 🚀 Deploy to Render
 
-Since you already have the code on GitHub, you don't need to "Clone" it. You just need to **Import** it.
+### Option A: One-Click Blueprint Deploy
 
-1. **Log in to Vercel**: Go to [vercel.com/dashboard](https://vercel.com/dashboard).
-2. **Add New Project**: Click the **"Add New..."** button (top right) -> Select **"Project"**.
-3. **Select Repository**:
-    * You should see `NSSPIP` in the list of your repositories.
-    * Click the **Import** button next to it.
-4. **Configure Project**:
-    * **Project Name**: Leave as `nsspip` (or whatever it suggests).
-    * **Framework Preset**: It should auto-detect `Next.js`.
-    * **Root Directory**: Leave as `./`.
-5. **Environment Variables (Crucial)**:
-    * Expand the **"Environment Variables"** section.
-    * **Key**: `DATABASE_URL`
-    * **Value**: *[Your Connection String]*
-        * *Example*: `postgres://username:password@ep-shiny-glade.aws.neon.tech/neondb...`
-        * (You must get this from a database provider like [Neon.tech](https://neon.tech) or Vercel Postgres).
-6. **Deploy**: Click **Deploy**.
+1. Go to [render.com/deploy](https://render.com/deploy)
+2. Paste your repo URL: `https://github.com/arapgechina24-lgtm/NSSPIP.git`
+3. Render will auto-detect the `render.yaml` Blueprint and configure everything
+4. Set your `DATABASE_URL` in the environment variables prompt
+5. Click **Deploy**
+
+### Option B: Manual Setup
+
+1. **Log in to Render**: Go to [dashboard.render.com](https://dashboard.render.com)
+2. **New Web Service**: Click **New +** → **Web Service**
+3. **Connect Repository**:
+    * Connect your GitHub account if not already connected
+    * Select the `NSSPIP` repository
+4. **Configure Service**:
+    * **Name**: `nctirs`
+    * **Region**: Choose closest to your users (e.g., `Frankfurt` for East Africa)
+    * **Branch**: `main`
+    * **Runtime**: `Docker`
+    * **Dockerfile Path**: `./Dockerfile`
+    * **Plan**: Select your preferred plan (Free tier available)
+5. **Environment Variables**:
+    * `DATABASE_URL` → Your PostgreSQL connection string
+    * `AUTH_SECRET` → Generate with `openssl rand -base64 32`
+    * `NEXTAUTH_URL` → `https://nctirs.onrender.com` (or your custom domain)
+6. **Deploy**: Click **Create Web Service**
+
+---
 
 ## Database Setup (Post-Deployment)
 
@@ -29,5 +40,13 @@ Once deployed, populate your cloud database:
 # In your local terminal
 export DATABASE_URL="<your-cloud-connection-string>"
 npx prisma db push
-npm run seed
+npm run db:seed
 ```
+
+---
+
+## Custom Domain (Optional)
+
+1. In your Render service → **Settings** → **Custom Domains**
+2. Add your domain (e.g., `nctirs.ke`)
+3. Configure DNS as instructed by Render
